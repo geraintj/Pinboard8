@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows Desktop
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PinboardConsoleApp", "PinboardConsoleApp\PinboardConsoleApp.csproj", "{FB0C3CFB-7F75-4424-8A8A-84DC1C556E8E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PinboardTests", "PinboardTests\PinboardTests.csproj", "{36C55836-E793-448B-957E-02B40D5DEBC3}"
@@ -12,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PinboardClient", "PinboardClient\PinboardClient.csproj", "{5F917403-7604-4219-92C0-4620DF1DB30E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PinboardApi", "PinboardClient\PinboardApi.csproj", "{5F917403-7604-4219-92C0-4620DF1DB30E}"
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution

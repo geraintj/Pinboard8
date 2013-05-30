@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using PinboardApi;
 
 namespace PinboardConsoleApp
 {
@@ -9,6 +10,10 @@ namespace PinboardConsoleApp
     {
         static void Main(string[] args)
         {
+            var client = new PinboardClient();
+            Console.WriteLine(client.GetTimeOfLatestUpdate().ToString());
+
+            Console.ReadLine();
         }
     }
 }

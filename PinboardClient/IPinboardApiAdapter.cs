@@ -2,14 +2,21 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using PinboardClient.Model;
+using PinboardApi.Model;
 
-namespace PinboardClient
+namespace PinboardApi
 {
     interface IPinboardApiWrapper
     {
-        List<Tag> GetTags();
-        List<Bookmark> GetBookmarks(string tag);
+        DateTime GetTimeOfLatestUpdate();
+
         List<Bookmark> GetAllBookmarks();
+        List<Bookmark> GetBookmarksSince(DateTime date);
+        void AddBookmark(Bookmark newBookmark);
+        void DeleteBookmark(string url);
+
+        List<Tag> GetTags();
+        void RenameTag(string newTag, string oldTag);
+        void DeleteTag(string tag);
     }
 }
