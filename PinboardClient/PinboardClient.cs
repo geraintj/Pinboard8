@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Xml;
 using RestSharp;
 using System.Xml.Linq;
 using System.IO;
@@ -39,13 +40,12 @@ namespace PinboardApi
             request.AddUrlSegment("id", "geraintj:86AE2F150AE2D4027D38");
             var response = client.Execute(request);
 
-            TextReader tr = new StringReader(response.Content);
-            XDocument doc = XDocument.Load(tr);
-            var serializer = new XmlSerializer(typeof(List<Bookmark>));
-            // deserialize
-            tr.Close();
-
-            return new List<Bookmark>();
+            var xdoc = XDocument.Parse(response.Content);
+            var posts = xdoc.Root.Elements("post");
+            return posts.Select(xElement => new Bookmark()
+                {
+                    Url = xElement.Attribute("href").Value, Title = xElement.Attribute("description").Value, TagList = xElement.Attribute("tag").Value, Time = xElement.Attribute("time").Value,
+                }).ToList();
         }
 
         public void AddBookmark(Bookmark newBookmark)
