@@ -11,8 +11,8 @@ namespace PinboardConsoleApp
         static void Main(string[] args)
         {
             var client = new PinboardClient();
-            Console.WriteLine(client.GetTimeOfLatestUpdate().ToString());
-
+            //Console.WriteLine(client.GetTimeOfLatestUpdate().ToString());
+            Console.WriteLine(client.GetBookmarksSince(new DateTime()));
             Console.ReadLine();
         }
     }

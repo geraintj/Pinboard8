@@ -5,6 +5,8 @@ using System.Text;
 using RestSharp;
 using System.Xml.Linq;
 using System.IO;
+using PinboardApi.Model;
+using System.Xml.Serialization;
 
 namespace PinboardApi
 {
@@ -25,17 +27,28 @@ namespace PinboardApi
             return DateTime.Parse(dateString);
         }
 
-        public List<Model.Bookmark> GetAllBookmarks()
+        public List<Bookmark> GetAllBookmarks()
         {
             throw new NotImplementedException();
         }
 
-        public List<Model.Bookmark> GetBookmarksSince(DateTime date)
+        public List<Bookmark> GetBookmarksSince(DateTime date)
         {
-            throw new NotImplementedException();
+            var client = new RestClient("https://api.pinboard.in/");
+            var request = new RestRequest("v1/posts/recent?auth_token={id}", Method.GET);
+            request.AddUrlSegment("id", "geraintj:86AE2F150AE2D4027D38");
+            var response = client.Execute(request);
+
+            TextReader tr = new StringReader(response.Content);
+            XDocument doc = XDocument.Load(tr);
+            var serializer = new XmlSerializer(typeof(List<Bookmark>));
+            // deserialize
+            tr.Close();
+
+            return new List<Bookmark>();
         }
 
-        public void AddBookmark(Model.Bookmark newBookmark)
+        public void AddBookmark(Bookmark newBookmark)
         {
             throw new NotImplementedException();
         }
