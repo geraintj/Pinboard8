@@ -11,12 +11,12 @@ namespace PinboardApi
     {
         Task<DateTime> GetTimeOfLatestUpdateAsync();
 
-        Task<List<Bookmark>> GetAllBookmarksAsync();
-        Task<List<Bookmark>> GetBookmarksSinceAsync(DateTime date);
+        Task GetAllBookmarksAsync();
+        Task GetBookmarksSinceAsync(DateTime date);
         void AddBookmark(Bookmark newBookmark);
         void DeleteBookmark(string url);
 
-        Task<List<Tag>> GetTagsAsync();
+        Task GetTagsAsync();
         void RenameTag(string newTag, string oldTag);
         void DeleteTag(string tag);
     }

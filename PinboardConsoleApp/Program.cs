@@ -13,8 +13,8 @@ namespace PinboardConsoleApp
         {
 
             //var task = WaitForGetTimeOfLatestUpdate();
-            var task = WaitForGetAllBookmarks();
-            //var task = WaitForGetTags();
+            //var task = WaitForGetAllBookmarks();
+            var task = WaitForGetTags();
             //var task = WaitForGetBookmarksSince(new DateTime());
             task.Wait();
 
@@ -31,9 +31,9 @@ namespace PinboardConsoleApp
         static async Task WaitForGetBookmarksSince(DateTime date)
         {
             var client = new PinboardDataSource();
-            var posts = await client.GetBookmarksSinceAsync(date);
+            await client.GetBookmarksSinceAsync(date);
 
-            foreach (var bookmark in posts)
+            foreach (var bookmark in client.Bookmarks)
             {
                 Console.WriteLine(bookmark.Title);
             }
@@ -42,9 +42,9 @@ namespace PinboardConsoleApp
         static async Task WaitForGetAllBookmarks()
         {
             var client = new PinboardDataSource();
-            var posts = await client.GetAllBookmarksAsync();
+            await client.GetAllBookmarksAsync();
 
-            foreach (var bookmark in posts)
+            foreach (var bookmark in client.Bookmarks)
             {
                 Console.WriteLine(bookmark.Title);
             }
@@ -53,9 +53,9 @@ namespace PinboardConsoleApp
         static async Task WaitForGetTags()
         {
             var client = new PinboardDataSource();
-            var tags = await client.GetTagsAsync();
+            await client.GetTagsAsync();
 
-            foreach (var tag in tags)
+            foreach (var tag in client.Tags)
             {
                 Console.WriteLine(tag.Name + "(" + tag.Count + ")");
             }
