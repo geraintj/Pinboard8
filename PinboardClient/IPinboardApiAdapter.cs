@@ -2,20 +2,21 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using PinboardApi.Model;
 
 namespace PinboardApi
 {
     interface IPinboardApiWrapper
     {
-        DateTime GetTimeOfLatestUpdate();
+        Task<DateTime> GetTimeOfLatestUpdateAsync();
 
-        List<Bookmark> GetAllBookmarks();
-        List<Bookmark> GetBookmarksSince(DateTime date);
+        Task<List<Bookmark>> GetAllBookmarksAsync();
+        Task<List<Bookmark>> GetBookmarksSinceAsync(DateTime date);
         void AddBookmark(Bookmark newBookmark);
         void DeleteBookmark(string url);
 
-        List<Tag> GetTags();
+        Task<List<Tag>> GetTagsAsync();
         void RenameTag(string newTag, string oldTag);
         void DeleteTag(string tag);
     }
