@@ -13,8 +13,9 @@ namespace PinboardConsoleApp
         {
 
             //var task = WaitForGetTimeOfLatestUpdate();
-            //var task = WaitForGetAllBookmarks();
-            var task = WaitForGetTags();
+            var task = WaitForGetAllBookmarks();
+            //var task = WaitForGetTags();
+            //var task = WaitForGetBookmarksSince(new DateTime());
             task.Wait();
 
             Console.ReadLine();

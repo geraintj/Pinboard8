@@ -41,8 +41,8 @@ namespace PinboardApi
             {
                 Url = xElement.Attribute("href").Value,
                 Title = xElement.Attribute("description").Value,
-                TagList = xElement.Attribute("tag").Value,
                 Time = xElement.Attribute("time").Value,
+                Tags = new List<Tag>() { xElement.Attribute("tag").Value.Split(new char[] { ' ' }).Select(s => new Tag() { Name = s }).FirstOrDefault() }
             }).ToList();
         }
 
@@ -54,14 +54,14 @@ namespace PinboardApi
             var response = await client.ExecuteTaskAsync(request);
 
             var xdoc = XDocument.Parse(response.Content);
-            var posts = xdoc.Root.Elements("post");
-            return posts.Select(xElement => new Bookmark()
-            {
-                Url = xElement.Attribute("href").Value,
-                Title = xElement.Attribute("description").Value,
-                TagList = xElement.Attribute("tag").Value,
-                Time = xElement.Attribute("time").Value,
-            }).ToList();
+
+            return xdoc.Root.Elements("post").Select(xElement => new Bookmark()
+                {
+                    Url = xElement.Attribute("href").Value, 
+                    Title = xElement.Attribute("description").Value,  
+                    Time = xElement.Attribute("time").Value, 
+                    Tags = new List<Tag>() {xElement.Attribute("tag").Value.Split(new char[] {' '}).Select(s => new Tag() {Name = s}).FirstOrDefault()}
+                }).ToList();
         }
 
         public void AddBookmark(Bookmark newBookmark)

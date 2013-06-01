@@ -59,8 +59,8 @@ namespace PinboardApi
             {
                 Url = xElement.Attribute("href").Value,
                 Title = xElement.Attribute("description").Value,
-                TagList = xElement.Attribute("tag").Value,
                 Time = xElement.Attribute("time").Value,
+                Tags = new List<Tag>() { xElement.Attribute("tag").Value.Split(new char[] { ' ' }).Select(s => new Tag() { Name = s }).Single() }
             }).ToList();
         }
 
@@ -75,7 +75,10 @@ namespace PinboardApi
             var posts = xdoc.Root.Elements("post");
             return posts.Select(xElement => new Bookmark()
                 {
-                    Url = xElement.Attribute("href").Value, Title = xElement.Attribute("description").Value, TagList = xElement.Attribute("tag").Value, Time = xElement.Attribute("time").Value,
+                    Url = xElement.Attribute("href").Value, 
+                    Title = xElement.Attribute("description").Value,                     
+                    Tags = new List<Tag>() {xElement.Attribute("tag").Value.Split(new char[] {' '}).Select(s => new Tag() {Name = s}).Single()},
+                    Time = xElement.Attribute("time").Value,
                 }).ToList();
         }
 
