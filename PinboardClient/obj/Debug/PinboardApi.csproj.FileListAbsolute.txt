@@ -1,0 +1,7 @@
+C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardClient\bin\Debug\PinboardApi.dll
+C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardClient\bin\Debug\PinboardApi.pdb
+C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardClient\bin\Debug\RestSharp.dll
+C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardClient\bin\Debug\RestSharp.xml
+C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardClient\obj\Debug\PinboardApi.csprojResolveAssemblyReference.cache
+C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardClient\obj\Debug\PinboardApi.dll
+C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardClient\obj\Debug\PinboardApi.pdb

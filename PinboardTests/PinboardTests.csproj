@@ -52,9 +52,6 @@
     <Compile Include="PinboardClientTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\PinboardClient\PinboardApi.csproj">
       <Project>{5f917403-7604-4219-92c0-4620df1db30e}</Project>
       <Name>PinboardApi</Name>
