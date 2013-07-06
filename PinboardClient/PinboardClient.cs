@@ -9,6 +9,7 @@ using System.Xml.Linq;
 using System.IO;
 using PinboardApi.Model;
 using System.Xml.Serialization;
+using System.Net.Http;
 
 namespace PinboardApi
 {
@@ -31,18 +32,37 @@ namespace PinboardApi
 
         public async Task<DateTime> GetTimeOfLatestUpdateAsync()
         {
-            var client = new RestClient("https://api.pinboard.in/");
-            var request = new RestRequest("v1/posts/update?auth_token={id}", Method.GET);
-            request.AddUrlSegment("id", "geraintj:86AE2F150AE2D4027D38");
-            //var response2 = client.Execute<DateTime>(request);
-            IRestResponse response2 = await client.ExecuteTaskAsync(request);
+            //var client = new RestClient("https://api.pinboard.in/");
+            //var request = new RestRequest("v1/posts/update?auth_token={id}", Method.GET);
+            //request.AddUrlSegment("id", "geraintj:86AE2F150AE2D4027D38");
+            ////var response2 = client.Execute<DateTime>(request);
+            //IRestResponse response2 = await client.ExecuteTaskAsync(request);
 
-            TextReader tr = new StringReader(response2.Content);
-            XDocument doc = XDocument.Load(tr);
-            var dateString = doc.Element("update").Attribute("time").Value;
-            tr.Close();
+            //TextReader tr = new StringReader(response2.Content);
+            //XDocument doc = XDocument.Load(tr);
+            //var dateString = doc.Element("update").Attribute("time").Value;
+            //tr.Close();
 
-            return DateTime.Parse(dateString);
+            //return DateTime.Parse(dateString);
+            var client = new HttpClient();
+            client.BaseAddress = new Uri("https://api.pinboard.in/");
+
+            var response =
+                await client.GetAsync(String.Format("v1/posts/update?auth_token={0}", "geraintj:86AE2F150AE2D4027D38"));
+
+            DateTime updateDate = DateTime.Now;
+            if (response.IsSuccessStatusCode)
+            {
+                var responseString = await response.Content.ReadAsStringAsync();
+                TextReader tr = new StringReader(responseString);
+                XDocument doc = XDocument.Load(tr);
+                var dateString = doc.Element("update").Attribute("time").Value;
+                tr.Dispose();
+
+                updateDate = DateTime.Parse(dateString);
+            }
+
+            return updateDate;
         }
 
         public List<Bookmark> GetAllBookmarks()

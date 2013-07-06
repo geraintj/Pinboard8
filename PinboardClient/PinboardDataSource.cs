@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -28,28 +29,21 @@ namespace PinboardApi
 
         public async Task<DateTime> GetTimeOfLatestUpdateAsync()
         {
-            var client = new RestClient("https://api.pinboard.in/");
-            var request = new RestRequest("v1/posts/update?auth_token={id}", Method.GET);
-            request.AddUrlSegment("id", "geraintj:86AE2F150AE2D4027D38");
-            //var response2 = client.Execute<DateTime>(request);
-            IRestResponse response2 = await client.ExecuteTaskAsync(request);
+            var responseString = await MakeGetCall("posts/update");
 
-            TextReader tr = new StringReader(response2.Content);
+            TextReader tr = new StringReader(responseString);
             XDocument doc = XDocument.Load(tr);
             var dateString = doc.Element("update").Attribute("time").Value;
-            tr.Close();
+            tr.Dispose();
 
             return DateTime.Parse(dateString);
         }
 
         public async Task GetAllBookmarksAsync()
         {
-            var client = new RestClient("https://api.pinboard.in/");
-            var request = new RestRequest("v1/posts/all?auth_token={id}", Method.GET);
-            request.AddUrlSegment("id", "geraintj:86AE2F150AE2D4027D38");
-            var response = await client.ExecuteTaskAsync(request);
+            var responseString = await MakeGetCall("posts/all");
 
-            var xdoc = XDocument.Parse(response.Content);
+            var xdoc = XDocument.Parse(responseString);
             foreach (var xElement in xdoc.Root.Elements("post"))
             {
                 this.Bookmarks.Add(new Bookmark()
@@ -71,12 +65,9 @@ namespace PinboardApi
 
         public async Task GetBookmarksSinceAsync(DateTime date)
         {
-            var client = new RestClient("https://api.pinboard.in/");
-            var request = new RestRequest("v1/posts/recent?auth_token={id}", Method.GET);
-            request.AddUrlSegment("id", "geraintj:86AE2F150AE2D4027D38");
-            var response = await client.ExecuteTaskAsync(request);
+            var responseString = await MakeGetCall("posts/recent");
 
-            var xdoc = XDocument.Parse(response.Content);
+            var xdoc = XDocument.Parse(responseString);
             foreach (var xElement in xdoc.Root.Elements("post"))
             {
                 this.Bookmarks.Add(new Bookmark()
@@ -108,12 +99,9 @@ namespace PinboardApi
 
         public async Task GetTagsAsync()
         {
-            var client = new RestClient("https://api.pinboard.in/");
-            var request = new RestRequest("v1/tags/get?auth_token={id}", Method.GET);
-            request.AddUrlSegment("id", "geraintj:86AE2F150AE2D4027D38");
-            var response = await client.ExecuteTaskAsync(request);
+            var responseString = await MakeGetCall("tags/get");
 
-            var xdoc = XDocument.Parse(response.Content);
+            var xdoc = XDocument.Parse(responseString);
             foreach (var xElement in xdoc.Root.Elements("tag"))
             {
                 Tags.Add(new Tag() { Name = xElement.Attribute("tag").Value, Count = int.Parse(xElement.Attribute("count").Value) });
@@ -128,6 +116,23 @@ namespace PinboardApi
         public void DeleteTag(string tag)
         {
             throw new NotImplementedException();
+        }
+
+        async Task<string> MakeGetCall(string urlPart)
+        {
+            var client = new HttpClient();
+            client.BaseAddress = new Uri("https://api.pinboard.in/");
+
+            var response =
+                await client.GetAsync(String.Format("v1/" + urlPart + "?auth_token={0}", "geraintj:86AE2F150AE2D4027D38"));
+
+
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.Content.ReadAsStringAsync();
+            }
+
+            return response.StatusCode.ToString();
         }
     }
 }

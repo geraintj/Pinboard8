@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using PinboardApi;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
@@ -73,13 +74,13 @@ namespace Pinboard8
             var connectionProfile = Windows.Networking.Connectivity.NetworkInformation.GetInternetConnectionProfile();
             if (connectionProfile != null)
             {
-                FeedDataSource feedDataSource = (FeedDataSource)App.Current.Resources["feedDataSource"];
+                PinboardDataSource feedDataSource = (PinboardDataSource)App.Current.Resources["feedDataSource"];
                 if (feedDataSource != null)
                 {
-                    if (feedDataSource.Feeds.Count == 0)
-                    {
-                        await feedDataSource.GetFeedsAsync();
-                    }
+                    //if (feedDataSource.Feeds.Count == 0)
+                    //{
+                    //    await feedDataSource.GetFeedsAsync();
+                    //}
                 }
             }
             else

@@ -8,3 +8,13 @@ C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardConsoleApp\bin\Debug\RestSha
 C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardConsoleApp\obj\x86\Debug\PinboardConsoleApp.csprojResolveAssemblyReference.cache
 C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardConsoleApp\obj\x86\Debug\PinboardConsoleApp.exe
 C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardConsoleApp\obj\x86\Debug\PinboardConsoleApp.pdb
+C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardConsoleApp\bin\Debug\PinboardConsoleApp.exe.config
+C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardConsoleApp\obj\x86\Debug\PinboardConsoleApp.exe
+C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardConsoleApp\obj\x86\Debug\PinboardConsoleApp.pdb
+C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardConsoleApp\bin\Debug\PinboardConsoleApp.exe
+C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardConsoleApp\bin\Debug\PinboardConsoleApp.pdb
+C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardConsoleApp\bin\Debug\PinboardApi.dll
+C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardConsoleApp\bin\Debug\RestSharp.dll
+C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardConsoleApp\bin\Debug\PinboardApi.pdb
+C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardConsoleApp\bin\Debug\RestSharp.xml
+C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardConsoleApp\obj\x86\Debug\PinboardConsoleApp.csprojResolveAssemblyReference.cache

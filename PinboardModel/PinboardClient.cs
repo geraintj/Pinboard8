@@ -23,7 +23,7 @@ namespace PinboardApi
             var response =
                 await client.GetAsync(String.Format("v1/posts/update?auth_token={0}", "geraintj:86AE2F150AE2D4027D38"));
 
-            DateTime updateDate;
+            DateTime updateDate = DateTime.Now;
             if (response.IsSuccessStatusCode)
             {
                 var responseString = await response.Content.ReadAsStringAsync();

@@ -12,9 +12,9 @@ namespace PinboardConsoleApp
         static void Main(string[] args)
         {
 
-            var task = WaitForGetTimeOfLatestUpdate();
-            //var task = WaitForGetAllBookmarks();
-            //var task = WaitForGetTags();
+            //var task = WaitForGetTimeOfLatestUpdate();
+           // var task = WaitForGetAllBookmarks();
+            var task = WaitForGetTags();
             //var task = WaitForGetBookmarksSince(new DateTime());
             task.Wait();
 

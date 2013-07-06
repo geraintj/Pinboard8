@@ -101,6 +101,10 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <ProjectReference Include="..\PinboardModel\PinboardModel.csproj">
+      <Project>{c526ab05-2046-4e3e-89ec-83e5601c8535}</Project>
+      <Name>PinboardModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
