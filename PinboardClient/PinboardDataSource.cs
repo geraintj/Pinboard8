@@ -65,7 +65,8 @@ namespace PinboardApi
 
         public async Task GetBookmarksSinceAsync(DateTime date)
         {
-            var responseString = await MakeGetCall("posts/recent");
+            var dateString = String.Format("{0:yyyy-MM-dd}", date);
+            var responseString = await MakeGetCall("posts/all?fromdt=" + dateString);
 
             var xdoc = XDocument.Parse(responseString);
             foreach (var xElement in xdoc.Root.Elements("post"))
