@@ -65,8 +65,8 @@ namespace PinboardApi
 
         public async Task GetBookmarksSinceAsync(DateTime date)
         {
-            var dateString = String.Format("{0:yyyy-MM-dd}", date);
-            var responseString = await MakeGetCall("posts/all?fromdt=" + dateString);
+            var dateString = String.Format("{0:s}", date);
+            var responseString = await MakeGetCall("posts/all", "&fromdt=" + dateString + "Z");
 
             var xdoc = XDocument.Parse(responseString);
             foreach (var xElement in xdoc.Root.Elements("post"))
@@ -119,13 +119,13 @@ namespace PinboardApi
             throw new NotImplementedException();
         }
 
-        async Task<string> MakeGetCall(string urlPart)
+        async Task<string> MakeGetCall(string urlPart, string queryString =  "")
         {
             var client = new HttpClient();
             client.BaseAddress = new Uri("https://api.pinboard.in/");
 
             var response =
-                await client.GetAsync(String.Format("v1/" + urlPart + "?auth_token={0}", "geraintj:86AE2F150AE2D4027D38"));
+                await client.GetAsync(String.Format("v1/" + urlPart + "?auth_token={0}{1}", "geraintj:86AE2F150AE2D4027D38", queryString));
 
 
             if (response.IsSuccessStatusCode)

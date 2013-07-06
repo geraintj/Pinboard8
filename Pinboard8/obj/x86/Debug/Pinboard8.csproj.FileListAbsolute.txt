@@ -44,3 +44,8 @@ C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\TagCloud.xam
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Pinboard8.exe
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Pinboard8.pdb
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Pinboard8.csprojResolveAssemblyReference.cache
+C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\PinboardModel.dll
+C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\PinboardModel.pdb
+C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\PinboardModel.pri
+C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Pinboard8.csprojResolveAssemblyReference.cache
+C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Pinboard8.csproj.GenerateResource.Cache

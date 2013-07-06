@@ -28,82 +28,63 @@ namespace PinboardApi
 
         public async Task<DateTime> GetTimeOfLatestUpdateAsync()
         {
-            var client = new HttpClient();
-            client.BaseAddress = new Uri("https://api.pinboard.in/");
+            var responseString = await MakeGetCall("posts/update");
 
-            var response =
-                await client.GetAsync(String.Format("v1/posts/update?auth_token={0}", "geraintj:86AE2F150AE2D4027D38"));
+            TextReader tr = new StringReader(responseString);
+            XDocument doc = XDocument.Load(tr);
+            var dateString = doc.Element("update").Attribute("time").Value;
+            tr.Dispose();
 
-            DateTime updateDate = DateTime.Now;
-            if (response.IsSuccessStatusCode)
-            {
-                var responseString = await response.Content.ReadAsStringAsync();
-                TextReader tr = new StringReader(responseString);
-                XDocument doc = XDocument.Load(tr);
-                var dateString = doc.Element("update").Attribute("time").Value;
-                tr.Dispose();
-
-                updateDate = DateTime.Parse(dateString);
-            }
-
-            return updateDate;
+            return DateTime.Parse(dateString);
         }
 
         public async Task GetAllBookmarksAsync()
         {
-            //var client = new RestClient("https://api.pinboard.in/");
-            //var request = new RestRequest("v1/posts/all?auth_token={id}", Method.GET);
-            //request.AddUrlSegment("id", "geraintj:86AE2F150AE2D4027D38");
-            //var response = await client.ExecuteTaskAsync(request);
+            var responseString = await MakeGetCall("posts/all");
 
-            //var xdoc = XDocument.Parse(response.Content);
-            //foreach (var xElement in xdoc.Root.Elements("post"))
-            //{
-            //    this.Bookmarks.Add(new Bookmark()
-            //        {
-            //            Url = xElement.Attribute("href").Value,
-            //            Title = xElement.Attribute("description").Value,
-            //            Time = xElement.Attribute("time").Value,
-            //            Tags =
-            //                new List<Tag>()
-            //                    {
-            //                        xElement.Attribute("tag")
-            //                                .Value.Split(new char[] {' '})
-            //                                .Select(s => new Tag() {Name = s})
-            //                                .FirstOrDefault()
-            //                    }
-            //        });
-            //}
-            throw new NotImplementedException();
+            var xdoc = XDocument.Parse(responseString);
+            foreach (var xElement in xdoc.Root.Elements("post"))
+            {
+                this.Bookmarks.Add(new Bookmark()
+                {
+                    Url = xElement.Attribute("href").Value,
+                    Title = xElement.Attribute("description").Value,
+                    Time = xElement.Attribute("time").Value,
+                    Tags =
+                        new List<Tag>()
+                                {
+                                    xElement.Attribute("tag")
+                                            .Value.Split(new char[] {' '})
+                                            .Select(s => new Tag() {Name = s})
+                                            .FirstOrDefault()
+                                }
+                });
+            }
         }
 
         public async Task GetBookmarksSinceAsync(DateTime date)
         {
-            //var client = new RestClient("https://api.pinboard.in/");
-            //var request = new RestRequest("v1/posts/recent?auth_token={id}", Method.GET);
-            //request.AddUrlSegment("id", "geraintj:86AE2F150AE2D4027D38");
-            //var response = await client.ExecuteTaskAsync(request);
+            var dateString = String.Format("{0:s}", date);
+            var responseString = await MakeGetCall("posts/all", "&fromdt=" + dateString + "Z");
 
-            //var xdoc = XDocument.Parse(response.Content);
-            //foreach (var xElement in xdoc.Root.Elements("post"))
-            //{
-            //    this.Bookmarks.Add(new Bookmark()
-            //    {
-            //        Url = xElement.Attribute("href").Value,
-            //        Title = xElement.Attribute("description").Value,
-            //        Time = xElement.Attribute("time").Value,
-            //        Tags =
-            //            new List<Tag>()
-            //                    {
-            //                        xElement.Attribute("tag")
-            //                                .Value.Split(new char[] {' '})
-            //                                .Select(s => new Tag() {Name = s})
-            //                                .FirstOrDefault()
-            //                    }
-            //    });
-            //}
-            throw new NotImplementedException();
-
+            var xdoc = XDocument.Parse(responseString);
+            foreach (var xElement in xdoc.Root.Elements("post"))
+            {
+                this.Bookmarks.Add(new Bookmark()
+                {
+                    Url = xElement.Attribute("href").Value,
+                    Title = xElement.Attribute("description").Value,
+                    Time = xElement.Attribute("time").Value,
+                    Tags =
+                        new List<Tag>()
+                                {
+                                    xElement.Attribute("tag")
+                                            .Value.Split(new char[] {' '})
+                                            .Select(s => new Tag() {Name = s})
+                                            .FirstOrDefault()
+                                }
+                });
+            }
         }
 
         public void AddBookmark(Bookmark newBookmark)
@@ -118,18 +99,13 @@ namespace PinboardApi
 
         public async Task GetTagsAsync()
         {
-            //var client = new RestClient("https://api.pinboard.in/");
-            //var request = new RestRequest("v1/tags/get?auth_token={id}", Method.GET);
-            //request.AddUrlSegment("id", "geraintj:86AE2F150AE2D4027D38");
-            //var response = await client.ExecuteTaskAsync(request);
+            var responseString = await MakeGetCall("tags/get");
 
-            //var xdoc = XDocument.Parse(response.Content);
-            //foreach (var xElement in xdoc.Root.Elements("tag"))
-            //{
-            //    Tags.Add(new Tag() { Name = xElement.Attribute("tag").Value, Count = int.Parse(xElement.Attribute("count").Value) });
-            //}
-            throw new NotImplementedException();
-
+            var xdoc = XDocument.Parse(responseString);
+            foreach (var xElement in xdoc.Root.Elements("tag"))
+            {
+                Tags.Add(new Tag() { Name = xElement.Attribute("tag").Value, Count = int.Parse(xElement.Attribute("count").Value) });
+            }
         }
 
         public void RenameTag(string newTag, string oldTag)
@@ -141,5 +117,22 @@ namespace PinboardApi
         {
             throw new NotImplementedException();
         }
+
+        async Task<string> MakeGetCall(string urlPart, string queryString = "")
+        {
+            var client = new HttpClient();
+            client.BaseAddress = new Uri("https://api.pinboard.in/");
+
+            var response =
+                await client.GetAsync(String.Format("v1/" + urlPart + "?auth_token={0}{1}", "geraintj:86AE2F150AE2D4027D38", queryString));
+
+
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.Content.ReadAsStringAsync();
+            }
+
+            return response.StatusCode.ToString();
+        }   
     }
 }
