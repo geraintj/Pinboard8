@@ -1,2 +1,0 @@
-C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardTests\obj\Debug\PinboardTests.csprojResolveAssemblyReference.cache
-C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardTests\obj\Debug\PinboardTests.csprojResolveAssemblyReference.cache
