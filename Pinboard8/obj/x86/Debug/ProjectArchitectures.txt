@@ -1,2 +1,0 @@
-C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\Pinboard8.csproj;x86
-C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardModel\PinboardModel.csproj;x86

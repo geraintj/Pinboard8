@@ -54,9 +54,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PinboardClient\PinboardApi.csproj">
-      <Project>{5f917403-7604-4219-92c0-4620df1db30e}</Project>
-      <Name>PinboardApi</Name>
+    <ProjectReference Include="..\PinboardDomain\PinboardDomain.csproj">
+      <Project>{99375e2a-b094-431c-81d8-4f3be4acedee}</Project>
+      <Name>PinboardDomain</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

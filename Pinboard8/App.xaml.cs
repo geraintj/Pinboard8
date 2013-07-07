@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using PinboardApi;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
@@ -70,25 +69,6 @@ namespace Pinboard8
                     throw new Exception("Failed to create initial page");
                 }
             }
-
-            var connectionProfile = Windows.Networking.Connectivity.NetworkInformation.GetInternetConnectionProfile();
-            if (connectionProfile != null)
-            {
-                PinboardDataSource feedDataSource = (PinboardDataSource)App.Current.Resources["feedDataSource"];
-                if (feedDataSource != null)
-                {
-                    //if (feedDataSource.Feeds.Count == 0)
-                    //{
-                    //    await feedDataSource.GetFeedsAsync();
-                    //}
-                }
-            }
-            else
-            {
-                var messageDialog = new Windows.UI.Popups.MessageDialog("An internet connection is needed to download feeds. Please check your connection and restart the app.");
-                var result = messageDialog.ShowAsync();
-            }
-
             // Ensure the current window is active
             Window.Current.Activate();
         }

@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
 
-  <Identity Name="2b74767f-8905-476d-8e4b-cbd10834f4af"
-            Publisher="CN=devuser"
+  <Identity Name="111743b5-74ee-4030-9f3d-0219e699a399"
+            Publisher="CN=Geraint"
             Version="1.0.0.0" />
 
   <Properties>
     <DisplayName>Pinboard8</DisplayName>
-    <PublisherDisplayName>devuser</PublisherDisplayName>
+    <PublisherDisplayName>Geraint</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
