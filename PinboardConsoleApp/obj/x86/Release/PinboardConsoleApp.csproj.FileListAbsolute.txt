@@ -1,0 +1,8 @@
+C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardConsoleApp\bin\Release\PinboardConsoleApp.exe.config
+C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardConsoleApp\bin\Release\PinboardConsoleApp.exe
+C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardConsoleApp\bin\Release\PinboardConsoleApp.pdb
+C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardConsoleApp\bin\Release\PinboardDomain.dll
+C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardConsoleApp\bin\Release\PinboardDomain.pdb
+C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardConsoleApp\obj\x86\Release\PinboardConsoleApp.csprojResolveAssemblyReference.cache
+C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardConsoleApp\obj\x86\Release\PinboardConsoleApp.exe
+C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardConsoleApp\obj\x86\Release\PinboardConsoleApp.pdb
