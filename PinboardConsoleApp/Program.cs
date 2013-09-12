@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using PinboardDomain;
+using PinboardDomain.Repository;
 
 namespace PinboardConsoleApp
 {
@@ -13,9 +14,9 @@ namespace PinboardConsoleApp
         {
 
             //var task = WaitForGetTimeOfLatestUpdate();
-           // var task = WaitForGetAllBookmarks();
+            //var task = WaitForGetAllBookmarks();
             //var task = WaitForGetTags();
-            var task = WaitForGetBookmarksSince(new DateTime(2013,7,3,0,0,0));
+            var task = WaitForGetBookmarksSince(new DateTime(2013,9,1,0,0,0));
             task.Wait();
 
             Console.ReadLine();
@@ -23,17 +24,17 @@ namespace PinboardConsoleApp
 
         static async Task WaitForGetTimeOfLatestUpdate()
         {
-            var client = new PinboardDataSource();
+            var client = new PinboardApiWrapper();
             var result = await client.GetTimeOfLatestUpdateAsync();
             Console.WriteLine(result.ToString());
         }
 
         static async Task WaitForGetBookmarksSince(DateTime date)
         {
-            var client = new PinboardDataSource();
-            await client.GetBookmarksSinceAsync(date);
+            var client = new PinboardApiWrapper();
+            var bookmarks = await client.GetBookmarksSinceAsync(date);
 
-            foreach (var bookmark in client.Bookmarks)
+            foreach (var bookmark in bookmarks)
             {
                 Console.WriteLine(bookmark.Title);
             }
@@ -41,10 +42,10 @@ namespace PinboardConsoleApp
 
         static async Task WaitForGetAllBookmarks()
         {
-            var client = new PinboardDataSource();
-            await client.GetAllBookmarksAsync();
+            var client = new PinboardApiWrapper();
+            var bookmarks = await client.GetAllBookmarksAsync();
 
-            foreach (var bookmark in client.Bookmarks)
+            foreach (var bookmark in bookmarks)
             {
                 Console.WriteLine(bookmark.Title);
             }
@@ -52,10 +53,10 @@ namespace PinboardConsoleApp
 
         static async Task WaitForGetTags()
         {
-            var client = new PinboardDataSource();
-            await client.GetTagsAsync();
+            var client = new PinboardApiWrapper();
+            var tags = await client.GetTagsAsync();
 
-            foreach (var tag in client.Tags)
+            foreach (var tag in tags)
             {
                 Console.WriteLine(tag.Name + "(" + tag.Count + ")");
             }
