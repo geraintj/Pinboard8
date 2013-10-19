@@ -1,0 +1,268 @@
+﻿<#@ template  debug="true" hostSpecific="true" language="C#" #>
+<#@ output extension=".cs" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Xml" #>
+<#@ assembly name="System.Xml.Linq" #>
+<#@ assembly name="$(TargetDir)WP-Fx.EasyMoq.Generator.dll" #> 
+<#@ assembly name="$(TargetPath)" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Xml.Linq" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Reflection" #>
+<#@ import namespace="System.Threading.Tasks" #>
+<#@ import namespace="KretschIT.WP_Fx.EasyMoq.Generator" #>
+<#@ import namespace="KretschIT.WP_Fx.EasyMoq.Generator.Configurations" #>
+<# this.Header(); #>
+
+<# this.CommonNamespaces(); #>
+
+namespace EasyMoq.Extensions
+{
+<# foreach(var info in this.Helper.MockableInfo)
+   {
+		var genericArguments = this.ClassHelper.CreateGenericArgumentsFor(info.InterfaceType);
+		var interfaceImplementation = info.InterfaceName + genericArguments;
+		var isWinRT = this.IsWinRTProject();
+#>
+	#region <#= info.MockableName #>
+
+	static class <#= info.MockableName #>Extensions
+	{
+		#region EventExtensions
+
+<#
+		foreach(var e in this.ClassHelper.GetEventsOf(info.InterfaceType))
+        {
+#>
+		public static void <#= e.Name #>Event<#= genericArguments #>(this IEventsOf<<#= interfaceImplementation #>> mock, <#= this.ClassHelper.CreateArguments(this.ClassHelper.GetSignatureOf(e).GetParameters(), true) #>)<#= this.ClassHelper.GetGenericConstraintOf(info.InterfaceType.GetGenericArguments()) #>
+		{
+<#
+			if(isWinRT)
+            {
+				var types = string.Empty;
+				foreach(var p in this.ClassHelper.GetSignatureOf(e).GetParameters())
+                {
+					var t = p.ParameterType;
+					var type = this.ClassHelper.GetUniqueNameOf(t);
+					if(t.IsGenericType)
+                    {
+						type += this.ClassHelper.CreateGenericArgumentsFor(t);
+                    }
+					types += "typeof(" + type + "), ";
+                }
+#>			var eventCall = mock.GetType().GetRuntimeMethod("<#= this.ClassHelper.GetRaiseMethodOf(e) #>", new Type[] { <#= types #> });
+<#			}
+			else
+            {
+#>
+			var eventCall = mock.GetType().GetMethod("<#= this.ClassHelper.GetRaiseMethodOf(e) #>");
+<#			}
+#>
+			eventCall.Invoke(mock, new object[] { <#= this.ClassHelper.CreateArguments(this.ClassHelper.GetSignatureOf(e).GetParameters(), false) #> });
+		}
+
+<# 
+        }
+#>
+		#endregion
+
+		#region PropertyExtensions
+
+<#
+
+		foreach(var property in this.ClassHelper.GetPropertiesOf(info.InterfaceType).GroupBy(p => p.Name).Select(g => g.First()))
+        {
+#>
+		public static PropertyInfo <#= property.Name #><#= genericArguments #>(this <#= interfaceImplementation #> mock)<#= this.ClassHelper.GetGenericConstraintOf(info.InterfaceType.GetGenericArguments()) #>
+		{
+<#			
+			if(property.CanWrite && !property.CanRead && !property.DeclaringType.IsPublic)
+			{
+ #>
+			return mock.GetType().Get<# if(isWinRT) { #>Runtime<# } #>Property("<#= property.Name #>");
+<#			}
+			else
+			{
+#>
+			return typeof(<#= interfaceImplementation #>).Get<# if(isWinRT) { #>Runtime<# } #>Property("<#= property.Name #>");
+<#			}
+#>
+		}
+
+<#
+        }
+#>		
+		#endregion
+	}
+	
+	#endregion
+
+<# } #>	
+}
+
+
+<#+ // Helper
+	
+	private IEasyMoqTemplateHelper helper;
+
+	public IEasyMoqTemplateHelper Helper
+	{
+		 get
+         {
+			if(this.helper == null)
+            {
+				var assembly = this.GetTargetAssembly();
+				this.helper = new EasyMoqTemplateHelper(new EasyMoqClassConfigReader(assembly));
+            }
+			return this.helper;
+         }
+		 set
+		 {
+			 this.helper = value;
+         }
+	}	
+
+	private Assembly GetTargetAssembly()
+    {
+		var resolver = new AssemblyResolver();
+		return resolver.GetAssembly(this.AssemblyName, AppDomain.CurrentDomain.GetAssemblies());
+    }
+
+	private string AssemblyName
+    {
+		get
+		{
+			var path = this.Host.ResolveAssemblyReference("$(TargetPath)");
+			return Path.GetFileNameWithoutExtension(path);
+        }
+    }
+
+	private IEasyMoqClassTemplateHelper classHelper;
+
+	private IEasyMoqClassTemplateHelper ClassHelper
+    {
+		get
+		{
+			if(this.classHelper == null)
+            {
+				this.classHelper = new EasyMoqClassTemplateHelper(this.Helper.NameFactory);
+            }
+			return this.classHelper;
+        }
+    }
+
+	private const string WinRTProjectGuids = "{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}";
+
+	private XDocument GetXmlOf(FileInfo file)
+	{
+		var stream = new StreamReader(file.OpenRead());
+        var content = stream.ReadToEnd();
+        return XDocument.Parse(content);
+	}
+
+	private bool IsWinRTProject()
+	{
+		var dir = Host.ResolveAssemblyReference("$(ProjectDir)");
+		var file = new FileInfo(Directory.GetFiles(dir, "*.csproj").Single());
+		var xml = this.GetXmlOf(file);
+		var outputType = xml.Descendants().Single(d => d.Name.LocalName == "ProjectTypeGuids").Value;
+		return outputType == WinRTProjectGuids;
+	}
+
+		#region Common
+
+	private void InsertLines(int lines)
+    {
+		for(int i = 0; i < lines; i++)
+        {
+#><#= Environment.NewLine #><#+ 
+        }
+
+	}
+
+	#region Header
+
+	private void Header()
+	{			
+		this.LiceningNotice();
+		this.AutoGeneratedNotice();
+	}
+
+	private void LiceningNotice()
+    {
+#>//
+// *************************************************************************************
+// WP-Framework
+// 
+// Developed by
+// Lukas Kretschmar (lkretschmar.dev@bluewin.ch)
+//
+// Switzerland, Copyright (c) 2013 lkretschmar
+// This content is released under the MIT License (http://opensource.org/licenses/MIT).
+//     
+// *************************************************************************************
+//
+//
+<#+ 
+    }
+
+	private void AutoGeneratedNotice()
+    {
+#>
+// ***********************************************************************************************************************************
+// NOTICE!!
+// This content is auto-generated. Any changes will be overriden the next time the template is changed or the custom-tool is executed.
+// Generated at: <#= DateTime.Now.ToShortDateString() #> <#= DateTime.Now.ToShortTimeString() #>
+//
+// ***********************************************************************************************************************************
+<#+ 
+    }
+
+	#endregion
+
+	#region Namespaces
+
+	private void CommonNamespaces()
+    {
+#>
+using System;
+using System.Reflection;
+using KretschIT.WP_Fx.EasyMoq;
+using KretschIT.WP_Fx.EasyMoq.Generator;
+<#+
+    }
+
+	private void WriteNamespaces(IEnumerable<string> namespaces)
+    {
+		foreach(var n in namespaces)
+        {
+#>
+using <#= n #>;
+<#+
+        }
+    }
+
+	#endregion
+
+	#endregion
+
+	#region Factory
+
+	private void FactoryNamespaces()
+    {
+		this.WriteNamespaces(this.Helper.FactoryUsingNamespaces);
+    }
+
+	#endregion
+
+	#region Mockables
+
+	private void MockableNamespaces()
+    {
+		this.WriteNamespaces(this.Helper.MockablesUsingNamespaces);
+    }
+
+	#endregion
+#>

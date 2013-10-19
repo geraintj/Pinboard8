@@ -8,3 +8,5 @@ D:\Geraint\Documents\GitHub\Pinboard8\PinboardDomain\bin\Debug\PinboardDomain.pd
 D:\Geraint\Documents\GitHub\Pinboard8\PinboardDomain\obj\Debug\PinboardDomain.csprojResolveAssemblyReference.cache
 D:\Geraint\Documents\GitHub\Pinboard8\PinboardDomain\obj\Debug\PinboardDomain.dll
 D:\Geraint\Documents\GitHub\Pinboard8\PinboardDomain\obj\Debug\PinboardDomain.pdb
+C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardDomain\bin\Debug\Ninject.Common.dll
+C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardDomain\bin\Debug\Ninject.Common.xml

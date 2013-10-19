@@ -109,6 +109,18 @@
     <SDKReference Include="TestPlatform, Version=11.0" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EasyMoq.cs">
+      <DependentUpon>EasyMoq.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="EasyMoq.Extensions.cs">
+      <DependentUpon>EasyMoq.Extensions.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="EasyMoqGeneratorImpl.cs" />
+    <Compile Include="PinboardApiMockGenerator.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -116,10 +128,20 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="EasyMoq.Extensions.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EasyMoq.Extensions.cs</LastGenOutput>
+    </None>
+    <None Include="EasyMoq.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EasyMoq.cs</LastGenOutput>
+    </None>
     <None Include="packages.config" />
     <None Include="Pinboard8.Tests_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="EasyMoq_License.txt" />
+    <Content Include="EasyMoq_ReadMe.txt" />
     <Content Include="Images\UnitTestLogo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -134,11 +156,23 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Ninject.Common">
-      <HintPath>..\packages\Portable.Ninject.3.0.7\lib\netcore45\Ninject.Common.dll</HintPath>
+    <ProjectReference Include="..\PinboardDomain\PinboardDomain.csproj">
+      <Project>{99375e2a-b094-431c-81d8-4f3be4acedee}</Project>
+      <Name>PinboardDomain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="WP-Fx.Core">
+      <HintPath>..\packages\WP-Fx.EasyMoq.1.1.1\lib\WP-Fx.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Ninject.WinRT">
-      <HintPath>..\packages\Portable.Ninject.3.0.7\lib\netcore45\Ninject.WinRT.dll</HintPath>
+    <Reference Include="WP-Fx.EasyMoq">
+      <HintPath>..\packages\WP-Fx.EasyMoq.1.1.1\lib\WP-Fx.EasyMoq.dll</HintPath>
+    </Reference>
+    <Reference Include="WP-Fx.EasyMoq.Generator">
+      <HintPath>..\packages\WP-Fx.EasyMoq.1.1.1\lib\WP-Fx.EasyMoq.Generator.dll</HintPath>
     </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">

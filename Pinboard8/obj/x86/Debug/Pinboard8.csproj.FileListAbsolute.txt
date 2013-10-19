@@ -35,3 +35,4 @@ D:\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\resources.resfiles
 D:\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\pri.resfiles
 D:\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\LanguageQualifiers.txt
 D:\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Pinboard8.csprojResolveAssemblyReference.cache
