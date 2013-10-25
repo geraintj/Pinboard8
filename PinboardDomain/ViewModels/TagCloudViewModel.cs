@@ -11,24 +11,19 @@ namespace PinboardDomain.ViewModels
 {
     public class TagCloudViewModel
     {
-        private ObservableCollection<Tag> _tags;
         private IPinboardApiWrapper _api;
 
         public TagCloudViewModel(IPinboardApiWrapper api)
         {
             _api = api;
-            _tags = WaitForGetTags();
+            Initialise(null);
         }
 
-        public ObservableCollection<Tag> Tags
-        {
-            get { return _tags; }
-            set { _tags = value; }
-        }
+        public ObservableCollection<ITag> Tags { get; set; }
 
-        async Task WaitForGetTags()
+        public async void Initialise(object parameter)
         {
-           await _api.GetTagsAsync();
+            this.Tags = await _api.GetTagsAsync();
         }
     }
 }

@@ -56,13 +56,10 @@ C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\MainPage.xam
 C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Pinboard8.exe
 C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Pinboard8.pdb
 C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Pinboard8.csproj.GenerateResource.Cache
-C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\priconfig.xml.intermediate
-C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\layout.resfiles.intermediate
-C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\resources.resfiles.intermediate
-C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\pri.resfiles.intermediate
 C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\priconfig.xml
 C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\layout.resfiles
 C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\resources.resfiles
 C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\pri.resfiles
 C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\LanguageQualifiers.txt
 C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Pinboard8.csprojResolveAssemblyReference.cache

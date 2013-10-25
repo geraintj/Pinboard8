@@ -14,7 +14,7 @@ namespace PinboardDomain.Repository
         void AddBookmark(Bookmark newBookmark);
         void DeleteBookmark(string url);
 
-        Task<ObservableCollection<Tag>> GetTagsAsync();
+        Task<ObservableCollection<ITag>> GetTagsAsync();
         void RenameTag(string newTag, string oldTag);
         void DeleteTag(string tag);
     }

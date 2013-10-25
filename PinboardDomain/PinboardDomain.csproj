@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Model\ITag.cs" />
     <Compile Include="Repository\IPinboardApiWrapper.cs" />
     <Compile Include="Model\Bookmark.cs" />
     <Compile Include="Model\Tag.cs" />

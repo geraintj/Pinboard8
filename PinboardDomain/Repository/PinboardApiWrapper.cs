@@ -90,11 +90,11 @@ namespace PinboardDomain.Repository
             throw new NotImplementedException();
         }
 
-        public async Task<ObservableCollection<Tag>> GetTagsAsync()
+        public async Task<ObservableCollection<ITag>> GetTagsAsync()
         {
             var responseString = await MakeGetCall("tags/get");
 
-            var tags = new ObservableCollection<Tag>();
+            var tags = new ObservableCollection<ITag>();
             var xdoc = XDocument.Parse(responseString);
             foreach (var xElement in xdoc.Root.Elements("tag"))
             {
