@@ -13,7 +13,7 @@ namespace Pinboard8.Tests
     {
         public async Task<DateTime> GetTimeOfLatestUpdateAsync()
         {
-            return await GetNow();
+            return await GetMiddayYesterday();
         }
 
         public async Task<ObservableCollection<Bookmark>> GetAllBookmarksAsync()
@@ -52,12 +52,12 @@ namespace Pinboard8.Tests
         }
 
         // TASK<T> EXAMPLE
-        async Task<DateTime> GetNow()
+        async Task<DateTime> GetMiddayYesterday()
         {
             // The body of the method is expected to contain an awaited asynchronous 
             // call. 
             // Task.FromResult is a placeholder for actual work that returns a string. 
-            var now = await Task.FromResult<DateTime>(DateTime.Now);
+            var now = await Task.FromResult<DateTime>(new DateTime(DateTime.Now.AddDays(-1).Year, DateTime.Now.AddDays(-1).Month, DateTime.Now.AddDays(-1).Day, 12, 0, 0));
             
             return now;
         }

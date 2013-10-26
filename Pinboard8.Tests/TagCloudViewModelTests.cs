@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
+﻿using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using PinboardDomain.Repository;
+using PinboardDomain.ViewModels;
 
 namespace Pinboard8.Tests
 {
@@ -15,12 +12,8 @@ namespace Pinboard8.Tests
         [TestInitialize]
         public void Initialize()
         {
-            _repoStub = new PinboardApiWrapper();
+            _repoStub = new MockPinboardApiWrapper();
         }
-
-        [TestMethod]
-        public void TestMethod1()
-        {
-        }
+        
     }
 }
