@@ -25,3 +25,7 @@ C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Release\resources.
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Release\pri.resfiles
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Release\LanguageQualifiers.txt
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Release\ProjectArchitectures.txt
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Release\PinboardDomain.dll
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Release\PinboardDomain.pdb
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Release\Pinboard8.csprojResolveAssemblyReference.cache
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Release\Pinboard8.csproj.GenerateResource.Cache

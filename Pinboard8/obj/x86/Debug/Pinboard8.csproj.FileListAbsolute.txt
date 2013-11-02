@@ -1,13 +1,3 @@
-C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\App.g.i.cs
-C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\App.g.cs
-C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Common\StandardStyles.g.i.cs
-C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Common\StandardStyles.g.cs
-C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\MainPage.g.i.cs
-C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\MainPage.g.cs
-C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\XamlTypeInfo.g.cs
-C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\App.xaml
-C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Common\StandardStyles.xaml
-C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\MainPage.xaml
 D:\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\Pinboard8.exe
 D:\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\Pinboard8.pdb
 D:\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\resources.pri
@@ -35,7 +25,6 @@ D:\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\resources.resfiles
 D:\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\pri.resfiles
 D:\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\LanguageQualifiers.txt
 D:\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\ProjectArchitectures.txt
-C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Pinboard8.csprojResolveAssemblyReference.cache
 C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\Pinboard8.exe
 C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\Pinboard8.pdb
 C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\resources.pri
@@ -63,3 +52,14 @@ C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\pri.resfiles
 C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\LanguageQualifiers.txt
 C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Pinboard8.csprojResolveAssemblyReference.cache
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Pinboard8.csprojResolveAssemblyReference.cache
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\App.g.i.cs
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\App.g.cs
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Common\StandardStyles.g.i.cs
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Common\StandardStyles.g.cs
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\MainPage.g.i.cs
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\MainPage.g.cs
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\XamlTypeInfo.g.cs
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\App.xaml
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Common\StandardStyles.xaml
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\MainPage.xaml

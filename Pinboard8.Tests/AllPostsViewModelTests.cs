@@ -22,14 +22,14 @@ namespace Pinboard8.Tests
 
         
         [TestMethod]
-        public void GetLatestDateTest()
+        public async Task  GetLatestDateTest()
         {
             var viewModel = new AllPostsViewModel(_repoStub);
 
             var middayYesterday = new DateTime(DateTime.Now.AddDays(-1).Year, DateTime.Now.AddDays(-1).Month,
                                                DateTime.Now.AddDays(-1).Day, 12, 0, 0);
 
-            Assert.AreEqual(middayYesterday.Day, viewModel.GetLastUpdate());
+            Assert.AreEqual(middayYesterday, await viewModel.GetLastUpdate());
         }
     }
 }
