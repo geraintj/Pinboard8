@@ -14,6 +14,13 @@ namespace Pinboard8.Tests
         {
             _repoStub = new MockPinboardApiWrapper();
         }
+
+        [TestMethod]
+        public void TagsCollectionTest()
+        {
+            var viewModel = new TagCloudViewModel(_repoStub);
+            Assert.AreEqual(4, viewModel.Tags.Count);
+        }
         
     }
 }

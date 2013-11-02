@@ -36,9 +36,9 @@ namespace Pinboard8.Tests
             throw new NotImplementedException();
         }
 
-        public Task<ObservableCollection<ITag>> GetTagsAsync()
+        public async Task<ObservableCollection<ITag>> GetTagsAsync()
         {
-            throw new NotImplementedException();
+            return new ObservableCollection<ITag>(await GetTags());
         }
 
         public void RenameTag(string newTag, string oldTag)
@@ -60,6 +60,19 @@ namespace Pinboard8.Tests
             var now = await Task.FromResult<DateTime>(new DateTime(DateTime.Now.AddDays(-1).Year, DateTime.Now.AddDays(-1).Month, DateTime.Now.AddDays(-1).Day, 12, 0, 0));
             
             return now;
+        }
+
+        private async Task<List<Tag>> GetTags()
+        {
+            var tags = await Task.FromResult<List<Tag>>(new List<Tag>()
+                {
+                    new Tag() {Name = "Tag1", Count = 1},
+                    new Tag() {Name = "Tag2", Count = 2},
+                    new Tag() {Name = "Tag3", Count = 3},
+                    new Tag() {Name = "Tag4", Count = 4}
+                });
+
+            return tags;
         }
     }
 }
