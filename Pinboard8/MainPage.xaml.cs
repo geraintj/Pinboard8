@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
+using PinboardDomain.Model;
+using PinboardDomain.Repository;
+using PinboardDomain.ViewModels;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -33,6 +37,10 @@ namespace Pinboard8
         /// property is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            var api = new PinboardApiWrapper();
+            this.DataContext = new TagCloudViewModel(api);
         }
+
+        
     }
 }

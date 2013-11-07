@@ -16,6 +16,7 @@ namespace PinboardDomain.ViewModels
         public TagCloudViewModel(IPinboardApiWrapper api)
         {
             _api = api;
+            this.Tags = new ObservableCollection<ITag>();
             Initialise(null);
         }
 
@@ -23,7 +24,11 @@ namespace PinboardDomain.ViewModels
 
         public async void Initialise(object parameter)
         {
-            this.Tags = await _api.GetTagsAsync();
+            var tags = await _api.GetTagsAsync();
+            foreach (var tag in tags)
+            {
+                this.Tags.Add(tag);
+            }
         }
     }
 }

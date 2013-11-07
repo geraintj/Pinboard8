@@ -9,6 +9,15 @@
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
 
+        <ListBox x:Name="Tags" ItemsSource="{Binding Tags}"
+                 HorizontalAlignment="Left" Height="654" Margin="55,52,0,0" VerticalAlignment="Top" Width="269">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}"></TextBlock>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
     </Grid>
 </Page>
 
