@@ -41,9 +41,9 @@ namespace Pinboard8.Tests
             throw new NotImplementedException();
         }
 
-        public async Task<ObservableCollection<Bookmark>> GetRecentBookmarks()
+        public async Task<ObservableCollection<IBookmark>> GetRecentBookmarks()
         {
-            return new ObservableCollection<ITag>(await GetBookmarks());
+            return new ObservableCollection<IBookmark>(await GetBookmarks());
         }
 
         public void AddBookmark(Bookmark newBookmark)

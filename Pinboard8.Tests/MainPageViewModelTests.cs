@@ -7,10 +7,11 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using PinboardDomain.Repository;
 using PinboardDomain.ViewModels;
 
+
 namespace Pinboard8.Tests
 {
     [TestClass]
-    public class AllPostsViewModelTests
+    public class MainPageViewModelTests
     {
         private IPinboardApiWrapper _repoStub;
 
@@ -20,17 +21,18 @@ namespace Pinboard8.Tests
             _repoStub = new MockPinboardApiWrapper();
         }
 
-        
         [TestMethod]
-        public async Task  GetLatestDateTest()
+        public void TagsCollectionTest()
         {
-            var viewModel = new AllPostsViewModel(_repoStub);
-
-            var middayYesterday = new DateTime(DateTime.Now.AddDays(-1).Year, DateTime.Now.AddDays(-1).Month,
-                                               DateTime.Now.AddDays(-1).Day, 12, 0, 0);
-
-            Assert.AreEqual(middayYesterday, await viewModel.GetLastUpdate());
+            var viewModel = new MainPageViewModel(_repoStub);
+            Assert.AreEqual(4, viewModel.Tags.Count);
         }
-        
+
+        [TestMethod]
+        public void RecentBookmarkCollectionTest()
+        {
+            var viewModel= new MainPageViewModel(_repoStub);
+            Assert.AreEqual(3, viewModel.RecentBookmarks.Count);
+        }
     }
 }

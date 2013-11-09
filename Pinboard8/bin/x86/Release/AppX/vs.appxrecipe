@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>RHWYDWAITHDEVVM</Machine>
-    <WindowsUser>devuser</WindowsUser>
+    <Machine>HEIMDALL</Machine>
+    <WindowsUser>Geraint</WindowsUser>
     <SolutionConfiguration>Release|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <RegisteredManifestChecksum>B9091EE6B7858E7A4B343E37BF689641ED52B200E85AE4A2158D36F5C00AB5F8</RegisteredManifestChecksum>
@@ -13,64 +13,64 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Release\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Release\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-11-02T13:34:49.320</Modified>
+      <Modified>2013-11-02T12:42:54.332</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Release\Pinboard8.exe">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Release\Pinboard8.exe">
       <PackagePath>Pinboard8.exe</PackagePath>
-      <Modified>2013-11-07T20:19:55.760</Modified>
+      <Modified>2013-11-09T13:37:43.582</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Release\Pinboard8.pdb">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Release\Pinboard8.pdb">
       <PackagePath>Pinboard8.pdb</PackagePath>
-      <Modified>2013-11-07T20:19:55.748</Modified>
+      <Modified>2013-11-09T13:37:43.568</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardDomain\bin\Release\PinboardDomain.dll">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardDomain\bin\Release\PinboardDomain.dll">
       <PackagePath>PinboardDomain.dll</PackagePath>
-      <Modified>2013-11-07T19:37:34.251</Modified>
+      <Modified>2013-11-09T13:20:28.279</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardDomain\bin\Release\PinboardDomain.pdb">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardDomain\bin\Release\PinboardDomain.pdb">
       <PackagePath>PinboardDomain.pdb</PackagePath>
-      <Modified>2013-11-07T19:37:34.238</Modified>
+      <Modified>2013-11-09T13:20:28.229</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\Assets\Logo.png">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-03-15T20:42:52.000</Modified>
+      <Modified>2012-03-15T19:42:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\Assets\SmallLogo.png">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\Assets\SmallLogo.png">
       <PackagePath>Assets\SmallLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-03-15T20:42:52.000</Modified>
+      <Modified>2012-03-15T19:42:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\Assets\SplashScreen.png">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\Assets\SplashScreen.png">
       <PackagePath>Assets\SplashScreen.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-03-15T20:42:52.000</Modified>
+      <Modified>2012-03-15T19:42:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2012-03-15T20:42:52.000</Modified>
+      <Modified>2012-03-15T19:42:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Release\App.xaml">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Release\App.xaml">
       <PackagePath>App.xaml</PackagePath>
-      <Modified>2013-06-08T15:44:23.171</Modified>
+      <Modified>2013-07-07T06:44:51.568</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Release\Common\StandardStyles.xaml">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Release\Common\StandardStyles.xaml">
       <PackagePath>Common\StandardStyles.xaml</PackagePath>
-      <Modified>2012-06-26T16:19:20.000</Modified>
+      <Modified>2012-06-26T15:19:20.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Release\MainPage.xaml">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Release\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>
-      <Modified>2013-11-07T20:19:53.810</Modified>
+      <Modified>2013-11-09T13:37:26.211</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Release\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Release\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2013-11-07T12:47:22.344</Modified>
+      <Modified>2013-07-07T06:51:13.601</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

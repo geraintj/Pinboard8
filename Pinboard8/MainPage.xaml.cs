@@ -38,7 +38,7 @@ namespace Pinboard8
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             var api = new PinboardApiWrapper();
-            this.DataContext = new TagCloudViewModel(api);
+            this.DataContext = new MainPageViewModel(api);
         }
 
         

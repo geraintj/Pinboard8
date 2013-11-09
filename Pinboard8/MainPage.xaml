@@ -17,6 +17,14 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+        <ListBox x:Name="RecentBookmarks" ItemsSource="{Binding RecentBookmarks}" 
+                 HorizontalAlignment="Left" Height="654" Margin="421,52,0,0" VerticalAlignment="Top" Width="615">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Title}"></TextBlock>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
 
     </Grid>
 </Page>

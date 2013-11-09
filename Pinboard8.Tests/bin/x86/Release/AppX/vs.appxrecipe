@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>RHWYDWAITHDEVVM</Machine>
-    <WindowsUser>devuser</WindowsUser>
+    <Machine>HEIMDALL</Machine>
+    <WindowsUser>Geraint</WindowsUser>
     <SolutionConfiguration>Release|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
-    <RegisteredManifestChecksum>CF3671CCC22E025923560A20FA67AD1D6368B76E8A628EF205B9893C9B503349</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>D6595859DFA9BCC9A85C975BD18B174AEA003694749231849678A68D7019439F</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>1461ad87-a03b-4e20-8713-d53841f9f8fe_1.0.0.0_x86__k25vcbkxjekvr</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>1461ad87-a03b-4e20-8713-d53841f9f8fe_k25vcbkxjekvr!vstest.executionengine.App</RegisteredUserModeAppID>
     <RegisteredPackageID>1461ad87-a03b-4e20-8713-d53841f9f8fe</RegisteredPackageID>
@@ -13,88 +13,88 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\bin\x86\Release\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8.Tests\bin\x86\Release\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-11-02T13:41:41.995</Modified>
+      <Modified>2013-11-09T13:20:29.618</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\bin\x86\Release\Pinboard8.Tests.dll">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8.Tests\bin\x86\Release\Pinboard8.Tests.dll">
       <PackagePath>Pinboard8.Tests.dll</PackagePath>
-      <Modified>2013-11-07T12:44:10.358</Modified>
+      <Modified>2013-11-09T13:23:04.199</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\bin\x86\Release\Pinboard8.Tests.pdb">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8.Tests\bin\x86\Release\Pinboard8.Tests.pdb">
       <PackagePath>Pinboard8.Tests.pdb</PackagePath>
-      <Modified>2013-11-07T12:44:10.346</Modified>
+      <Modified>2013-11-09T13:23:04.185</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\MSTestFramework\11.0\References\CommonConfiguration\neutral\Microsoft.VisualStudio.TestPlatform.UnitTestFramework.AppContainer.dll">
       <PackagePath>Microsoft.VisualStudio.TestPlatform.UnitTestFramework.AppContainer.dll</PackagePath>
-      <Modified>2013-03-15T00:05:56.000</Modified>
+      <Modified>2013-03-14T23:05:56.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\MSTestFramework\11.0\References\CommonConfiguration\neutral\Microsoft.VisualStudio.TestPlatform.UnitTestFramework.dll">
       <PackagePath>Microsoft.VisualStudio.TestPlatform.UnitTestFramework.dll</PackagePath>
-      <Modified>2013-03-15T00:05:56.000</Modified>
+      <Modified>2013-03-14T23:05:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardDomain\bin\Release\PinboardDomain.dll">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardDomain\bin\Release\PinboardDomain.dll">
       <PackagePath>PinboardDomain.dll</PackagePath>
-      <Modified>2013-11-07T12:44:09.025</Modified>
+      <Modified>2013-11-09T13:20:28.279</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardDomain\bin\Release\PinboardDomain.pdb">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardDomain\bin\Release\PinboardDomain.pdb">
       <PackagePath>PinboardDomain.pdb</PackagePath>
-      <Modified>2013-11-07T12:44:08.997</Modified>
+      <Modified>2013-11-09T13:20:28.229</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\TestPlatform\11.0\Redist\CommonConfiguration\neutral\Microsoft.VisualStudio.TestPlatform.Core.dll">
       <PackagePath>Microsoft.VisualStudio.TestPlatform.Core.dll</PackagePath>
-      <Modified>2013-03-15T00:05:56.000</Modified>
+      <Modified>2013-03-14T23:05:56.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\MSTestFramework\11.0\Redist\CommonConfiguration\neutral\Microsoft.VisualStudio.TestPlatform.Extensions.MSAppContainerAdapter.dll">
       <PackagePath>Microsoft.VisualStudio.TestPlatform.Extensions.MSAppContainerAdapter.dll</PackagePath>
-      <Modified>2013-03-15T00:05:56.000</Modified>
+      <Modified>2013-03-14T23:05:56.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\TestPlatform\11.0\Redist\CommonConfiguration\neutral\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll">
       <PackagePath>Microsoft.VisualStudio.TestPlatform.ObjectModel.dll</PackagePath>
-      <Modified>2013-03-15T00:05:56.000</Modified>
+      <Modified>2013-03-14T23:05:56.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\TestPlatform\11.0\Redist\CommonConfiguration\neutral\Microsoft.VisualStudio.TestPlatform.TestExecutor.Core.dll">
       <PackagePath>Microsoft.VisualStudio.TestPlatform.TestExecutor.Core.dll</PackagePath>
-      <Modified>2013-03-15T00:05:56.000</Modified>
+      <Modified>2013-03-14T23:05:56.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\TestPlatform\11.0\Redist\CommonConfiguration\neutral\Microsoft.VisualStudio.TestPlatform.Utilities.dll">
       <PackagePath>Microsoft.VisualStudio.TestPlatform.Utilities.dll</PackagePath>
-      <Modified>2013-06-09T19:53:16.000</Modified>
+      <Modified>2013-06-09T18:53:16.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\TestPlatform\11.0\Redist\CommonConfiguration\neutral\vstest.executionengine.appcontainer.exe">
       <PackagePath>vstest.executionengine.appcontainer.exe</PackagePath>
-      <Modified>2013-03-15T00:05:56.000</Modified>
+      <Modified>2013-03-14T23:05:56.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\TestPlatform\11.0\Redist\CommonConfiguration\neutral\vstest.executionengine.appcontainer.x86.exe">
       <PackagePath>vstest.executionengine.appcontainer.x86.exe</PackagePath>
-      <Modified>2013-03-15T00:05:56.000</Modified>
+      <Modified>2013-03-14T23:05:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\Images\UnitTestLogo.png">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8.Tests\Images\UnitTestLogo.png">
       <PackagePath>Images\UnitTestLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-10-20T16:56:44.365</Modified>
+      <Modified>2013-09-14T10:15:08.304</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\Images\UnitTestSmallLogo.png">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8.Tests\Images\UnitTestSmallLogo.png">
       <PackagePath>Images\UnitTestSmallLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-10-20T16:56:44.366</Modified>
+      <Modified>2013-09-14T10:15:08.304</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\Images\UnitTestSplashScreen.png">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8.Tests\Images\UnitTestSplashScreen.png">
       <PackagePath>Images\UnitTestSplashScreen.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-10-20T16:56:44.368</Modified>
+      <Modified>2013-09-14T10:15:08.305</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\Images\UnitTestStoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8.Tests\Images\UnitTestStoreLogo.png">
       <PackagePath>Images\UnitTestStoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-10-20T16:56:44.368</Modified>
+      <Modified>2013-09-14T10:15:08.306</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\bin\x86\Release\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8.Tests\bin\x86\Release\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2013-11-02T13:41:40.744</Modified>
+      <Modified>2013-11-09T13:20:29.255</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

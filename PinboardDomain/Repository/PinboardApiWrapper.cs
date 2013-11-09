@@ -80,11 +80,11 @@ namespace PinboardDomain.Repository
             return bookmarks;
         }
 
-        public async Task<ObservableCollection<Bookmark>> GetRecentBookmarks()
+        public async Task<ObservableCollection<IBookmark>> GetRecentBookmarks()
         {
             var responseString = await MakeGetCall("posts/recent", "&count=20");
 
-            var bookmarks = new ObservableCollection<Bookmark>();
+            var bookmarks = new ObservableCollection<IBookmark>();
             var xdoc = XDocument.Parse(responseString);
             foreach (var xElement in xdoc.Root.Elements("post"))
             {

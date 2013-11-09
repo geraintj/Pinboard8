@@ -110,6 +110,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AllPostsViewModelTests.cs" />
+    <Compile Include="MainPageViewModelTests.cs" />
     <Compile Include="MockPinboardApiWrapper.cs" />
     <Compile Include="TagCloudViewModelTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
