@@ -11,6 +11,8 @@ namespace PinboardDomain.Repository
 
         Task<ObservableCollection<Bookmark>> GetAllBookmarksAsync();
         Task<ObservableCollection<Bookmark>> GetBookmarksSinceAsync(DateTime date);
+        Task<ObservableCollection<Bookmark>> GetRecentBookmarks();
+
         void AddBookmark(Bookmark newBookmark);
         void DeleteBookmark(string url);
 

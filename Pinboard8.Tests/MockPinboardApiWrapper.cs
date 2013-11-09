@@ -11,6 +11,21 @@ namespace Pinboard8.Tests
 {
     public class MockPinboardApiWrapper : IPinboardApiWrapper
     {
+        private List<Tag> _tags = new List<Tag>()
+            {
+                new Tag() {Name = "Tag1", Count = 1},
+                new Tag() {Name = "Tag2", Count = 2},
+                new Tag() {Name = "Tag3", Count = 3},
+                new Tag() {Name = "Tag4", Count = 4}
+            };
+
+        private List<Bookmark> _bookmarks = new List<Bookmark>()
+            {
+                new Bookmark() { Title = "A bookmark, yesterday", Time = DateTime.Now.AddDays(-1).ToString()},
+                new Bookmark() { Title = "B bookmark, the day before", Time = DateTime.Now.AddDays(-2).ToString()},
+                new Bookmark() { Title = "C bookmark, last week", Time = DateTime.Now.AddDays(-7).ToString()}
+            };
+
         public async Task<DateTime> GetTimeOfLatestUpdateAsync()
         {
             return await GetMiddayYesterday();
@@ -24,6 +39,11 @@ namespace Pinboard8.Tests
         public Task<ObservableCollection<Bookmark>> GetBookmarksSinceAsync(DateTime date)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<ObservableCollection<Bookmark>> GetRecentBookmarks()
+        {
+            return new ObservableCollection<ITag>(await GetBookmarks());
         }
 
         public void AddBookmark(Bookmark newBookmark)
@@ -64,15 +84,14 @@ namespace Pinboard8.Tests
 
         private async Task<List<Tag>> GetTags()
         {
-            var tags = await Task.FromResult<List<Tag>>(new List<Tag>()
-                {
-                    new Tag() {Name = "Tag1", Count = 1},
-                    new Tag() {Name = "Tag2", Count = 2},
-                    new Tag() {Name = "Tag3", Count = 3},
-                    new Tag() {Name = "Tag4", Count = 4}
-                });
-
+            var tags = await Task.FromResult<List<Tag>>(_tags);
             return tags;
+        }
+
+        private async Task<List<Bookmark>> GetBookmarks()
+        {
+            var bookmarks = await Task.FromResult(_bookmarks);
+            return bookmarks;
         }
     }
 }

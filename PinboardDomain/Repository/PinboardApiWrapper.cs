@@ -80,6 +80,32 @@ namespace PinboardDomain.Repository
             return bookmarks;
         }
 
+        public async Task<ObservableCollection<Bookmark>> GetRecentBookmarks()
+        {
+            var responseString = await MakeGetCall("posts/recent", "&count=20");
+
+            var bookmarks = new ObservableCollection<Bookmark>();
+            var xdoc = XDocument.Parse(responseString);
+            foreach (var xElement in xdoc.Root.Elements("post"))
+            {
+                bookmarks.Add(new Bookmark()
+                {
+                    Url = xElement.Attribute("href").Value,
+                    Title = xElement.Attribute("description").Value,
+                    Time = xElement.Attribute("time").Value,
+                    Tags =
+                        new List<Tag>()
+                                {
+                                    xElement.Attribute("tag")
+                                            .Value.Split(new char[] {' '})
+                                            .Select(s => new Tag() {Name = s})
+                                            .FirstOrDefault()
+                                }
+                });
+            }
+            return bookmarks;
+        }
+
         public void AddBookmark(Bookmark newBookmark)
         {
             throw new NotImplementedException();
