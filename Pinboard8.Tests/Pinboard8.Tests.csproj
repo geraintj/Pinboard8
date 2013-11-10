@@ -110,6 +110,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AllPostsViewModelTests.cs" />
+    <Compile Include="ConverterTests.cs" />
     <Compile Include="MainPageViewModelTests.cs" />
     <Compile Include="MockPinboardApiWrapper.cs" />
     <Compile Include="TagCloudViewModelTests.cs" />
@@ -136,6 +137,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Pinboard8\Pinboard8.csproj">
+      <Project>{9e7fba1e-0022-4986-9c12-d994b4f4e0d2}</Project>
+      <Name>Pinboard8</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PinboardDomain\PinboardDomain.csproj">
       <Project>{99375e2a-b094-431c-81d8-4f3be4acedee}</Project>
       <Name>PinboardDomain</Name>

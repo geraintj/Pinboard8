@@ -112,7 +112,9 @@ namespace Pinboard8.Pinboard8_XamlTypeInfo
             }
         }
 
-        private object Activate_0_MainPage() { return new global::Pinboard8.MainPage(); }
+        private object Activate_0_DateElapsedTimeConverter() { return new global::Pinboard8.Converters.DateElapsedTimeConverter(); }
+
+        private object Activate_1_MainPage() { return new global::Pinboard8.MainPage(); }
 
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(string typeName)
@@ -122,6 +124,10 @@ namespace Pinboard8.Pinboard8_XamlTypeInfo
 
             switch (typeName)
             {
+            case "Object":
+                xamlType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlSystemBaseType(typeName, typeof(global::System.Object));
+                break;
+
             case "Windows.UI.Xaml.Controls.Page":
                 xamlType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlSystemBaseType(typeName, typeof(global::Windows.UI.Xaml.Controls.Page));
                 break;
@@ -130,9 +136,15 @@ namespace Pinboard8.Pinboard8_XamlTypeInfo
                 xamlType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlSystemBaseType(typeName, typeof(global::Windows.UI.Xaml.Controls.UserControl));
                 break;
 
+            case "Pinboard8.Converters.DateElapsedTimeConverter":
+                userType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Pinboard8.Converters.DateElapsedTimeConverter), GetXamlTypeByName("Object"));
+                userType.Activator = Activate_0_DateElapsedTimeConverter;
+                xamlType = userType;
+                break;
+
             case "Pinboard8.MainPage":
                 userType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Pinboard8.MainPage), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_MainPage;
+                userType.Activator = Activate_1_MainPage;
                 xamlType = userType;
                 break;
 
