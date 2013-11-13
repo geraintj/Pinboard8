@@ -112,9 +112,11 @@ namespace Pinboard8.Pinboard8_XamlTypeInfo
             }
         }
 
-        private object Activate_0_DateElapsedTimeConverter() { return new global::Pinboard8.Converters.DateElapsedTimeConverter(); }
+        private object Activate_0_BookmarkListItem() { return new global::Pinboard8.Common.BookmarkListItem(); }
 
-        private object Activate_1_MainPage() { return new global::Pinboard8.MainPage(); }
+        private object Activate_1_DateElapsedTimeConverter() { return new global::Pinboard8.Converters.DateElapsedTimeConverter(); }
+
+        private object Activate_2_MainPage() { return new global::Pinboard8.MainPage(); }
 
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(string typeName)
@@ -124,6 +126,10 @@ namespace Pinboard8.Pinboard8_XamlTypeInfo
 
             switch (typeName)
             {
+            case "Windows.UI.Xaml.Controls.UserControl":
+                xamlType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlSystemBaseType(typeName, typeof(global::Windows.UI.Xaml.Controls.UserControl));
+                break;
+
             case "Object":
                 xamlType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlSystemBaseType(typeName, typeof(global::System.Object));
                 break;
@@ -132,19 +138,21 @@ namespace Pinboard8.Pinboard8_XamlTypeInfo
                 xamlType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlSystemBaseType(typeName, typeof(global::Windows.UI.Xaml.Controls.Page));
                 break;
 
-            case "Windows.UI.Xaml.Controls.UserControl":
-                xamlType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlSystemBaseType(typeName, typeof(global::Windows.UI.Xaml.Controls.UserControl));
+            case "Pinboard8.Common.BookmarkListItem":
+                userType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Pinboard8.Common.BookmarkListItem), GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_0_BookmarkListItem;
+                xamlType = userType;
                 break;
 
             case "Pinboard8.Converters.DateElapsedTimeConverter":
                 userType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Pinboard8.Converters.DateElapsedTimeConverter), GetXamlTypeByName("Object"));
-                userType.Activator = Activate_0_DateElapsedTimeConverter;
+                userType.Activator = Activate_1_DateElapsedTimeConverter;
                 xamlType = userType;
                 break;
 
             case "Pinboard8.MainPage":
                 userType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::Pinboard8.MainPage), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_1_MainPage;
+                userType.Activator = Activate_2_MainPage;
                 xamlType = userType;
                 break;
 

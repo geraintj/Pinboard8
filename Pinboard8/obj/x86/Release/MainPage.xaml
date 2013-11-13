@@ -24,21 +24,21 @@
         </ListBox>
         
         <ListBox x:Name="RecentBookmarks" ItemsSource="{Binding RecentBookmarks}" 
-                 HorizontalAlignment="Left" Height="654" Margin="421,52,0,0" VerticalAlignment="Top" Width="615">
+                 HorizontalAlignment="Left" Height="654" Margin="421,52,0,0" VerticalAlignment="Top" Width="850">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Grid HorizontalAlignment="Stretch" >
+                    <Grid HorizontalAlignment="Stretch" Height="80" Width="600">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto" />
-                            <RowDefinition Height="*" />
+                            <RowDefinition Height="40" />
                         </Grid.RowDefinitions>
-                        <TextBlock Grid.Row="0" Text="{Binding Title}" Width="600" TextWrapping="Wrap"></TextBlock>
-                        <Grid Grid.Row="1" HorizontalAlignment="Stretch">
+                        <TextBlock Grid.Row="0" Text="{Binding Title}"  TextWrapping="Wrap"/>
+                        <Grid Grid.Row="1" Width="600">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"></ColumnDefinition>
                                 <ColumnDefinition Width="*"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
-                            <ListBox Grid.Column="0" ItemsSource="{Binding Tags}" Background="Transparent" Height="20" BorderThickness="1">
+                            <ListBox Grid.Column="0" ItemsSource="{Binding Tags}"  Background="Transparent" BorderThickness="1" Margin="0,0,0,10">
                                 <ListBox.ItemsPanel>
                                     <ItemsPanelTemplate>
                                         <StackPanel Orientation="Horizontal"></StackPanel>
@@ -50,7 +50,7 @@
                                     </DataTemplate>
                                 </ListBox.ItemTemplate>
                             </ListBox>
-                            <TextBlock Grid.Column="1" Text="{Binding Time, Converter={StaticResource dataConverter}}" TextAlignment="Right"></TextBlock>
+                            <TextBlock Grid.Column="1" Text="{Binding Time, Converter={StaticResource dataConverter}}" TextAlignment="Right" Margin="0,0,0,10"></TextBlock>
                         </Grid>
                     </Grid>
                 </DataTemplate>

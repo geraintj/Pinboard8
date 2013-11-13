@@ -1,25 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>RHWYDWAITHDEVVM</Machine>
-    <WindowsUser>devuser</WindowsUser>
+    <Machine>HEIMDALL</Machine>
+    <WindowsUser>Geraint</WindowsUser>
     <SolutionConfiguration>Release|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\bin\x86\Release\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8.Tests\bin\x86\Release\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\bin\x86\Release\Pinboard8.Tests.dll">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8.Tests\bin\x86\Release\Pinboard8.Tests.dll">
       <PackagePath>Pinboard8.Tests.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\bin\x86\Release\Pinboard8.Tests.pdb">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8.Tests\bin\x86\Release\Pinboard8.Tests.pdb">
       <PackagePath>Pinboard8.Tests.pdb</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Release\Pinboard8.pdb">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Release\Pinboard8.pdb">
       <PackagePath>Pinboard8.pdb</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\MSTestFramework\11.0\References\CommonConfiguration\neutral\Microsoft.VisualStudio.TestPlatform.UnitTestFramework.AppContainer.dll">
@@ -28,13 +28,13 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\MSTestFramework\11.0\References\CommonConfiguration\neutral\Microsoft.VisualStudio.TestPlatform.UnitTestFramework.dll">
       <PackagePath>Microsoft.VisualStudio.TestPlatform.UnitTestFramework.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardDomain\bin\Release\PinboardDomain.dll">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardDomain\bin\Release\PinboardDomain.dll">
       <PackagePath>PinboardDomain.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Release\Pinboard8.exe">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Release\Pinboard8.exe">
       <PackagePath>Pinboard8.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardDomain\bin\Release\PinboardDomain.pdb">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardDomain\bin\Release\PinboardDomain.pdb">
       <PackagePath>PinboardDomain.pdb</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\TestPlatform\11.0\Redist\CommonConfiguration\neutral\Microsoft.VisualStudio.TestPlatform.Core.dll">
@@ -58,44 +58,47 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\TestPlatform\11.0\Redist\CommonConfiguration\neutral\vstest.executionengine.appcontainer.x86.exe">
       <PackagePath>vstest.executionengine.appcontainer.x86.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\Images\UnitTestLogo.png">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8.Tests\Images\UnitTestLogo.png">
       <PackagePath>Images\UnitTestLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\Images\UnitTestSmallLogo.png">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8.Tests\Images\UnitTestSmallLogo.png">
       <PackagePath>Images\UnitTestSmallLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\Images\UnitTestSplashScreen.png">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8.Tests\Images\UnitTestSplashScreen.png">
       <PackagePath>Images\UnitTestSplashScreen.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\Images\UnitTestStoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8.Tests\Images\UnitTestStoreLogo.png">
       <PackagePath>Images\UnitTestStoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\Assets\Logo.png">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\Assets\SmallLogo.png">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\Assets\SmallLogo.png">
       <PackagePath>Assets\SmallLogo.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\Assets\SplashScreen.png">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\Assets\SplashScreen.png">
       <PackagePath>Assets\SplashScreen.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Release\App.xaml">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Release\App.xaml">
       <PackagePath>App.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Release\Common\StandardStyles.xaml">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Release\Common\BookmarkListItem.xaml">
+      <PackagePath>Common\BookmarkListItem.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Release\Common\StandardStyles.xaml">
       <PackagePath>Common\StandardStyles.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Release\MainPage.xaml">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Release\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\bin\x86\Release\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8.Tests\bin\x86\Release\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
