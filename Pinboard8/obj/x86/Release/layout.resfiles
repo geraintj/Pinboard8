@@ -6,3 +6,5 @@ App.xaml
 Common\BookmarkListItem.xaml
 Common\StandardStyles.xaml
 MainPage.xaml
+Tags.xaml
+Common\ReadMe.txt

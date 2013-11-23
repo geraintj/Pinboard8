@@ -63,3 +63,9 @@ C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Release\ProjectArc
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Release\Common\BookmarkListItem.g.i.cs
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Release\Common\BookmarkListItem.g.cs
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Release\Common\BookmarkListItem.xaml
+C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Release\Common\BookmarkListItem.g.i.cs
+C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Release\Common\BookmarkListItem.g.cs
+C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Release\Common\BookmarkListItem.xaml
+C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Release\Tags.g.i.cs
+C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Release\Tags.g.cs
+C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Release\Tags.xaml

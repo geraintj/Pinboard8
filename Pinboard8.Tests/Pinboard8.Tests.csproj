@@ -115,6 +115,7 @@
     <Compile Include="MockPinboardApiWrapper.cs" />
     <Compile Include="TagCloudViewModelTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TagPostsView ModelTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">

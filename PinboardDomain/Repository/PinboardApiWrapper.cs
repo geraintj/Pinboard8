@@ -27,83 +27,33 @@ namespace PinboardDomain.Repository
 
 
 
-        public async Task<ObservableCollection<Bookmark>> GetAllBookmarksAsync()
+        public async Task<ObservableCollection<IBookmark>> GetAllBookmarksAsync()
         {
             var responseString = await MakeGetCall("posts/all");
 
-            var bookmarks = new ObservableCollection<Bookmark>();
-            var xdoc = XDocument.Parse(responseString);
-            foreach (var xElement in xdoc.Root.Elements("post"))
-            {
-                bookmarks.Add(new Bookmark()
-                    {
-                        Url = xElement.Attribute("href").Value,
-                        Title = xElement.Attribute("description").Value,
-                        Time = xElement.Attribute("time").Value,
-                        Tags =
-                            new List<Tag>()
-                                {
-                                    xElement.Attribute("tag")
-                                            .Value.Split(new char[] {' '})
-                                            .Select(s => new Tag() {Name = s})
-                                            .FirstOrDefault()
-                                }
-                    });
-            }
-            return bookmarks;
+            return ParseBookmarks(responseString);
         }
 
-        public async Task<ObservableCollection<Bookmark>> GetBookmarksSinceAsync(DateTime date)
+        public async Task<ObservableCollection<IBookmark>> GetBookmarksSinceAsync(DateTime date)
         {
             var dateString = String.Format("{0:s}", date);
             var responseString = await MakeGetCall("posts/all", "&fromdt=" + dateString + "Z");
 
-            var bookmarks = new ObservableCollection<Bookmark>();
-            var xdoc = XDocument.Parse(responseString);
-            foreach (var xElement in xdoc.Root.Elements("post"))
-            {
-                bookmarks.Add(new Bookmark()
-                {
-                    Url = xElement.Attribute("href").Value,
-                    Title = xElement.Attribute("description").Value,
-                    Time = xElement.Attribute("time").Value,
-                    Tags =
-                        new List<Tag>()
-                                {
-                                    xElement.Attribute("tag")
-                                            .Value.Split(new char[] {' '})
-                                            .Select(s => new Tag() {Name = s})
-                                            .FirstOrDefault()
-                                }
-                });
-            }
-            return bookmarks;
+            return ParseBookmarks(responseString);
         }
 
         public async Task<ObservableCollection<IBookmark>> GetRecentBookmarks()
         {
             var responseString = await MakeGetCall("posts/recent", "&count=20");
 
-            var bookmarks = new ObservableCollection<IBookmark>();
-            var xdoc = XDocument.Parse(responseString);
-            foreach (var xElement in xdoc.Root.Elements("post"))
-            {
-                bookmarks.Add(new Bookmark()
-                {
-                    Url = xElement.Attribute("href").Value,
-                    Title = xElement.Attribute("description").Value,
-                    Time = xElement.Attribute("time").Value,
-                    Tags =
-                        new List<Tag>()
-                                {
-                                    xElement.Attribute("tag")
-                                            .Value.Split(new char[] {' '})
-                                            .Select(s => new Tag() {Name = s})
-                                            .FirstOrDefault()
-                                }
-                });
-            }
-            return bookmarks;
+            return ParseBookmarks(responseString);
+        }
+
+        public async Task<ObservableCollection<IBookmark>> GetTaggedBookmarks(string tagName)
+        {
+            var responseString = await MakeGetCall("posts/all", "&tag=" + tagName + "Z");
+
+            return ParseBookmarks(responseString);
         }
 
         public void AddBookmark(Bookmark newBookmark)
@@ -139,6 +89,30 @@ namespace PinboardDomain.Repository
             throw new NotImplementedException();
         }
 
+        ObservableCollection<IBookmark> ParseBookmarks(string responseString)
+        {
+            var bookmarks = new ObservableCollection<IBookmark>();
+            var xdoc = XDocument.Parse(responseString);
+            foreach (var xElement in xdoc.Root.Elements("post"))
+            {
+                bookmarks.Add(new Bookmark()
+                {
+                    Url = xElement.Attribute("href").Value,
+                    Title = xElement.Attribute("description").Value,
+                    Time = xElement.Attribute("time").Value,
+                    Tags =
+                        new List<Tag>()
+                                {
+                                    xElement.Attribute("tag")
+                                            .Value.Split(new char[] {' '})
+                                            .Select(s => new Tag() {Name = s})
+                                            .FirstOrDefault()
+                                }
+                });
+            }
+            return bookmarks;
+        }
+            
         async Task<string> MakeGetCall(string urlPart, string queryString =  "")
         {
             var client = new HttpClient();

@@ -108,3 +108,5 @@ C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8.Tests\obj\x86\Debug\resour
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8.Tests\obj\x86\Debug\pri.resfiles
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8.Tests\obj\x86\Debug\LanguageQualifiers.txt
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8.Tests\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\bin\x86\Debug\Pinboard8.exe
+C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\bin\x86\Debug\Pinboard8.pdb
