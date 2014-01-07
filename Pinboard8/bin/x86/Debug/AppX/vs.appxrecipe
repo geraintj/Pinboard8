@@ -16,25 +16,25 @@
     <AppXManifest Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2013-11-15T19:34:49.369</Modified>
+      <Modified>2013-11-17T14:23:02.138</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\Pinboard8.exe">
       <PackagePath>Pinboard8.exe</PackagePath>
-      <Modified>2013-11-15T19:56:02.538</Modified>
+      <Modified>2013-11-23T17:07:44.813</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\Pinboard8.pdb">
       <PackagePath>Pinboard8.pdb</PackagePath>
-      <Modified>2013-11-15T19:56:02.523</Modified>
+      <Modified>2013-11-23T17:07:44.801</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardDomain\bin\Debug\PinboardDomain.dll">
       <PackagePath>PinboardDomain.dll</PackagePath>
-      <Modified>2013-11-15T19:34:46.906</Modified>
+      <Modified>2013-11-23T16:00:32.676</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardDomain\bin\Debug\PinboardDomain.pdb">
       <PackagePath>PinboardDomain.pdb</PackagePath>
-      <Modified>2013-11-15T19:34:46.890</Modified>
+      <Modified>2013-11-23T16:00:32.535</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
@@ -76,13 +76,17 @@
       <PackagePath>MainPage.xaml</PackagePath>
       <Modified>2013-11-15T18:48:56.821</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\TagPosts.xaml">
+      <PackagePath>TagPosts.xaml</PackagePath>
+      <Modified>2013-11-16T13:54:48.155</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\Tags.xaml">
       <PackagePath>Tags.xaml</PackagePath>
-      <Modified>2013-11-15T19:56:00.306</Modified>
+      <Modified>2013-11-23T17:07:42.545</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2013-11-15T19:34:49.213</Modified>
+      <Modified>2013-11-17T14:23:01.047</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

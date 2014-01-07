@@ -22,15 +22,15 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\bin\x86\Debug\Pinboard8.Tests.dll">
       <PackagePath>Pinboard8.Tests.dll</PackagePath>
-      <Modified>2013-11-17T14:58:17.709</Modified>
+      <Modified>2013-11-23T16:00:41.287</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\bin\x86\Debug\Pinboard8.Tests.pdb">
       <PackagePath>Pinboard8.Tests.pdb</PackagePath>
-      <Modified>2013-11-17T14:58:17.697</Modified>
+      <Modified>2013-11-23T16:00:41.272</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\Pinboard8.pdb">
       <PackagePath>Pinboard8.pdb</PackagePath>
-      <Modified>2013-11-17T14:58:16.197</Modified>
+      <Modified>2013-11-23T16:00:37.292</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\MSTestFramework\11.0\References\CommonConfiguration\neutral\Microsoft.VisualStudio.TestPlatform.UnitTestFramework.AppContainer.dll">
       <PackagePath>Microsoft.VisualStudio.TestPlatform.UnitTestFramework.AppContainer.dll</PackagePath>
@@ -42,15 +42,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardDomain\bin\Debug\PinboardDomain.dll">
       <PackagePath>PinboardDomain.dll</PackagePath>
-      <Modified>2013-11-17T14:58:13.886</Modified>
+      <Modified>2013-11-23T16:00:32.676</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\Pinboard8.exe">
       <PackagePath>Pinboard8.exe</PackagePath>
-      <Modified>2013-11-17T14:58:16.211</Modified>
+      <Modified>2013-11-23T16:00:37.308</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardDomain\bin\Debug\PinboardDomain.pdb">
       <PackagePath>PinboardDomain.pdb</PackagePath>
-      <Modified>2013-11-17T14:58:13.856</Modified>
+      <Modified>2013-11-23T16:00:32.535</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\TestPlatform\11.0\Redist\CommonConfiguration\neutral\Microsoft.VisualStudio.TestPlatform.Core.dll">
       <PackagePath>Microsoft.VisualStudio.TestPlatform.Core.dll</PackagePath>

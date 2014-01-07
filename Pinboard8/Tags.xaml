@@ -26,7 +26,7 @@
         </Grid.RowDefinitions>
 
         <!-- Back button and page title -->
-        <Grid>
+        <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
@@ -34,19 +34,24 @@
             <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="My Tags" Style="{StaticResource PageHeaderTextStyle}"/>
         </Grid>
-        <ListView ItemsSource="{Binding Tags}" Height="400">
+        
+
+         <ListView Grid.Row="1" ItemsSource="{Binding Tags}" ScrollViewer.VerticalScrollBarVisibility="Disabled" 
+                   ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollMode="Disabled"
+                   ScrollViewer.HorizontalScrollMode="Auto" ScrollViewer.ZoomMode="Disabled" 
+                   Height="450" MinWidth="900"> 
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <WrapGrid Orientation="Horizontal"></WrapGrid>
+                    <WrapGrid Orientation="Vertical" ></WrapGrid>
                 </ItemsPanelTemplate>
             </ListView.ItemsPanel>
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextBox Text="{Binding Name}"></TextBox>
+                    <TextBox Text="{Binding Name}" Width="150" Height="75"></TextBox>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-       
+        
 
         <VisualStateManager.VisualStateGroups>
 
