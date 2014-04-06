@@ -100,3 +100,15 @@ C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\bin\x86\Release\Pinb
 C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\bin\x86\Release\Pinboard8.pdb
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8.Tests\bin\x86\Release\Pinboard8.exe
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8.Tests\bin\x86\Release\Pinboard8.pdb
+C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\obj\x86\Release\Microsoft.VisualStudio.TestPlatform.UnitTestFramework\priconfig.xml.intermediate
+C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\obj\x86\Release\Microsoft.VisualStudio.TestPlatform.UnitTestFramework\Resources.resfiles.intermediate
+C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\obj\x86\Release\Microsoft.VisualStudio.TestPlatform.Core\priconfig.xml.intermediate
+C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\obj\x86\Release\Microsoft.VisualStudio.TestPlatform.Core\Resources.resfiles.intermediate
+C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\obj\x86\Release\Microsoft.VisualStudio.TestPlatform.Extensions.MSAppContainerAdapter\priconfig.xml.intermediate
+C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\obj\x86\Release\Microsoft.VisualStudio.TestPlatform.Extensions.MSAppContainerAdapter\Resources.resfiles.intermediate
+C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\obj\x86\Release\Microsoft.VisualStudio.TestPlatform.ObjectModel\priconfig.xml.intermediate
+C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\obj\x86\Release\Microsoft.VisualStudio.TestPlatform.ObjectModel\Resources.resfiles.intermediate
+C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\obj\x86\Release\Microsoft.VisualStudio.TestPlatform.TestExecutor.Core\priconfig.xml.intermediate
+C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\obj\x86\Release\Microsoft.VisualStudio.TestPlatform.TestExecutor.Core\Resources.resfiles.intermediate
+C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\obj\x86\Release\Microsoft.VisualStudio.TestPlatform.Utilities\priconfig.xml.intermediate
+C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\obj\x86\Release\Microsoft.VisualStudio.TestPlatform.Utilities\Resources.resfiles.intermediate

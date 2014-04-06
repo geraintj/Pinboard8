@@ -43,6 +43,7 @@
     <Compile Include="ViewModels\AllPostsViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
     <Compile Include="ViewModels\TagCloudViewModel.cs" />
+    <Compile Include="ViewModels\TagPostsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Ninject.Common">

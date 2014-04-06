@@ -21,9 +21,9 @@ namespace Pinboard8.Tests
 
         private List<Bookmark> _bookmarks = new List<Bookmark>()
             {
-                new Bookmark() { Title = "A bookmark, yesterday", Time = DateTime.Now.AddDays(-1).ToString()},
-                new Bookmark() { Title = "B bookmark, the day before", Time = DateTime.Now.AddDays(-2).ToString()},
-                new Bookmark() { Title = "C bookmark, last week", Time = DateTime.Now.AddDays(-7).ToString()}
+                new Bookmark() { Title = "A bookmark, yesterday", Time = DateTime.Now.AddDays(-1).ToString(), Tags = new List<Tag>()},
+                new Bookmark() { Title = "B bookmark, the day before", Time = DateTime.Now.AddDays(-2).ToString(), Tags = new List<Tag>()},
+                new Bookmark() { Title = "C bookmark, last week", Time = DateTime.Now.AddDays(-7).ToString(), Tags = new List<Tag>()}
             };
 
         public async Task<DateTime> GetTimeOfLatestUpdateAsync()
@@ -31,12 +31,12 @@ namespace Pinboard8.Tests
             return await GetMiddayYesterday();
         }
 
-        public async Task<ObservableCollection<Bookmark>> GetAllBookmarksAsync()
+        public Task<ObservableCollection<IBookmark>> GetAllBookmarksAsync()
         {
             throw new NotImplementedException();
         }
 
-        public Task<ObservableCollection<Bookmark>> GetBookmarksSinceAsync(DateTime date)
+        public Task<ObservableCollection<IBookmark>> GetBookmarksSinceAsync(DateTime date)
         {
             throw new NotImplementedException();
         }
@@ -44,6 +44,16 @@ namespace Pinboard8.Tests
         public async Task<ObservableCollection<IBookmark>> GetRecentBookmarks()
         {
             return new ObservableCollection<IBookmark>(await GetBookmarks());
+        }
+
+        public async Task<ObservableCollection<IBookmark>> GetTaggedBookmarks(string tagName)
+        {
+            var bookmarks = await GetBookmarks();
+            foreach (var bookmark in bookmarks)
+            {
+                bookmark.Tags.Add(new Tag() { Name = tagName });
+            }
+            return new ObservableCollection<IBookmark>(bookmarks);
         }
 
         public void AddBookmark(Bookmark newBookmark)
