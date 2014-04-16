@@ -2,10 +2,10 @@ Assets\Logo.png
 Assets\SmallLogo.png
 Assets\SplashScreen.png
 Assets\StoreLogo.png
-App.xaml
-Common\BookmarkListItem.xaml
-Common\StandardStyles.xaml
-MainPage.xaml
-TagPosts.xaml
-Tags.xaml
+App.xbf
+Common\BookmarkListItem.xbf
+Common\StandardStyles.xbf
+MainPage.xbf
+TagPosts.xbf
+Tags.xbf
 Common\ReadMe.txt
