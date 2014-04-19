@@ -1,2 +1,2 @@
-C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8.Tests\Pinboard8.Tests.csproj;x86
-C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\Pinboard8.csproj;x86
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8.Tests\Pinboard8.Tests.csproj;x86
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\Pinboard8.csproj;x86

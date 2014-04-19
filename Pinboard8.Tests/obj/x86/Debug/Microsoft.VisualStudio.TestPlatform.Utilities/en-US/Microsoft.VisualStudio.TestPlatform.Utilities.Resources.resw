@@ -159,6 +159,9 @@
   <data name="PhoneAppPackageInstallationFailure" xml:space="preserve">
     <value>Installation of package '{1}' failed with Error: (0x{2:X}) {3}.</value>
   </data>
+  <data name="UnableToUninstallTestPhoneApp" xml:space="preserve">
+    <value>Unable to uninstall the test phone application. Reason: {0}</value>
+  </data>
   <data name="SystemArchitectureIncompatibleWithTargetPlatform" xml:space="preserve">
     <value>Incompatible Target platform settings '{0}' with system architecture '{1}'.</value>
   </data>
