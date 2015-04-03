@@ -3,11 +3,77 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Pinboard8"
+    xmlns:converters="using:Pinboard8.Converters"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <converters:DateElapsedTimeConverter x:Key="dataConverter"></converters:DateElapsedTimeConverter>
+    </Page.Resources>
+    
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}" >
+
+        <ScrollViewer HorizontalScrollMode="Auto" HorizontalScrollBarVisibility="Auto">
+
+            <StackPanel Orientation="Horizontal" Margin="20, 50, 20, 50">
+
+                <StackPanel MaxWidth="450" Margin="10">
+                    <TextBlock FontSize="42" Text="Recent Bookmarks" Margin="0,0,0,20"></TextBlock>
+                    <ListBox x:Name="RecentBookmarks" ItemsSource="{Binding RecentBookmarks}" Width="413" Height="577">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                            <Grid Width="450">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="40" />
+                                </Grid.RowDefinitions>
+                                <TextBlock Grid.Row="0" Text="{Binding Title}" TextWrapping="Wrap"/>
+                                <Grid Grid.Row="1">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <ListBox Grid.Column="0" ItemsSource="{Binding Tags}"  Background="Transparent" BorderThickness="1" BorderBrush="Blue">
+                                        <ListBox.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <StackPanel Orientation="Horizontal"></StackPanel>
+                                            </ItemsPanelTemplate>
+                                        </ListBox.ItemsPanel>
+                                        <ListBox.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding Name}" FontStyle="Italic" ></TextBlock>
+                                            </DataTemplate>
+                                        </ListBox.ItemTemplate>
+                                    </ListBox>
+                                    <TextBlock Grid.Column="1" Text="{Binding Time, Converter={StaticResource dataConverter}}" TextAlignment="Right" HorizontalAlignment="Right"></TextBlock>
+                                </Grid>
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                </StackPanel>
+
+
+                <StackPanel Margin="20,10,10,10" Width="852">
+                    <TextBlock FontSize="42" Text="My Tags" Margin="0,0,0,20"></TextBlock>
+                    <ListView ItemsSource="{Binding Tags}" ScrollViewer.VerticalScrollBarVisibility="Disabled" 
+                        ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollMode="Disabled"
+                        ScrollViewer.HorizontalScrollMode="Auto" ScrollViewer.ZoomMode="Disabled" Height="582" Width="900">
+                        <ListView.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapGrid Orientation="Vertical" />
+                            </ItemsPanelTemplate>
+                        </ListView.ItemsPanel>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextBox Text="{Binding Name}" Width="150" Height="75"/>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
 
     </Grid>
 </Page>

@@ -9,12 +9,15 @@ namespace PinboardDomain.Repository
     {
         Task<DateTime> GetTimeOfLatestUpdateAsync();
 
-        Task<ObservableCollection<Bookmark>> GetAllBookmarksAsync();
-        Task<ObservableCollection<Bookmark>> GetBookmarksSinceAsync(DateTime date);
+        Task<ObservableCollection<IBookmark>> GetAllBookmarksAsync();
+        Task<ObservableCollection<IBookmark>> GetBookmarksSinceAsync(DateTime date);
+        Task<ObservableCollection<IBookmark>> GetRecentBookmarks();
+        Task<ObservableCollection<IBookmark>> GetTaggedBookmarks(string tagName);
+
         void AddBookmark(Bookmark newBookmark);
         void DeleteBookmark(string url);
 
-        Task<ObservableCollection<Tag>> GetTagsAsync();
+        Task<ObservableCollection<ITag>> GetTagsAsync();
         void RenameTag(string newTag, string oldTag);
         void DeleteTag(string tag);
     }

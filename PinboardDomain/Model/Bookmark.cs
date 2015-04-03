@@ -2,7 +2,7 @@
 
 namespace PinboardDomain.Model
 {
-    public class Bookmark
+    public class Bookmark : IBookmark
     {
         public string Url { get; set; }
         public string Title { get; set; }

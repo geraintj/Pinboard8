@@ -6,3 +6,11 @@ C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardConsoleApp\bin\Release\Pinbo
 C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardConsoleApp\obj\x86\Release\PinboardConsoleApp.csprojResolveAssemblyReference.cache
 C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardConsoleApp\obj\x86\Release\PinboardConsoleApp.exe
 C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardConsoleApp\obj\x86\Release\PinboardConsoleApp.pdb
+C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardConsoleApp\bin\Release\PinboardConsoleApp.exe.config
+C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardConsoleApp\obj\x86\Release\PinboardConsoleApp.exe
+C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardConsoleApp\obj\x86\Release\PinboardConsoleApp.pdb
+C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardConsoleApp\bin\Release\PinboardConsoleApp.exe
+C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardConsoleApp\bin\Release\PinboardConsoleApp.pdb
+C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardConsoleApp\bin\Release\PinboardDomain.dll
+C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardConsoleApp\bin\Release\PinboardDomain.pdb
+C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardConsoleApp\obj\x86\Release\PinboardConsoleApp.csprojResolveAssemblyReference.cache
