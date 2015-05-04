@@ -20,7 +20,7 @@
 
                 <StackPanel MaxWidth="450" Margin="10">
                     <TextBlock FontSize="42" Text="Recent Bookmarks" Margin="0,0,0,20"></TextBlock>
-                    <ListBox x:Name="RecentBookmarks" ItemsSource="{Binding RecentBookmarks}" Width="413" Height="577">
+                    <ListBox x:Name="RecentBookmarks" ItemsSource="{Binding RecentBookmarks}" Width="413">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                             <Grid Width="450">

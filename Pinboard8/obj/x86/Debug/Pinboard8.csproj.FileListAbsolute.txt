@@ -120,3 +120,8 @@ C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\qualifiers.t
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\HubPage.xbf
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\HubPage.g.i.cs
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\HubPage.g.cs
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\HubPage.xaml
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\HubPage.xbf

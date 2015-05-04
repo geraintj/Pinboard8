@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>AKHENATEN</Machine>
+    <Machine>HEIMDALL</Machine>
     <WindowsUser>Geraint</WindowsUser>
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
@@ -47,6 +47,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\Common\StandardStyles.xbf">
       <PackagePath>Common\StandardStyles.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\HubPage.xbf">
+      <PackagePath>HubPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
