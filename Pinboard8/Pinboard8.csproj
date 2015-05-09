@@ -126,6 +126,7 @@
     <Compile Include="Common\RichTextColumns.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
     <Compile Include="Converters\DateElapsedTimeConverter.cs" />
+    <Compile Include="Converters\PercentileTextBoxSizeConverter.cs" />
     <Compile Include="HubPage.xaml.cs">
       <DependentUpon>HubPage.xaml</DependentUpon>
     </Compile>

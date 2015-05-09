@@ -47,7 +47,7 @@
             </ListView.ItemsPanel>
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextBox Text="{Binding Name}" Width="150" Height="75"></TextBox>
+                    <TextBox Text="{Binding Name}" FontSize="25" Width="150" Height="75"></TextBox>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

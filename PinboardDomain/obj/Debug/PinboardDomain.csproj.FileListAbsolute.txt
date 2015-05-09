@@ -8,12 +8,12 @@ C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardDomain\bin\Debug\PinboardDom
 C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardDomain\obj\Debug\PinboardDomain.csprojResolveAssemblyReference.cache
 C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardDomain\obj\Debug\PinboardDomain.dll
 C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardDomain\obj\Debug\PinboardDomain.pdb
+C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardDomain\bin\Debug\Ninject.Common.dll
+C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardDomain\bin\Debug\Ninject.Common.xml
 C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardDomain\bin\Debug\PinboardDomain.dll
 C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardDomain\bin\Debug\PinboardDomain.pdb
 C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardDomain\bin\Debug\Ninject.Common.dll
 C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardDomain\bin\Debug\Ninject.Common.xml
+C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardDomain\obj\Debug\PinboardDomain.csprojResolveAssemblyReference.cache
 C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardDomain\obj\Debug\PinboardDomain.dll
 C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardDomain\obj\Debug\PinboardDomain.pdb
-C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardDomain\bin\Debug\Ninject.Common.dll
-C:\Users\devuser\Documents\GitHub\Pinboard8\PinboardDomain\bin\Debug\Ninject.Common.xml
-C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardDomain\obj\Debug\PinboardDomain.csprojResolveAssemblyReference.cache

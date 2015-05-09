@@ -3,9 +3,11 @@
   <PropertyGroup>
     <Machine>HEIMDALL</Machine>
     <WindowsUser>Geraint</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>111743b5-74ee-4030-9f3d-0219e699a399</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\AppxManifest.xml">
@@ -59,6 +61,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\Tags.xbf">
       <PackagePath>Tags.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\Pinboard8.xr.xml">
+      <PackagePath>Pinboard8.xr.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>

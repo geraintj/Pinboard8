@@ -3,31 +3,34 @@
   <PropertyGroup>
     <Machine>HEIMDALL</Machine>
     <WindowsUser>Geraint</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>111743b5-74ee-4030-9f3d-0219e699a399</PackageIdentityName>
-    <RegisteredManifestChecksum>E21996DA0597F65936711CEA3FE57C77BDBCCA43AF600EA402F39CE55FB2DE83</RegisteredManifestChecksum>
+    <IntermediateOutputPath>C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>A326DF286CFA754D8A307C970CF7994471A31721BECAD0031A748C89D3774ECA</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>111743b5-74ee-4030-9f3d-0219e699a399_1.1.0.0_x86__k25vcbkxjekvr</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>111743b5-74ee-4030-9f3d-0219e699a399_k25vcbkxjekvr!App</RegisteredUserModeAppID>
     <RegisteredPackageID>111743b5-74ee-4030-9f3d-0219e699a399</RegisteredPackageID>
     <RegisteredPackagePublisher>CN=Geraint</RegisteredPackagePublisher>
     <RegisteredVersion>1.1.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-04-20T08:05:58.854</Modified>
+      <Modified>2015-05-09T11:39:07.901</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\Pinboard8.exe">
       <PackagePath>Pinboard8.exe</PackagePath>
-      <Modified>2014-04-20T08:10:02.440</Modified>
+      <Modified>2015-05-09T13:39:39.232</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardDomain\bin\Debug\PinboardDomain.dll">
       <PackagePath>PinboardDomain.dll</PackagePath>
-      <Modified>2014-04-19T06:49:01.379</Modified>
+      <Modified>2015-05-06T19:36:01.224</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
@@ -55,35 +58,39 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2014-04-20T07:21:21.125</Modified>
+      <Modified>2015-05-04T15:30:14.985</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\Common\BookmarkListItem.xbf">
       <PackagePath>Common\BookmarkListItem.xbf</PackagePath>
-      <Modified>2014-04-20T07:21:21.127</Modified>
+      <Modified>2015-05-04T15:30:14.985</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\Common\StandardStyles.xbf">
       <PackagePath>Common\StandardStyles.xbf</PackagePath>
-      <Modified>2014-04-20T07:21:21.129</Modified>
+      <Modified>2015-05-04T15:30:14.985</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\HubPage.xbf">
       <PackagePath>HubPage.xbf</PackagePath>
-      <Modified>2014-04-20T08:10:02.212</Modified>
+      <Modified>2015-05-06T19:51:52.613</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2014-04-20T08:10:02.212</Modified>
+      <Modified>2015-05-04T15:30:14.985</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\TagPosts.xbf">
       <PackagePath>TagPosts.xbf</PackagePath>
-      <Modified>2014-04-20T07:21:21.132</Modified>
+      <Modified>2015-05-04T15:30:14.985</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\Tags.xbf">
       <PackagePath>Tags.xbf</PackagePath>
-      <Modified>2014-04-20T07:21:21.133</Modified>
+      <Modified>2015-05-09T13:39:38.955</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\Pinboard8.xr.xml">
+      <PackagePath>Pinboard8.xr.xml</PackagePath>
+      <Modified>2015-05-09T13:39:38.824</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-04-20T08:05:58.756</Modified>
+      <Modified>2015-05-09T11:39:07.635</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
