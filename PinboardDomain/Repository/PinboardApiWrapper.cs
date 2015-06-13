@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using PinboardDomain.Model;
@@ -12,6 +13,12 @@ namespace PinboardDomain.Repository
 {
     public class PinboardApiWrapper : IPinboardApiWrapper
     {
+        private List<Bookmark> _bookmarkCache;
+
+        public PinboardApiWrapper()
+        {
+            GetAllBookmarksAsync();
+        }
 
         public async Task<DateTime> GetTimeOfLatestUpdateAsync()
         {
@@ -25,13 +32,19 @@ namespace PinboardDomain.Repository
             return DateTime.Parse(dateString);
         }
 
-
-
         public async Task<ObservableCollection<IBookmark>> GetAllBookmarksAsync()
         {
             var responseString = await MakeGetCall("posts/all");
 
-            return ParseBookmarks(responseString);
+            var result = ParseBookmarks(responseString);
+            _bookmarkCache = new List<Bookmark>((IEnumerable<Bookmark>)result);
+
+            return result;
+        }
+
+        public List<Bookmark> GetAllBookmarks()
+        {
+            return _bookmarkCache;
         }
 
         public async Task<ObservableCollection<IBookmark>> GetBookmarksSinceAsync(DateTime date)
@@ -129,5 +142,6 @@ namespace PinboardDomain.Repository
 
             return response.StatusCode.ToString();
         }
+
     }
 }

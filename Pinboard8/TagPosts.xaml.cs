@@ -12,6 +12,9 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Pinboard8.Common;
+using PinboardDomain.Repository;
+using PinboardDomain.ViewModels;
 
 // The Split Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234234
 
@@ -26,6 +29,18 @@ namespace Pinboard8
         public TagPosts()
         {
             this.InitializeComponent();
+        }
+
+        /// <summary>
+        /// Invoked when this page is about to be displayed in a Frame.
+        /// </summary>
+        /// <param name="e">Event data that describes how this page was reached.  The Parameter
+        /// property is typically used to configure the page.</param>
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            var api = new PinboardApiWrapper();
+            this.DataContext = new TagPostsViewModel(api, e.Parameter as string);
         }
 
         #region Page state management
@@ -131,20 +146,20 @@ namespace Pinboard8
         /// <param name="e">Event data that describes how the back button was clicked.</param>
         protected override void GoBack(object sender, RoutedEventArgs e)
         {
-            if (this.UsingLogicalPageNavigation() && itemListView.SelectedItem != null)
-            {
-                // When logical page navigation is in effect and there's a selected item that
-                // item's details are currently displayed.  Clearing the selection will return to
-                // the item list.  From the user's point of view this is a logical backward
-                // navigation.
-                this.itemListView.SelectedItem = null;
-            }
-            else
-            {
-                // When logical page navigation is not in effect, or when there is no selected
-                // item, use the default back button behavior.
-                base.GoBack(sender, e);
-            }
+            //if (this.UsingLogicalPageNavigation() && itemListView.SelectedItem != null)
+            //{
+            //    // When logical page navigation is in effect and there's a selected item that
+            //    // item's details are currently displayed.  Clearing the selection will return to
+            //    // the item list.  From the user's point of view this is a logical backward
+            //    // navigation.
+            //    this.itemListView.SelectedItem = null;
+            //}
+            //else
+            //{
+            //    // When logical page navigation is not in effect, or when there is no selected
+            //    // item, use the default back button behavior.
+            //    base.GoBack(sender, e);
+            //}
         }
 
         /// <summary>
@@ -158,7 +173,7 @@ namespace Pinboard8
         protected override string DetermineVisualState(ApplicationViewState viewState)
         {
             // Update the back button's enabled state when the view state changes
-            var logicalPageBack = this.UsingLogicalPageNavigation(viewState) && this.itemListView.SelectedItem != null;
+            var logicalPageBack = this.UsingLogicalPageNavigation(viewState);// && this.itemListView.SelectedItem != null;
             var physicalPageBack = this.Frame != null && this.Frame.CanGoBack;
             this.DefaultViewModel["CanGoBack"] = logicalPageBack || physicalPageBack;
 

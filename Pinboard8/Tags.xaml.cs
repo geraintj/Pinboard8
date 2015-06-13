@@ -36,7 +36,8 @@ namespace Pinboard8
         /// <param name="navigationParameter">The parameter value passed to
         /// <see cref="Frame.Navigate(Type, Object)"/> when this page was initially requested.
         /// </param>
-        /// <param name="pageState">A dictionary of state preserved by this page during an earlier
+        /// <param name="pageState">A dictionary of state preserved by 
+        /// this page during an earlier
         /// session.  This will be null the first time a page is visited.</param>
         protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
         {
@@ -49,6 +50,7 @@ namespace Pinboard8
         /// property is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            base.OnNavigatedTo(e);
             var api = new PinboardApiWrapper();
             this.DataContext = new TagCloudViewModel(api);
         }
@@ -63,5 +65,13 @@ namespace Pinboard8
         {
 
         }
+
+        public void ButtonClick(object sender, RoutedEventArgs e)
+        {
+            var button = sender as HyperlinkButton;
+            var thing = button.Content;
+            this.Frame.Navigate(typeof(TagPosts), thing);
+        }
+
     }
 }

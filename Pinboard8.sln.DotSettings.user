@@ -2,6 +2,10 @@
 	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=1AEEB69A77BB44D48271D3AA16EBAF18/@KeyIndexDefined">True</s:Boolean>
 	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=1AEEB69A77BB44D48271D3AA16EBAF18/Name/@EntryValue">GetLatestDateTest</s:String>
 	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=1AEEB69A77BB44D48271D3AA16EBAF18/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;Elements /&gt;&lt;/Session&gt;</s:String>
+	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=2C30AFAB7A0F44999C7F85FEA36E87E0/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=2C30AFAB7A0F44999C7F85FEA36E87E0/GroupingIndex/@EntryValue">4</s:Int64>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=2C30AFAB7A0F44999C7F85FEA36E87E0/Name/@EntryValue">TagPostsViewModelTests</s:String>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=2C30AFAB7A0F44999C7F85FEA36E87E0/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;e Id="Pinboard8.Tests.TagPostsViewModelTests" Project="2108D378-A4D8-4C4C-979B-1A47848A97D3" Provider="MSTest" /&gt;&lt;e Id="Pinboard8.Tests.TagPostsViewModelTests.BookmarksReturnedTest" Project="2108D378-A4D8-4C4C-979B-1A47848A97D3" Provider="MSTest" /&gt;&lt;e Id="Pinboard8.Tests.TagPostsViewModelTests.TagNameTest" Project="2108D378-A4D8-4C4C-979B-1A47848A97D3" Provider="MSTest" /&gt;&lt;/Session&gt;</s:String>
 	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=4D8B75F6601B4B4AAAA3EDADFE64901A/@KeyIndexDefined">True</s:Boolean>
 	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=4D8B75F6601B4B4AAAA3EDADFE64901A/Name/@EntryValue">GetLatestDateTest</s:String>
 	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=4D8B75F6601B4B4AAAA3EDADFE64901A/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;Elements /&gt;&lt;/Session&gt;</s:String></wpf:ResourceDictionary>

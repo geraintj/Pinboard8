@@ -14,13 +14,14 @@
     <RootPropertyPathName Name="NavigationHelper" />
     <RootPropertyPathName Name="GoBackCommand" />
     <RootPropertyPathName Name="RecentBookmarks" />
+    <RootPropertyPathName Name="Count" />
     <RootPropertyPathName Name="DefaultViewModel" />
     <RootPropertyPathName Name="Items" />
     <RootPropertyPathName Name="SelectedItem" />
     <RootPropertyPathName Name="Content" />
-    <RootPropertyPathName Name="Group" />
-    <RootPropertyPathName Name="CanGoBack" />
+    <RootPropertyPathName Name="Tag" />
     <RootPropertyPathName Name="Frame" />
+    <RootPropertyPathName Name="CanGoBack" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -97,7 +98,6 @@
       <RootProperty Name="Converter" />
       <RootProperty Name="ElementName" />
       <RootProperty Name="RelativeSource" />
-      <RootProperty Name="Source" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.ItemsPanelTemplate">
@@ -285,6 +285,9 @@
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Pinboard8.Converters.DateElapsedTimeConverter" />
+    <RootType FullName="Pinboard8.Converters.PercentileTextBoxSizeConverter">
+      <RootProperty Name="Tags" />
+    </RootType>
     <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.Hub">
       <RootProperty Name="Header" />
@@ -294,35 +297,30 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Background" />
-      <RootProperty Name="Header" />
       <RootProperty Name="ContentTemplate" />
+      <RootProperty Name="Header" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
       <RootProperty Name="Stretch" />
     </RootType>
-    <RootType FullName="Pinboard8.HubPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="Height" />
-      <RootProperty Name="Width" />
+      <RootProperty Name="MinWidth" />
       <RootProperty Name="ItemsPanel" />
       <RootProperty Name="ItemTemplate" />
-      <RootProperty Name="TabIndex" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Padding" />
-      <RootProperty Name="IsSwipeEnabled" />
-      <RootProperty Name="MinWidth" />
-      <RootEvent Name="SelectionChanged" />
+      <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.WrapGrid">
       <RootProperty Name="Orientation" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Text" />
+      <RootProperty Name="FontSize" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
-      <RootProperty Name="FontSize" />
     </RootType>
+    <RootType FullName="Pinboard8.HubPage" />
     <RootType FullName="Pinboard8.MainPage" />
     <RootType FullName="Pinboard8.Common.LayoutAwarePage">
       <RootProperty Name="DataContext" />
@@ -334,6 +332,15 @@
       <RootProperty Name="Source" />
     </RootType>
     <RootType FullName="Pinboard8.TagPosts" />
+    <RootType FullName="Windows.UI.Xaml.Controls.HyperlinkButton">
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="FontSize" />
+      <RootEvent Name="Click" />
+    </RootType>
     <RootType FullName="Pinboard8.Tags" />
   </Roots.RootTypes>
 </Roots>

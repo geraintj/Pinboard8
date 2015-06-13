@@ -24,7 +24,7 @@ namespace Pinboard8.Tests
         [TestMethod]
         public void TagNameTest()
         {
-            var viewModel = new TagPostsViewModel(_repoStub);
+            var viewModel = new TagPostsViewModel(_repoStub, "");
             viewModel.SetTag(new Tag() { Name = "tag"});
 
             Assert.AreEqual("tag", viewModel.Tag.Name);
@@ -33,7 +33,7 @@ namespace Pinboard8.Tests
         [TestMethod]
         public void BookmarksReturnedTest()
         {
-            var viewModel = new TagPostsViewModel(_repoStub);
+            var viewModel = new TagPostsViewModel(_repoStub, "");
             viewModel.SetTag(new Tag() { Name = "tag" });
 
             Assert.AreEqual("tag", viewModel.Bookmarks[0].Tags[0].Name);

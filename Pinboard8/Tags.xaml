@@ -8,10 +8,11 @@
     xmlns:common="using:Pinboard8.Common"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:converters="using:Pinboard8.Converters"
     mc:Ignorable="d">
 
     <Page.Resources>
-
+        <converters:PercentileTextBoxSizeConverter x:Key="countConverter" Tags="{Binding Tags}" />
     </Page.Resources>
 
     <!--
@@ -47,7 +48,9 @@
             </ListView.ItemsPanel>
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextBox Text="{Binding Name}" FontSize="25" Width="150" Height="75"></TextBox>
+                    <HyperlinkButton Width="150" Height="75" BorderThickness="1" BorderBrush="Wheat" Click="ButtonClick"
+                               Content="{Binding Name}" FontSize="{Binding Count, Converter={StaticResource countConverter}}">
+                    </HyperlinkButton>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

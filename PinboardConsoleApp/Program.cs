@@ -14,11 +14,12 @@ namespace PinboardConsoleApp
         {
 
             //var task = WaitForGetTimeOfLatestUpdate();
-            //var task = WaitForGetAllBookmarks();
+            GetAllBookmarks();
             //var task = WaitForGetTags();
             //var task = WaitForGetBookmarksSince(new DateTime(2013,9,1,0,0,0));
-            var task = WaitForGetRecentBookmarks();
-            task.Wait();
+            //var task = WaitForGetRecentBookmarks();
+            //var task = WaitForTagBookmarks();
+            //task.Wait();
 
             Console.ReadLine();
         }
@@ -41,10 +42,10 @@ namespace PinboardConsoleApp
             }
         }
 
-        static async Task WaitForGetAllBookmarks()
+        static void GetAllBookmarks()
         {
             var client = new PinboardApiWrapper();
-            var bookmarks = await client.GetAllBookmarksAsync();
+            var bookmarks = client.GetAllBookmarks();
 
             foreach (var bookmark in bookmarks)
             {
@@ -73,5 +74,17 @@ namespace PinboardConsoleApp
                 Console.WriteLine(bookmark.Title);
             }
         }
+
+        static async Task WaitForTagBookmarks()
+        {
+            var client = new PinboardApiWrapper();
+            var bookmarks = await client.GetTaggedBookmarks("recipes");
+
+            foreach (var bookmark in bookmarks)
+            {
+                Console.WriteLine(bookmark.Title);
+            }
+        }
+
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using PinboardDomain.Model;
@@ -10,6 +11,7 @@ namespace PinboardDomain.Repository
         Task<DateTime> GetTimeOfLatestUpdateAsync();
 
         Task<ObservableCollection<IBookmark>> GetAllBookmarksAsync();
+        List<Bookmark> GetAllBookmarks();
         Task<ObservableCollection<IBookmark>> GetBookmarksSinceAsync(DateTime date);
         Task<ObservableCollection<IBookmark>> GetRecentBookmarks();
         Task<ObservableCollection<IBookmark>> GetTaggedBookmarks(string tagName);

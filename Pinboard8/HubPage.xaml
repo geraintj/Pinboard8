@@ -16,6 +16,7 @@
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
         <x:String x:Key="AppName">My Application</x:String>
         <converters:DateElapsedTimeConverter x:Key="dataConverter"/>
+        <converters:PercentileTextBoxSizeConverter x:Key="countConverter" Tags="{Binding Tags}" />
     </Page.Resources>
 
     <!--
@@ -51,6 +52,29 @@
                 <HubSection.Background>
                     <ImageBrush Stretch="UniformToFill" />
                 </HubSection.Background>
+                <DataTemplate>
+                    <StackPanel MaxWidth="700" Margin="10">
+                        <TextBlock FontSize="42" Text="My Tags" Margin="0,0,0,20"></TextBlock>
+                    <ListView Grid.Row="1" ItemsSource="{Binding Tags}" ScrollViewer.VerticalScrollBarVisibility="Disabled" 
+                   ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollMode="Disabled"
+                   ScrollViewer.HorizontalScrollMode="Auto" ScrollViewer.ZoomMode="Disabled" 
+                   Height="450" MinWidth="900">
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapGrid Orientation="Vertical" ></WrapGrid>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextBox Text="{Binding Name}" FontSize="{Binding Count, Converter={StaticResource countConverter}}"
+                             Width="150" Height="75"></TextBox>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                    </ListView>
+
+</StackPanel>
+
+                </DataTemplate>
             </HubSection>
             <HubSection Width="500" Header="Section 1">
                 <DataTemplate>
