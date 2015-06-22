@@ -20,17 +20,17 @@
     <AppXManifest Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-05-09T15:17:02.692</Modified>
+      <Modified>2015-06-15T16:45:07.348</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\Pinboard8.exe">
       <PackagePath>Pinboard8.exe</PackagePath>
-      <Modified>2015-06-04T15:53:17.593</Modified>
+      <Modified>2015-06-21T16:45:52.813</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardDomain\bin\Debug\PinboardDomain.dll">
       <PackagePath>PinboardDomain.dll</PackagePath>
-      <Modified>2015-05-28T15:23:36.829</Modified>
+      <Modified>2015-06-15T16:52:50.715</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
@@ -74,23 +74,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2015-05-05T12:02:37.953</Modified>
+      <Modified>2015-06-21T16:45:52.558</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\TagPosts.xbf">
       <PackagePath>TagPosts.xbf</PackagePath>
-      <Modified>2015-05-28T11:33:15.422</Modified>
+      <Modified>2015-06-21T16:45:52.563</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\Tags.xbf">
       <PackagePath>Tags.xbf</PackagePath>
-      <Modified>2015-05-25T15:33:43.188</Modified>
+      <Modified>2015-06-21T16:45:52.563</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\Pinboard8.xr.xml">
       <PackagePath>Pinboard8.xr.xml</PackagePath>
-      <Modified>2015-05-28T11:33:15.343</Modified>
+      <Modified>2015-06-21T16:45:52.528</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-05-09T18:12:07.196</Modified>
+      <Modified>2015-06-15T16:45:06.959</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -21,7 +21,7 @@ namespace PinboardDomain.ViewModels
         public TagPostsViewModel(IPinboardApiWrapper api, string value)
         {
             _api = api;
-            this.Bookmarks = new ObservableCollection<IBookmark>();
+            Bookmarks = new ObservableCollection<IBookmark>();
             SetTag(new Tag() {Name = value});
 
         }

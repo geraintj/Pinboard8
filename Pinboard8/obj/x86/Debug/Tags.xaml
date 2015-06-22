@@ -48,7 +48,7 @@
             </ListView.ItemsPanel>
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <HyperlinkButton x:ConnectionId='1' Width="150" Height="75" BorderThickness="1" BorderBrush="Wheat"                    
+                    <HyperlinkButton x:ConnectionId='1' Width="150" Height="75" Background="WhiteSmoke"                    
                                Content="{Binding Name}" FontSize="{Binding Count, Converter={StaticResource countConverter}}">
                     </HyperlinkButton>
                 </DataTemplate>

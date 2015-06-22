@@ -14,12 +14,12 @@ namespace PinboardConsoleApp
         {
 
             //var task = WaitForGetTimeOfLatestUpdate();
-            GetAllBookmarks();
+            //GetAllBookmarks();
             //var task = WaitForGetTags();
             //var task = WaitForGetBookmarksSince(new DateTime(2013,9,1,0,0,0));
             //var task = WaitForGetRecentBookmarks();
-            //var task = WaitForTagBookmarks();
-            //task.Wait();
+            var task = WaitForTagBookmarks();
+            task.Wait();
 
             Console.ReadLine();
         }

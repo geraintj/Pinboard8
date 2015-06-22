@@ -39,7 +39,7 @@ namespace Pinboard8.Converters
 
                 var subjectPercentile = 10 - indexOfSubject/decileSize;
 
-                return 15 + subjectPercentile;
+                return 12;// + subjectPercentile;
             }
             return 15;
         }

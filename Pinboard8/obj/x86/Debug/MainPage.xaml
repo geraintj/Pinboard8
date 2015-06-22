@@ -18,23 +18,23 @@
 
             <StackPanel Orientation="Horizontal" Margin="20, 50, 20, 50">
 
-                <StackPanel MaxWidth="450" Margin="10">
+                <StackPanel MaxWidth="450" Margin="20,10,10,10" Width="466" Height="884">
                     <TextBlock FontSize="42" Text="Recent Bookmarks" Margin="0,0,0,20"></TextBlock>
                     <ListBox x:Name="RecentBookmarks" ItemsSource="{Binding RecentBookmarks}" Width="413">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                            <Grid Width="450">
+                                <Grid  Margin="0,0,0,10">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto" />
                                     <RowDefinition Height="40" />
                                 </Grid.RowDefinitions>
                                 <TextBlock Grid.Row="0" Text="{Binding Title}" TextWrapping="Wrap"/>
-                                <Grid Grid.Row="1">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="2*"></ColumnDefinition>
-                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <Grid Grid.Row="1" >
+                                        <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                        <ColumnDefinition Width="150"></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
-                                    <ListBox Grid.Column="0" ItemsSource="{Binding Tags}"  Background="Transparent" BorderThickness="1" BorderBrush="Blue">
+                                        <ListBox Grid.Column="0" ItemsSource="{Binding Tags}" BorderThickness="1" BorderBrush="Yellow">
                                         <ListBox.ItemsPanel>
                                             <ItemsPanelTemplate>
                                                 <StackPanel Orientation="Horizontal"></StackPanel>
@@ -42,12 +42,14 @@
                                         </ListBox.ItemsPanel>
                                         <ListBox.ItemTemplate>
                                             <DataTemplate>
-                                                <TextBlock Text="{Binding Name}" FontStyle="Italic" ></TextBlock>
+                                                <TextBlock Text="{Binding Name}" FontStyle="Italic"></TextBlock>
                                             </DataTemplate>
                                         </ListBox.ItemTemplate>
                                     </ListBox>
-                                    <TextBlock Grid.Column="1" Text="{Binding Time, Converter={StaticResource dataConverter}}" TextAlignment="Right" HorizontalAlignment="Right"></TextBlock>
-                                </Grid>
+                                        <Border Grid.Column="1" BorderThickness="1" BorderBrush="Yellow"  HorizontalAlignment="Right" >
+                                            <TextBlock Text="{Binding Time, Converter={StaticResource dataConverter}}" TextAlignment="Right"></TextBlock>
+                                        </Border>
+                                    </Grid>
                             </Grid>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
@@ -55,11 +57,11 @@
                 </StackPanel>
 
 
-                <StackPanel Margin="20,10,10,10" Width="852">
+                <StackPanel Margin="20,10,10,10" Width="884">
                     <TextBlock FontSize="42" Text="My Tags" Margin="0,0,0,20"></TextBlock>
                     <ListView ItemsSource="{Binding Tags}" ScrollViewer.VerticalScrollBarVisibility="Disabled" 
                         ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollMode="Disabled"
-                        ScrollViewer.HorizontalScrollMode="Auto" ScrollViewer.ZoomMode="Disabled" Height="582" Width="900">
+                        ScrollViewer.HorizontalScrollMode="Auto" ScrollViewer.ZoomMode="Disabled" Height="800">
                         <ListView.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <WrapGrid Orientation="Vertical" />
@@ -67,7 +69,9 @@
                         </ListView.ItemsPanel>
                         <ListView.ItemTemplate>
                             <DataTemplate>
-                                <TextBox Text="{Binding Name}" Width="150" Height="75"/>
+                                <HyperlinkButton x:ConnectionId='1' Width="150" Height="75" Background="WhiteSmoke"                     
+                               Content="{Binding Name}" FontSize="12">
+                                </HyperlinkButton>
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>

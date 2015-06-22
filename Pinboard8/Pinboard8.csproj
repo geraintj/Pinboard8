@@ -113,6 +113,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Caching\FileCache.cs" />
     <Compile Include="Common\BindableBase.cs" />
     <Compile Include="Common\BookmarkListItem.xaml.cs">
       <DependentUpon>BookmarkListItem.xaml</DependentUpon>

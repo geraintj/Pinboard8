@@ -64,7 +64,7 @@ namespace PinboardDomain.Repository
 
         public async Task<ObservableCollection<IBookmark>> GetTaggedBookmarks(string tagName)
         {
-            var responseString = await MakeGetCall("posts/all", "&tag=" + tagName + "Z");
+            var responseString = await MakeGetCall("posts/recent", "&tag=" + tagName + "&count=100");
 
             return ParseBookmarks(responseString);
         }

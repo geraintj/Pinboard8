@@ -30,8 +30,8 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition x:Name="primaryColumn" Width="610"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition x:Name="primaryColumn" Width="506"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
         <!-- Back button and page title -->
@@ -48,8 +48,8 @@
         </Grid>
 
         <!-- Vertical scrolling item list -->
-        <StackPanel MaxWidth="450" Margin="10">
-            <ListBox x:Name="TagBookmarks" ItemsSource="{Binding RecentBookmarks}" Width="413">
+        <StackPanel Margin="10,10,10,27" Grid.Row="1">
+            <ListBox x:Name="TagBookmarks" ItemsSource="{Binding Bookmarks}" Width="Auto" Margin="20">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Grid Width="450">
@@ -63,7 +63,7 @@
                                     <ColumnDefinition Width="2*"></ColumnDefinition>
                                     <ColumnDefinition Width="*"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
-                                <ListBox Grid.Column="0" ItemsSource="{Binding Tags}"  Background="Transparent" BorderThickness="1" BorderBrush="Blue">
+                                <ListBox Grid.Column="0" ItemsSource="{Binding Tags}"  Background="Transparent" BorderThickness="1">
                                     <ListBox.ItemsPanel>
                                         <ItemsPanelTemplate>
                                             <StackPanel Orientation="Horizontal"></StackPanel>
@@ -97,21 +97,15 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Image Grid.Row="1" Margin="0,0,20,0" Width="180" Height="180" Source="{Binding Image}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>
-                <StackPanel x:Name="itemDetailTitlePanel" Grid.Row="1" Grid.Column="1">
-                    <TextBlock x:Name="itemTitle" Margin="0,-10,0,0" Text="{Binding Title}" Style="{StaticResource SubheaderTextStyle}"/>
-                    <TextBlock x:Name="itemSubtitle" Margin="0,0,0,20" Text="{Binding Subtitle}" Style="{StaticResource SubtitleTextStyle}"/>
-                </StackPanel>
-                <TextBlock Grid.Row="2" Grid.ColumnSpan="2" Margin="0,20,0,0" Text="{Binding Content}" Style="{StaticResource BodyTextStyle}"/>
+                <WebView Grid.Row="1" HorizontalAlignment="Right" Height="100" Margin="0,328,-254,0"  VerticalAlignment="Top" Width="100"/>
             </Grid>
         </ScrollViewer>
+
 
         <VisualStateManager.VisualStateGroups>
 

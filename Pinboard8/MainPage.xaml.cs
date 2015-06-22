@@ -41,6 +41,11 @@ namespace Pinboard8
             this.DataContext = new MainPageViewModel(api);
         }
 
-        
+        public void ButtonClick(object sender, RoutedEventArgs e)
+        {
+            var button = sender as HyperlinkButton;
+            var thing = button.Content;
+            this.Frame.Navigate(typeof(TagPosts), thing);
+        }
     }
 }
