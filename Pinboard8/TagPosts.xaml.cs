@@ -43,6 +43,8 @@ namespace Pinboard8
             this.DataContext = new TagPostsViewModel(api, e.Parameter as string);
         }
 
+
+
         #region Page state management
 
         /// <summary>

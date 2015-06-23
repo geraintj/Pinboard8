@@ -15,6 +15,7 @@
     <RootPropertyPathName Name="GoBackCommand" />
     <RootPropertyPathName Name="RecentBookmarks" />
     <RootPropertyPathName Name="Count" />
+    <RootPropertyPathName Name="Url" />
     <RootPropertyPathName Name="DefaultViewModel" />
     <RootPropertyPathName Name="Items" />
     <RootPropertyPathName Name="SelectedItem" />
@@ -330,6 +331,7 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Content" />
       <RootProperty Name="FontSize" />
+      <RootProperty Name="NavigateUri" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Pinboard8.MainPage" />
