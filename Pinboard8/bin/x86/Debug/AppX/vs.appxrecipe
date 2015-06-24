@@ -26,7 +26,7 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\Pinboard8.exe">
       <PackagePath>Pinboard8.exe</PackagePath>
-      <Modified>2015-06-23T21:45:19.390</Modified>
+      <Modified>2015-06-24T05:43:03.874</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\PinboardDomain\bin\Debug\PinboardDomain.dll">
       <PackagePath>PinboardDomain.dll</PackagePath>
@@ -74,11 +74,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2015-06-23T21:45:19.187</Modified>
+      <Modified>2015-06-24T05:43:03.515</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\TagPosts.xbf">
       <PackagePath>TagPosts.xbf</PackagePath>
-      <Modified>2015-06-23T18:27:08.880</Modified>
+      <Modified>2015-06-24T05:43:03.515</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\Tags.xbf">
       <PackagePath>Tags.xbf</PackagePath>
