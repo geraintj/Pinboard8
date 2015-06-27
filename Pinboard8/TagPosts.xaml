@@ -15,10 +15,6 @@
         <converters:DateElapsedTimeConverter x:Key="dataConverter"/>
         <converters:WidthConverter x:Key="widthConverter" />
         <converters:StringConcatConverter x:Key="stringConcat"/>
-        <!-- Collection of items displayed by this page -->
-        <CollectionViewSource
-            x:Name="itemsViewSource"
-            Source="{Binding Items}"/>
         <DataTemplate x:Name="BookmarkDataTemplate">
             <Grid Width="450" Background="Blue" Height="92">
                 <Grid.ColumnDefinitions>
@@ -41,19 +37,19 @@
                         <ColumnDefinition Width="*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <ScrollViewer Grid.Column="0" VerticalScrollMode="Disabled" VerticalScrollBarVisibility="Hidden">
-                    <ListBox ItemsSource="{Binding Tags}"  Background="Blue" BorderThickness="1" FontFamily="Global User Interface" VerticalAlignment="Top" 
+                        <ListBox ItemsSource="{Binding Tags}"  Background="Blue" BorderThickness="1" FontFamily="Global User Interface" VerticalAlignment="Top" 
                              Foreground="White" Height="Auto" Width="250" VerticalContentAlignment="Top">
-                        <ListBox.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <StackPanel Orientation="Horizontal"></StackPanel>
-                            </ItemsPanelTemplate>
-                        </ListBox.ItemsPanel>
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
+                            <ListBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Horizontal"></StackPanel>
+                                </ItemsPanelTemplate>
+                            </ListBox.ItemsPanel>
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
                                     <TextBlock Text="{Binding Name}" FontStyle="Italic" Width="Auto" Foreground="White" Padding="5" VerticalAlignment="Top"></TextBlock>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
                     </ScrollViewer>
                     <TextBlock Grid.Column="1" Text="{Binding Time, Converter={StaticResource dataConverter}}" TextAlignment="Right" HorizontalAlignment="Right" Width="178" Margin="0,0,22,0" VerticalAlignment="Bottom" Height="25" Grid.ColumnSpan="2"/>
                 </Grid>
@@ -61,6 +57,7 @@
         </DataTemplate>
     </Page.Resources>
 
+    <ScrollViewer HorizontalScrollMode="Auto" HorizontalScrollBarVisibility="Auto">
     <!--
         This grid acts as a root panel for the page that defines two rows:
         * Row 0 contains the back button and page title
@@ -105,4 +102,5 @@
             </ListView>
         </StackPanel>
     </Grid>
+        </ScrollViewer>
 </Page>

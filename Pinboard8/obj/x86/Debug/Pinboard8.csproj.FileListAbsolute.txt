@@ -111,3 +111,8 @@ C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\qualifiers.t
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\Common\BookmarkTemplateDictionary.xbf
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Common\BookmarkTemplateDictionary.g.i.cs
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Common\BookmarkTemplateDictionary.g.cs
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Common\BookmarkTemplateDictionary.xaml
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Common\BookmarkTemplateDictionary.xbf

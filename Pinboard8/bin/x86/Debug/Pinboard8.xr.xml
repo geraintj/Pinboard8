@@ -7,11 +7,10 @@
     <RootPropertyPathName Name="Time" />
     <RootPropertyPathName Name="Tags" />
     <RootPropertyPathName Name="Name" />
-    <RootPropertyPathName Name="RecentBookmarks" />
-    <RootPropertyPathName Name="Title" />
     <RootPropertyPathName Name="Url" />
+    <RootPropertyPathName Name="Title" />
+    <RootPropertyPathName Name="RecentBookmarks" />
     <RootPropertyPathName Name="DefaultViewModel" />
-    <RootPropertyPathName Name="Items" />
     <RootPropertyPathName Name="Bookmarks" />
     <RootPropertyPathName Name="Tag" />
     <RootPropertyPathName Name="NavigationHelper" />
@@ -36,7 +35,6 @@
       <RootProperty Name="Children" />
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="Background" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="ChildrenTransitions" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
@@ -54,13 +52,13 @@
       <RootProperty Name="TextAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="FontStyle" />
-      <RootProperty Name="FontSize" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="Padding" />
+      <RootProperty Name="FontSize" />
       <RootProperty Name="Style" />
       <RootProperty Name="IsHitTestVisible" />
     </RootType>
@@ -74,12 +72,11 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="ItemsPanel" />
       <RootProperty Name="ItemTemplate" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="BorderBrush" />
       <RootProperty Name="FontFamily" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
       <RootProperty Name="VerticalContentAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
@@ -95,30 +92,32 @@
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Orientation" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="Children" />
-      <RootProperty Name="MaxWidth" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Height" />
       <RootProperty Name="MinWidth" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Children" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
     </RootType>
     <RootType FullName="Pinboard8.Common.BookmarkListItem" />
-    <RootType FullName="Windows.UI.Xaml.Controls.Page">
-      <RootProperty Name="Resources" />
-      <RootProperty Name="Content" />
-      <RootProperty Name="DataContext" />
-    </RootType>
     <RootType FullName="Pinboard8.Converters.DateElapsedTimeConverter" />
-    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
-      <RootProperty Name="HorizontalScrollMode" />
-      <RootProperty Name="HorizontalScrollBarVisibility" />
+    <RootType FullName="Windows.UI.Xaml.Controls.HyperlinkButton">
+      <RootProperty Name="NavigateUri" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="ContentTemplate" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
       <RootProperty Name="Content" />
+      <RootEvent Name="Click" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootProperty Name="VerticalScrollMode" />
       <RootProperty Name="VerticalScrollBarVisibility" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="HorizontalScrollMode" />
+      <RootProperty Name="HorizontalScrollBarVisibility" />
       <RootMethod Name="GetVerticalScrollBarVisibility" />
       <RootMethod Name="SetVerticalScrollBarVisibility" />
       <RootMethod Name="GetHorizontalScrollBarVisibility" />
@@ -130,6 +129,11 @@
       <RootMethod Name="GetZoomMode" />
       <RootMethod Name="SetZoomMode" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Page">
+      <RootProperty Name="Resources" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="DataContext" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="Height" />
@@ -140,30 +144,11 @@
     <RootType FullName="Windows.UI.Xaml.Controls.WrapGrid">
       <RootProperty Name="Orientation" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.HyperlinkButton">
-      <RootProperty Name="Width" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="Background" />
-      <RootProperty Name="Foreground" />
-      <RootProperty Name="Content" />
-      <RootProperty Name="NavigateUri" />
-      <RootProperty Name="ContentTemplate" />
-      <RootEvent Name="Click" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Border">
-      <RootProperty Name="BorderThickness" />
-      <RootProperty Name="BorderBrush" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Child" />
-    </RootType>
+    <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Pinboard8.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Data.RelativeSource" />
     <RootType FullName="Pinboard8.Converters.WidthConverter" />
     <RootType FullName="Pinboard8.Converters.StringConcatConverter" />
-    <RootType FullName="Windows.UI.Xaml.Data.CollectionViewSource">
-      <RootProperty Name="Source" />
-    </RootType>
-    <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Media.Animation.TransitionCollection" />
     <RootType FullName="Windows.UI.Xaml.Media.Animation.EntranceThemeTransition" />
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
