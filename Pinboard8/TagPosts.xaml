@@ -1,4 +1,4 @@
-﻿<common:LayoutAwarePage
+﻿<Page
     x:Name="pageRoot"
     x:Class="Pinboard8.TagPosts"
     DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
@@ -13,29 +13,36 @@
 
     <Page.Resources>
         <converters:DateElapsedTimeConverter x:Key="dataConverter"/>
+        <converters:WidthConverter x:Key="widthConverter" />
+        <converters:StringConcatConverter x:Key="stringConcat"/>
         <!-- Collection of items displayed by this page -->
         <CollectionViewSource
             x:Name="itemsViewSource"
             Source="{Binding Items}"/>
         <DataTemplate x:Name="BookmarkDataTemplate">
-            <Grid Width="450" Background="Blue">
+            <Grid Width="450" Background="Blue" Height="92">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="40" />
+                    <RowDefinition />
+                    <RowDefinition Height="35" />
                 </Grid.RowDefinitions>
-                <HyperlinkButton  Grid.Row="0" NavigateUri="{Binding Url}" Background="Blue" Foreground="White">
+                <HyperlinkButton Grid.Row="0" Grid.Column="0" NavigateUri="{Binding Url}" Background="Blue" Foreground="White">
                     <HyperlinkButton.ContentTemplate>
                         <DataTemplate>
-                            <TextBlock TextWrapping="Wrap" Text="{Binding Title}" />
-                       </DataTemplate>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Title}" TextAlignment="Left"/>
+                        </DataTemplate>
                     </HyperlinkButton.ContentTemplate>
                 </HyperlinkButton>
-                <Grid Grid.Row="1" Background="Blue">
+                <Grid Grid.Row="1" Grid.Column="0" Background="Blue">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="2*"></ColumnDefinition>
                         <ColumnDefinition Width="*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <ListBox Grid.Column="0" ItemsSource="{Binding Tags}"  Background="Blue" BorderThickness="1" FontFamily="Global User Interface" VerticalAlignment="Bottom" Foreground="White">
+                    <ScrollViewer Grid.Column="0" VerticalScrollMode="Disabled" VerticalScrollBarVisibility="Hidden">
+                    <ListBox ItemsSource="{Binding Tags}"  Background="Blue" BorderThickness="1" FontFamily="Global User Interface" VerticalAlignment="Top" 
+                             Foreground="White" Height="Auto" Width="250" VerticalContentAlignment="Top">
                         <ListBox.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <StackPanel Orientation="Horizontal"></StackPanel>
@@ -43,11 +50,12 @@
                         </ListBox.ItemsPanel>
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding Name}" FontStyle="Italic" ></TextBlock>
+                                    <TextBlock Text="{Binding Name}" FontStyle="Italic" Width="Auto" Foreground="White" Padding="5" VerticalAlignment="Top"></TextBlock>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>
-                    <TextBlock Grid.Column="1" Text="{Binding Time, Converter={StaticResource dataConverter}}" TextAlignment="Right" HorizontalAlignment="Right" Width="121" Margin="0,0,29,10" VerticalAlignment="Bottom" Height="30"></TextBlock>
+                    </ScrollViewer>
+                    <TextBlock Grid.Column="1" Text="{Binding Time, Converter={StaticResource dataConverter}}" TextAlignment="Right" HorizontalAlignment="Right" Width="178" Margin="0,0,22,0" VerticalAlignment="Bottom" Height="25" Grid.ColumnSpan="2"/>
                 </Grid>
             </Grid>
         </DataTemplate>
@@ -58,34 +66,37 @@
         * Row 0 contains the back button and page title
         * Row 1 contains the rest of the page layout
     -->
-    <Grid Style="{StaticResource LayoutRootStyle}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="140"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition x:Name="primaryColumn" Width="1366"/>
-            <ColumnDefinition Width="0*"/>
-        </Grid.ColumnDefinitions>
 
         <!-- Back button and page title -->
-        <Grid x:Name="titlePanel">
+        <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button
-                x:Name="backButton"
-                Click="GoBack"
-                Style="{StaticResource BackButtonStyle}"/>
-            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{Binding Tag.Name}" Style="{StaticResource PageHeaderTextStyle}"/>
+            <Button Margin="39,59,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
+                        Style="{StaticResource NavigationBackButtonNormalStyle}"
+                        VerticalAlignment="Top"
+                        AutomationProperties.Name="Back"
+                        AutomationProperties.AutomationId="BackButton"
+                        AutomationProperties.ItemType="Navigation Button"/>
+            <TextBlock Text="{Binding Tag.Name}" Style="{StaticResource HeaderTextBlockStyle}" 
+                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="107,0,30,40" Height="40"/>
         </Grid>
 
         <!-- Vertical scrolling item list -->
-        <StackPanel Margin="10,10,10,0" Grid.Row="1" Orientation="Horizontal" Width="1200" VerticalAlignment="Top">
-            <ListView ItemsSource="{Binding Bookmarks}" Width="Auto" Margin="20,20,20,22" ItemTemplate="{StaticResource BookmarkDataTemplate}" ScrollViewer.VerticalScrollBarVisibility="Disabled" 
+            <StackPanel Margin="10,10,10,0" Grid.Row="1" Orientation="Horizontal" MinWidth="{Binding Converter={StaticResource widthConverter}, ConverterParameter=50}" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <ListView ItemsSource="{Binding Bookmarks}" Margin="20,20,20,22" ItemTemplate="{StaticResource BookmarkDataTemplate}" ScrollViewer.VerticalScrollBarVisibility="Disabled" 
                         ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollMode="Disabled"
-                        ScrollViewer.HorizontalScrollMode="Auto" ScrollViewer.ZoomMode="Disabled">
+                        ScrollViewer.HorizontalScrollMode="Auto" ScrollViewer.ZoomMode="Disabled" Height="814">
                 <ListView.ItemsPanel>
                     <ItemsPanelTemplate>
                         <WrapGrid Orientation="Vertical" />
@@ -93,10 +104,5 @@
                 </ListView.ItemsPanel>
             </ListView>
         </StackPanel>
-
-        <!-- Details for selected item -->
-
-
-
     </Grid>
-</common:LayoutAwarePage>
+</Page>

@@ -124,47 +124,35 @@ namespace Pinboard8.Pinboard8_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[19];
+            _typeNameTable = new string[13];
             _typeNameTable[0] = "Pinboard8.Common.BookmarkListItem";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[2] = "Pinboard8.Converters.DateElapsedTimeConverter";
             _typeNameTable[3] = "Object";
-            _typeNameTable[4] = "Pinboard8.Converters.PercentileTextBoxSizeConverter";
-            _typeNameTable[5] = "Windows.UI.Xaml.DependencyObject";
-            _typeNameTable[6] = "System.Collections.ObjectModel.ObservableCollection`1<PinboardDomain.Model.ITag>";
-            _typeNameTable[7] = "System.Collections.ObjectModel.Collection`1<PinboardDomain.Model.ITag>";
-            _typeNameTable[8] = "PinboardDomain.Model.ITag";
-            _typeNameTable[9] = "String";
-            _typeNameTable[10] = "Int32";
-            _typeNameTable[11] = "Pinboard8.HubPage";
-            _typeNameTable[12] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[13] = "Pinboard8.Common.ObservableDictionary";
-            _typeNameTable[14] = "Pinboard8.Common.NavigationHelper";
-            _typeNameTable[15] = "Pinboard8.MainPage";
-            _typeNameTable[16] = "Pinboard8.Common.LayoutAwarePage";
-            _typeNameTable[17] = "Pinboard8.TagPosts";
-            _typeNameTable[18] = "Pinboard8.Tags";
+            _typeNameTable[4] = "Pinboard8.MainPage";
+            _typeNameTable[5] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[6] = "Pinboard8.Converters.WidthConverter";
+            _typeNameTable[7] = "Pinboard8.Converters.StringConcatConverter";
+            _typeNameTable[8] = "Pinboard8.TagPosts";
+            _typeNameTable[9] = "Pinboard8.Common.ObservableDictionary";
+            _typeNameTable[10] = "String";
+            _typeNameTable[11] = "Pinboard8.Common.NavigationHelper";
+            _typeNameTable[12] = "Windows.UI.Xaml.DependencyObject";
 
-            _typeTable = new global::System.Type[19];
+            _typeTable = new global::System.Type[13];
             _typeTable[0] = typeof(global::Pinboard8.Common.BookmarkListItem);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[2] = typeof(global::Pinboard8.Converters.DateElapsedTimeConverter);
             _typeTable[3] = typeof(global::System.Object);
-            _typeTable[4] = typeof(global::Pinboard8.Converters.PercentileTextBoxSizeConverter);
-            _typeTable[5] = typeof(global::Windows.UI.Xaml.DependencyObject);
-            _typeTable[6] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::PinboardDomain.Model.ITag>);
-            _typeTable[7] = typeof(global::System.Collections.ObjectModel.Collection<global::PinboardDomain.Model.ITag>);
-            _typeTable[8] = typeof(global::PinboardDomain.Model.ITag);
-            _typeTable[9] = typeof(global::System.String);
-            _typeTable[10] = typeof(global::System.Int32);
-            _typeTable[11] = typeof(global::Pinboard8.HubPage);
-            _typeTable[12] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[13] = typeof(global::Pinboard8.Common.ObservableDictionary);
-            _typeTable[14] = typeof(global::Pinboard8.Common.NavigationHelper);
-            _typeTable[15] = typeof(global::Pinboard8.MainPage);
-            _typeTable[16] = typeof(global::Pinboard8.Common.LayoutAwarePage);
-            _typeTable[17] = typeof(global::Pinboard8.TagPosts);
-            _typeTable[18] = typeof(global::Pinboard8.Tags);
+            _typeTable[4] = typeof(global::Pinboard8.MainPage);
+            _typeTable[5] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[6] = typeof(global::Pinboard8.Converters.WidthConverter);
+            _typeTable[7] = typeof(global::Pinboard8.Converters.StringConcatConverter);
+            _typeTable[8] = typeof(global::Pinboard8.TagPosts);
+            _typeTable[9] = typeof(global::Pinboard8.Common.ObservableDictionary);
+            _typeTable[10] = typeof(global::System.String);
+            _typeTable[11] = typeof(global::Pinboard8.Common.NavigationHelper);
+            _typeTable[12] = typeof(global::Windows.UI.Xaml.DependencyObject);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -201,28 +189,12 @@ namespace Pinboard8.Pinboard8_XamlTypeInfo
 
         private object Activate_0_BookmarkListItem() { return new global::Pinboard8.Common.BookmarkListItem(); }
         private object Activate_2_DateElapsedTimeConverter() { return new global::Pinboard8.Converters.DateElapsedTimeConverter(); }
-        private object Activate_4_PercentileTextBoxSizeConverter() { return new global::Pinboard8.Converters.PercentileTextBoxSizeConverter(); }
-        private object Activate_6_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::PinboardDomain.Model.ITag>(); }
-        private object Activate_7_Collection() { return new global::System.Collections.ObjectModel.Collection<global::PinboardDomain.Model.ITag>(); }
-        private object Activate_11_HubPage() { return new global::Pinboard8.HubPage(); }
-        private object Activate_13_ObservableDictionary() { return new global::Pinboard8.Common.ObservableDictionary(); }
-        private object Activate_15_MainPage() { return new global::Pinboard8.MainPage(); }
-        private object Activate_16_LayoutAwarePage() { return new global::Pinboard8.Common.LayoutAwarePage(); }
-        private object Activate_17_TagPosts() { return new global::Pinboard8.TagPosts(); }
-        private object Activate_18_Tags() { return new global::Pinboard8.Tags(); }
-        private void VectorAdd_6_ObservableCollection(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::PinboardDomain.Model.ITag>)instance;
-            var newItem = (global::PinboardDomain.Model.ITag)item;
-            collection.Add(newItem);
-        }
-        private void VectorAdd_7_Collection(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::PinboardDomain.Model.ITag>)instance;
-            var newItem = (global::PinboardDomain.Model.ITag)item;
-            collection.Add(newItem);
-        }
-        private void MapAdd_13_ObservableDictionary(object instance, object key, object item)
+        private object Activate_4_MainPage() { return new global::Pinboard8.MainPage(); }
+        private object Activate_6_WidthConverter() { return new global::Pinboard8.Converters.WidthConverter(); }
+        private object Activate_7_StringConcatConverter() { return new global::Pinboard8.Converters.StringConcatConverter(); }
+        private object Activate_8_TagPosts() { return new global::Pinboard8.TagPosts(); }
+        private object Activate_9_ObservableDictionary() { return new global::Pinboard8.Common.ObservableDictionary(); }
+        private void MapAdd_9_ObservableDictionary(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.String, global::System.Object>)instance;
             var newKey = (global::System.String)key;
@@ -262,145 +234,75 @@ namespace Pinboard8.Pinboard8_XamlTypeInfo
                 xamlType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 4:   //  Pinboard8.Converters.PercentileTextBoxSizeConverter
-                userType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_4_PercentileTextBoxSizeConverter;
-                userType.AddMemberName("Tags");
+            case 4:   //  Pinboard8.MainPage
+                userType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_4_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 5:   //  Windows.UI.Xaml.DependencyObject
+            case 5:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 6:   //  System.Collections.ObjectModel.ObservableCollection`1<PinboardDomain.Model.ITag>
-                userType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<PinboardDomain.Model.ITag>"));
-                userType.CollectionAdd = VectorAdd_6_ObservableCollection;
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 7:   //  System.Collections.ObjectModel.Collection`1<PinboardDomain.Model.ITag>
+            case 6:   //  Pinboard8.Converters.WidthConverter
                 userType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_7_Collection;
-                userType.CollectionAdd = VectorAdd_7_Collection;
+                userType.Activator = Activate_6_WidthConverter;
+                userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 8:   //  PinboardDomain.Model.ITag
-                userType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.AddMemberName("Name");
-                userType.AddMemberName("Count");
+            case 7:   //  Pinboard8.Converters.StringConcatConverter
+                userType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_7_StringConcatConverter;
+                userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 9:   //  String
-                xamlType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 10:   //  Int32
-                xamlType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 11:   //  Pinboard8.HubPage
+            case 8:   //  Pinboard8.TagPosts
                 userType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_11_HubPage;
+                userType.Activator = Activate_8_TagPosts;
                 userType.AddMemberName("DefaultViewModel");
                 userType.AddMemberName("NavigationHelper");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 12:   //  Windows.UI.Xaml.Controls.Page
-                xamlType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 13:   //  Pinboard8.Common.ObservableDictionary
+            case 9:   //  Pinboard8.Common.ObservableDictionary
                 userType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.DictionaryAdd = MapAdd_13_ObservableDictionary;
+                userType.DictionaryAdd = MapAdd_9_ObservableDictionary;
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 14:   //  Pinboard8.Common.NavigationHelper
+            case 10:   //  String
+                xamlType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 11:   //  Pinboard8.Common.NavigationHelper
                 userType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 15:   //  Pinboard8.MainPage
-                userType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_15_MainPage;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 16:   //  Pinboard8.Common.LayoutAwarePage
-                userType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_16_LayoutAwarePage;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 17:   //  Pinboard8.TagPosts
-                userType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Pinboard8.Common.LayoutAwarePage"));
-                userType.Activator = Activate_17_TagPosts;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 18:   //  Pinboard8.Tags
-                userType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Pinboard8.Common.LayoutAwarePage"));
-                userType.Activator = Activate_18_Tags;
-                userType.SetIsLocalType();
-                xamlType = userType;
+            case 12:   //  Windows.UI.Xaml.DependencyObject
+                xamlType = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
             return xamlType;
         }
 
 
-        private object get_0_PercentileTextBoxSizeConverter_Tags(object instance)
+        private object get_0_TagPosts_DefaultViewModel(object instance)
         {
-            var that = (global::Pinboard8.Converters.PercentileTextBoxSizeConverter)instance;
-            return that.Tags;
-        }
-        private void set_0_PercentileTextBoxSizeConverter_Tags(object instance, object Value)
-        {
-            var that = (global::Pinboard8.Converters.PercentileTextBoxSizeConverter)instance;
-            that.Tags = (global::System.Collections.ObjectModel.ObservableCollection<global::PinboardDomain.Model.ITag>)Value;
-        }
-        private object get_1_ITag_Name(object instance)
-        {
-            var that = (global::PinboardDomain.Model.ITag)instance;
-            return that.Name;
-        }
-        private void set_1_ITag_Name(object instance, object Value)
-        {
-            var that = (global::PinboardDomain.Model.ITag)instance;
-            that.Name = (global::System.String)Value;
-        }
-        private object get_2_ITag_Count(object instance)
-        {
-            var that = (global::PinboardDomain.Model.ITag)instance;
-            return that.Count;
-        }
-        private void set_2_ITag_Count(object instance, object Value)
-        {
-            var that = (global::PinboardDomain.Model.ITag)instance;
-            that.Count = (global::System.Int32)Value;
-        }
-        private object get_3_HubPage_DefaultViewModel(object instance)
-        {
-            var that = (global::Pinboard8.HubPage)instance;
+            var that = (global::Pinboard8.TagPosts)instance;
             return that.DefaultViewModel;
         }
-        private object get_4_HubPage_NavigationHelper(object instance)
+        private object get_1_TagPosts_NavigationHelper(object instance)
         {
-            var that = (global::Pinboard8.HubPage)instance;
+            var that = (global::Pinboard8.TagPosts)instance;
             return that.NavigationHelper;
         }
 
@@ -411,34 +313,16 @@ namespace Pinboard8.Pinboard8_XamlTypeInfo
 
             switch (longMemberName)
             {
-            case "Pinboard8.Converters.PercentileTextBoxSizeConverter.Tags":
-                userType = (global::Pinboard8.Pinboard8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Pinboard8.Converters.PercentileTextBoxSizeConverter");
-                xamlMember = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlMember(this, "Tags", "System.Collections.ObjectModel.ObservableCollection`1<PinboardDomain.Model.ITag>");
-                xamlMember.Getter = get_0_PercentileTextBoxSizeConverter_Tags;
-                xamlMember.Setter = set_0_PercentileTextBoxSizeConverter_Tags;
-                break;
-            case "PinboardDomain.Model.ITag.Name":
-                userType = (global::Pinboard8.Pinboard8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PinboardDomain.Model.ITag");
-                xamlMember = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlMember(this, "Name", "String");
-                xamlMember.Getter = get_1_ITag_Name;
-                xamlMember.Setter = set_1_ITag_Name;
-                break;
-            case "PinboardDomain.Model.ITag.Count":
-                userType = (global::Pinboard8.Pinboard8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PinboardDomain.Model.ITag");
-                xamlMember = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlMember(this, "Count", "Int32");
-                xamlMember.Getter = get_2_ITag_Count;
-                xamlMember.Setter = set_2_ITag_Count;
-                break;
-            case "Pinboard8.HubPage.DefaultViewModel":
-                userType = (global::Pinboard8.Pinboard8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Pinboard8.HubPage");
+            case "Pinboard8.TagPosts.DefaultViewModel":
+                userType = (global::Pinboard8.Pinboard8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Pinboard8.TagPosts");
                 xamlMember = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "Pinboard8.Common.ObservableDictionary");
-                xamlMember.Getter = get_3_HubPage_DefaultViewModel;
+                xamlMember.Getter = get_0_TagPosts_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
-            case "Pinboard8.HubPage.NavigationHelper":
-                userType = (global::Pinboard8.Pinboard8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Pinboard8.HubPage");
+            case "Pinboard8.TagPosts.NavigationHelper":
+                userType = (global::Pinboard8.Pinboard8_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Pinboard8.TagPosts");
                 xamlMember = new global::Pinboard8.Pinboard8_XamlTypeInfo.XamlMember(this, "NavigationHelper", "Pinboard8.Common.NavigationHelper");
-                xamlMember.Getter = get_4_HubPage_NavigationHelper;
+                xamlMember.Getter = get_1_TagPosts_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             }

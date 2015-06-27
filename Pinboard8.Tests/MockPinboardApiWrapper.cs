@@ -36,6 +36,11 @@ namespace Pinboard8.Tests
             throw new NotImplementedException();
         }
 
+        public List<Bookmark> GetAllBookmarks()
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<ObservableCollection<IBookmark>> GetBookmarksSinceAsync(DateTime date)
         {
             throw new NotImplementedException();

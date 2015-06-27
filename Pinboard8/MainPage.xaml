@@ -57,7 +57,7 @@
                 </StackPanel>
 
 
-                <StackPanel Margin="20,10,10,10" Width="884">
+                <StackPanel Margin="20,10,10,10" MinWidth="884">
                     <TextBlock FontSize="42" Text="My Tags" Margin="0,0,0,20"></TextBlock>
                     <ListView ItemsSource="{Binding Tags}" ScrollViewer.VerticalScrollBarVisibility="Disabled" 
                         ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollMode="Disabled"
@@ -69,8 +69,8 @@
                         </ListView.ItemsPanel>
                         <ListView.ItemTemplate>
                             <DataTemplate>
-                                <HyperlinkButton Width="150" Height="75" Background="WhiteSmoke"  Click="ButtonClick"
-                               Content="{Binding Name}" FontSize="12">
+                                <HyperlinkButton Width="150" Height="75"  Background="Blue" Foreground="White"  Click="ButtonClick"
+                               Content="{Binding Name}">
                                 </HyperlinkButton>
                             </DataTemplate>
                         </ListView.ItemTemplate>

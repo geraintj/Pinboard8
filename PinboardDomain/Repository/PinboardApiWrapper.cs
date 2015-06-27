@@ -113,14 +113,9 @@ namespace PinboardDomain.Repository
                     Url = xElement.Attribute("href").Value,
                     Title = xElement.Attribute("description").Value,
                     Time = xElement.Attribute("time").Value,
-                    Tags =
-                        new List<Tag>()
-                                {
-                                    xElement.Attribute("tag")
-                                            .Value.Split(new char[] {' '})
-                                            .Select(s => new Tag() {Name = s})
-                                            .FirstOrDefault()
-                                }
+                    Tags = xElement.Attribute("tag")
+                        .Value.Split(new char[] { ' ' })
+                        .Select(s => new Tag() { Name = s }).ToList()
                 });
             }
             return bookmarks;
