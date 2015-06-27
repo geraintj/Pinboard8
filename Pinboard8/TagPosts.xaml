@@ -18,18 +18,24 @@
             x:Name="itemsViewSource"
             Source="{Binding Items}"/>
         <DataTemplate x:Name="BookmarkDataTemplate">
-            <Grid Width="450">
+            <Grid Width="450" Background="Blue">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="40" />
                 </Grid.RowDefinitions>
-                <HyperlinkButton  Grid.Row="0" Content="{Binding Title}" NavigateUri="{Binding Url}" />
-                <Grid Grid.Row="1">
+                <HyperlinkButton  Grid.Row="0" NavigateUri="{Binding Url}" Background="Blue" Foreground="White">
+                    <HyperlinkButton.ContentTemplate>
+                        <DataTemplate>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Title}" />
+                       </DataTemplate>
+                    </HyperlinkButton.ContentTemplate>
+                </HyperlinkButton>
+                <Grid Grid.Row="1" Background="Blue">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="2*"></ColumnDefinition>
                         <ColumnDefinition Width="*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <ListBox Grid.Column="0" ItemsSource="{Binding Tags}"  Background="Transparent" BorderThickness="1" FontFamily="Global User Interface" VerticalAlignment="Bottom">
+                    <ListBox Grid.Column="0" ItemsSource="{Binding Tags}"  Background="Blue" BorderThickness="1" FontFamily="Global User Interface" VerticalAlignment="Bottom" Foreground="White">
                         <ListBox.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <StackPanel Orientation="Horizontal"></StackPanel>

@@ -93,6 +93,7 @@
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="FontFamily" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Foreground" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Converter" />
@@ -330,6 +331,8 @@
       <RootProperty Name="Content" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="NavigateUri" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="ContentTemplate" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Pinboard8.MainPage" />
