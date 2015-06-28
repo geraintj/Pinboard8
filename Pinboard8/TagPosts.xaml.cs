@@ -53,6 +53,7 @@ namespace Pinboard8
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += navigationHelper_LoadState;
             this.navigationHelper.SaveState += navigationHelper_SaveState;
+            BottomBar.Closed += BottomBarClosed;
         }
 
         /// <summary>
@@ -106,5 +107,20 @@ namespace Pinboard8
         }
 
         #endregion
+
+        private void PostSelected(object sender, SelectionChangedEventArgs e)
+        {
+
+            if (PostsListView.SelectedItem != null)
+            {
+                BottomBar.IsOpen = true;
+            }
+        }
+
+        private void BottomBarClosed(object sender, object e)
+        {
+            PostsListView.SelectedItem = null;
+        }
+        
     }
 }

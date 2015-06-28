@@ -91,11 +91,11 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Orientation" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Children" />
       <RootProperty Name="Margin" />
       <RootProperty Name="MinWidth" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Children" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
@@ -131,15 +131,24 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Resources" />
+      <RootProperty Name="BottomAppBar" />
       <RootProperty Name="Content" />
       <RootProperty Name="DataContext" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.AppBar">
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
+      <RootProperty Name="Icon" />
+      <RootProperty Name="Label" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="Height" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="ItemsPanel" />
       <RootProperty Name="ItemTemplate" />
-      <RootProperty Name="Margin" />
+      <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.WrapGrid">
       <RootProperty Name="Orientation" />
@@ -148,7 +157,6 @@
     <RootType FullName="Pinboard8.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Data.RelativeSource" />
     <RootType FullName="Pinboard8.Converters.WidthConverter" />
-    <RootType FullName="Pinboard8.Converters.StringConcatConverter" />
     <RootType FullName="Windows.UI.Xaml.Media.Animation.TransitionCollection" />
     <RootType FullName="Windows.UI.Xaml.Media.Animation.EntranceThemeTransition" />
     <RootType FullName="Windows.UI.Xaml.Controls.Button">

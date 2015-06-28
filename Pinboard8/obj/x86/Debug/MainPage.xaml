@@ -6,6 +6,7 @@
     xmlns:converters="using:Pinboard8.Converters"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:interop="using:Windows.UI.Xaml.Interop"
     mc:Ignorable="d">
 
     <Page.Resources>
@@ -51,7 +52,24 @@
             </Grid>
         </DataTemplate>
     </Page.Resources>
-    <ScrollViewer HorizontalScrollMode="Auto" HorizontalScrollBarVisibility="Auto">
+
+    <Page.BottomAppBar>
+        <AppBar x:Name="BottomBar">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal"/>
+                <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
+                    <AppBarButton x:Name="RenameTagAppBarButton" Icon="Rename" Label="Rename Tag"/>
+                    <AppBarButton x:Name="DeleteTagAppBarButton" Icon="Delete" Label="Delete Tag" />
+                </StackPanel>
+            </Grid>
+        </AppBar>
+    </Page.BottomAppBar>
+
+    <ScrollViewer HorizontalScrollMode="Auto" HorizontalScrollBarVisibility="Auto" VerticalScrollMode="Disabled" VerticalScrollBarVisibility="Disabled">
 
         <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}" >
         <Grid.RowDefinitions>
@@ -59,17 +77,20 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="450"></ColumnDefinition>
+            <ColumnDefinition Width="600"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         
 
-            <TextBlock Grid.Column="0" Grid.Row="0" FontSize="42" Text="Recent Bookmarks" Margin="0,0,0,20" Foreground="White"></TextBlock>
-            <ListBox Grid.Column="0" Grid.Row="1" x:Name="RecentBookmarks" ItemsSource="{Binding RecentBookmarks}" Width="450" ItemTemplate="{StaticResource BookmarkDataTemplate}" FontFamily="Global User Interface" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" />
-            <TextBlock  Grid.Column="1" Grid.Row="0" FontSize="42" Text="My Tags" Margin="0,0,0,20"/>
-            <ListView  Grid.Column="1" Grid.Row="1" ItemsSource="{Binding Tags}" ScrollViewer.VerticalScrollBarVisibility="Disabled" 
+            <TextBlock Grid.Column="0" Grid.Row="0" FontSize="42" Text="Recent Bookmarks" Margin="20,56,0,20" Foreground="White"></TextBlock>
+            <ListBox Grid.Column="0" Grid.Row="1" x:Name="RecentBookmarks" ItemsSource="{Binding RecentBookmarks}" Width="450" ItemTemplate="{StaticResource BookmarkDataTemplate}" 
+                      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
+                
+            </ListBox>
+            <TextBlock  Grid.Column="1" Grid.Row="0" FontSize="42" Text="My Tags" Margin="20,56,0,20"/>
+            <ListView x:ConnectionId='1' x:Name="TagListView" Grid.Column="1" Grid.Row="1" ItemsSource="{Binding Tags}" ScrollViewer.VerticalScrollBarVisibility="Disabled" 
                         ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollMode="Disabled"
-                        ScrollViewer.HorizontalScrollMode="Auto" ScrollViewer.ZoomMode="Disabled" Height="814">
+                        ScrollViewer.HorizontalScrollMode="Auto" ScrollViewer.ZoomMode="Disabled" Height="Auto" Margin="50,10,10,10"                               >
                         <ListView.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <WrapGrid Orientation="Vertical" />
@@ -77,14 +98,15 @@
                         </ListView.ItemsPanel>
                         <ListView.ItemTemplate>
                             <DataTemplate>
-                                <HyperlinkButton x:ConnectionId='1' Width="150" Height="75"  Background="Blue" Foreground="White"                     
+                                <HyperlinkButton x:ConnectionId='2' Width="150" Height="75"  Background="Blue" Foreground="White"                     
                                Content="{Binding Name}">
                                 </HyperlinkButton>
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
-                
-    </Grid>
+
+
+        </Grid>
     </ScrollViewer>
 
 </Page>

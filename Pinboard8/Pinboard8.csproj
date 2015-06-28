@@ -124,7 +124,6 @@
     <Compile Include="Common\SuspensionManager.cs" />
     <Compile Include="Converters\DateElapsedTimeConverter.cs" />
     <Compile Include="Converters\PercentileTextBoxSizeConverter.cs" />
-    <Compile Include="Converters\StringConcatConverter.cs" />
     <Compile Include="Converters\WidthConverter.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>

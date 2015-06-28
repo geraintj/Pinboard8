@@ -28,6 +28,7 @@ namespace Pinboard8
         public MainPage()
         {
             this.InitializeComponent();
+            BottomBar.Closed += BottomBarClosed;
         }
 
         /// <summary>
@@ -47,5 +48,19 @@ namespace Pinboard8
             var thing = button.Content;
             this.Frame.Navigate(typeof(TagPosts), thing);
         }
+
+        private void TagSelected(object sender, SelectionChangedEventArgs e)
+        {
+            if (TagListView.SelectedItem != null)
+            {
+                BottomBar.IsOpen = true;
+            }
+        }
+
+        private void BottomBarClosed(object sender, object e)
+        {
+            TagListView.SelectedItem = null;
+        }
+        
     }
 }
