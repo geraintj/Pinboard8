@@ -61,6 +61,17 @@ namespace Pinboard8
         {
             TagListView.SelectedItem = null;
         }
+
+        private void AppBar_RenameButton_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedTag = TagListView.SelectedItem as Tag;
+            TagName.Text = selectedTag.Name;
+        }
+
+        private void RenameButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
         
     }
 }

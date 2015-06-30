@@ -62,7 +62,18 @@
                 </Grid.ColumnDefinitions>
                 <StackPanel Orientation="Horizontal"/>
                 <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
-                    <AppBarButton x:Name="RenameTagAppBarButton" Icon="Rename" Label="Rename Tag"/>
+                    <AppBarButton x:Name="RenameTagAppBarButton" Icon="Rename" Label="Rename Tag" Click="AppBar_RenameButton_Click">
+                        <AppBarButton.Flyout>
+                            <Flyout>
+                                <StackPanel Width="400" >
+                                    <TextBlock Text="Rename Tag" FontSize="30" Margin="5,5,5,10" />
+                                    <TextBlock Text="Type in the new tag name and tap the Rename button" Margin="5,0,5,10" FontSize="14"/>
+                                    <TextBox x:Name="TagName" Margin="5, 0, 5, 10"/>
+                                    <Button Content="Rename" Click="RenameButton_Click" Margin="5, 0, 5,5"/>
+                                </StackPanel>
+                            </Flyout>
+                        </AppBarButton.Flyout>
+                    </AppBarButton>
                     <AppBarButton x:Name="DeleteTagAppBarButton" Icon="Delete" Label="Delete Tag" />
                 </StackPanel>
             </Grid>

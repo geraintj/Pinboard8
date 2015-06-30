@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using PinboardDomain.Model;
 using PinboardDomain.Repository;
 using PinboardDomain.ViewModels;
 
@@ -110,7 +111,6 @@ namespace Pinboard8
 
         private void PostSelected(object sender, SelectionChangedEventArgs e)
         {
-
             if (PostsListView.SelectedItem != null)
             {
                 BottomBar.IsOpen = true;
@@ -120,6 +120,15 @@ namespace Pinboard8
         private void BottomBarClosed(object sender, object e)
         {
             PostsListView.SelectedItem = null;
+        }
+
+        private void AppBar_EditButton_Click(object sender, RoutedEventArgs e)
+        {
+            var post = PostsListView.SelectedItem as Bookmark;
+
+            PostTitle.Text = post.Title;
+            PostTags.Text = post.Tags[0].Name;
+            PostUrl.Text = post.Url;
         }
         
     }
