@@ -14,46 +14,6 @@
     <Page.Resources>
         <converters:DateElapsedTimeConverter x:Key="dataConverter"/>
         <converters:WidthConverter x:Key="widthConverter" />
-        <DataTemplate x:Name="BookmarkDataTemplate">
-            <Grid Width="450" Background="Blue" Height="92">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition />
-                    <RowDefinition Height="35" />
-                </Grid.RowDefinitions>
-                <HyperlinkButton Grid.Row="0" Grid.Column="0" NavigateUri="{Binding Url}" Background="Blue" Foreground="White" >
-                    <HyperlinkButton.ContentTemplate>
-                        <DataTemplate>
-                            <TextBlock TextWrapping="Wrap" Text="{Binding Title}" TextAlignment="Left"/>
-                        </DataTemplate>
-                    </HyperlinkButton.ContentTemplate>
-                </HyperlinkButton>
-                <Grid Grid.Row="1" Grid.Column="0" Background="Blue">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2*"></ColumnDefinition>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <ScrollViewer Grid.Column="0" VerticalScrollMode="Disabled" VerticalScrollBarVisibility="Hidden">
-                        <ListBox ItemsSource="{Binding Tags}"  Background="Blue" BorderThickness="1" FontFamily="Global User Interface" VerticalAlignment="Top" 
-                             Foreground="White" Height="Auto" Width="250" VerticalContentAlignment="Top">
-                            <ListBox.ItemsPanel>
-                                <ItemsPanelTemplate>
-                                    <StackPanel Orientation="Horizontal"></StackPanel>
-                                </ItemsPanelTemplate>
-                            </ListBox.ItemsPanel>
-                            <ListBox.ItemTemplate>
-                                <DataTemplate>
-                                    <TextBlock Text="{Binding Name}" FontStyle="Italic" Width="Auto" Foreground="White" Padding="5" VerticalAlignment="Top"></TextBlock>
-                                </DataTemplate>
-                            </ListBox.ItemTemplate>
-                        </ListBox>
-                    </ScrollViewer>
-                    <TextBlock Grid.Column="1" Text="{Binding Time, Converter={StaticResource dataConverter}}" TextAlignment="Right" HorizontalAlignment="Right" Width="178" Margin="0,0,22,0" VerticalAlignment="Bottom" Height="25" Grid.ColumnSpan="2"/>
-                </Grid>
-            </Grid>
-        </DataTemplate>
     </Page.Resources>
 
     <Page.BottomAppBar>
@@ -66,20 +26,7 @@
                 <StackPanel Orientation="Horizontal"/>
                 <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
                     <AppBarButton x:Name="EditPostAppBarButton" Icon="Edit" Label="Edit Post" Click="AppBar_EditButton_Click">
-                        <AppBarButton.Flyout>
-                            <Flyout>
-                                <StackPanel Width="400" Height="600">
-                                    <TextBlock Text="Edit Bookmark" FontSize="30" Margin="5,5,5,10" />
-                                    <TextBlock Text="Title" Margin="5,10,5,10" FontSize="14" TextWrapping="Wrap"/>
-                                    <TextBox x:Name="PostTitle" Margin="5, 0, 5, 10"/>
-                                    <TextBlock Text="URL" Margin="5,10,5,10" FontSize="14" TextWrapping="Wrap"/>
-                                    <TextBox x:Name="PostUrl" Margin="5, 0, 5, 10"/>
-                                    <TextBlock Text="Tags" Margin="5,10,5,10" FontSize="14" TextWrapping="Wrap"/>
-                                    <TextBox x:Name="PostTags" Margin="5, 0, 5, 10"/>                                    
-                                    <Button Content="Save Changes" Margin="5, 0, 5,5"/>
-                                </StackPanel>
-                            </Flyout>
-                        </AppBarButton.Flyout>
+                        <AppBarButton Flyout="{StaticResource BookmarkDetailsFlyout}" />
                     </AppBarButton>
                     <AppBarButton x:Name="DeletePostAppBarButton" Icon="Delete" Label="Delete Post"/>
                 </StackPanel>

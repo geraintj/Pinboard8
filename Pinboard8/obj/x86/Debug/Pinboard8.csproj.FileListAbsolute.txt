@@ -66,7 +66,6 @@ C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\TagPosts.g.i
 C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\TagPosts.g.cs
 C:\Users\devuser\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\TagPosts.xaml
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\App.xbf
-C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\Common\BookmarkListItem.xbf
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\Common\BookmarkTemplateDictionary.xbf
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\MainPage.xbf
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\TagPosts.xbf
@@ -81,8 +80,6 @@ C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\PinboardDoma
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Pinboard8.csprojResolveAssemblyReference.cache
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\App.g.i.cs
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\App.g.cs
-C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Common\BookmarkListItem.g.i.cs
-C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Common\BookmarkListItem.g.cs
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Common\BookmarkTemplateDictionary.g.i.cs
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Common\BookmarkTemplateDictionary.g.cs
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\MainPage.g.i.cs
@@ -91,11 +88,8 @@ C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\TagPosts.g.i
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\TagPosts.g.cs
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\XamlTypeInfo.g.cs
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\App.xaml
-C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Common\BookmarkListItem.xaml
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Common\BookmarkTemplateDictionary.xaml
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\App.xbf
-C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Common\BookmarkListItem.xbf
-C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Common\BookmarkTemplateDictionary.xbf
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\XamlSaveStateFile.xml
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\MainPage.xaml
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\TagPosts.xaml
@@ -116,3 +110,9 @@ C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\qualifiers.t
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Common\BookmarkTemplateDictionary.xbf
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Common\BookmarkDetailsTemplateDictionary.g.i.cs
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Common\BookmarkDetailsTemplateDictionary.g.cs
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\bin\x86\Debug\Common\BookmarkDetailsTemplateDictionary.xbf
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Common\BookmarkDetailsTemplateDictionary.xaml
+C:\Users\Geraint\Documents\GitHub\Pinboard8\Pinboard8\obj\x86\Debug\Common\BookmarkDetailsTemplateDictionary.xbf

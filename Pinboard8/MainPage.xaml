@@ -11,46 +11,6 @@
 
     <Page.Resources>
         <converters:DateElapsedTimeConverter x:Key="dataConverter"></converters:DateElapsedTimeConverter>
-        <DataTemplate x:Name="BookmarkDataTemplate">
-            <Grid Width="450" Background="Blue" Height="92">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition />
-                    <RowDefinition Height="35" />
-                </Grid.RowDefinitions>
-                <HyperlinkButton Grid.Row="0" Grid.Column="0" NavigateUri="{Binding Url}" Background="Blue" Foreground="White">
-                    <HyperlinkButton.ContentTemplate>
-                        <DataTemplate>
-                            <TextBlock TextWrapping="Wrap" Text="{Binding Title}" TextAlignment="Left"/>
-                        </DataTemplate>
-                    </HyperlinkButton.ContentTemplate>
-                </HyperlinkButton>
-                <Grid Grid.Row="1" Grid.Column="0" Background="Blue">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2*"></ColumnDefinition>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <ScrollViewer Grid.Column="0" VerticalScrollMode="Disabled" VerticalScrollBarVisibility="Hidden">
-                        <ListBox ItemsSource="{Binding Tags}"  Background="Blue" BorderThickness="1" FontFamily="Global User Interface" VerticalAlignment="Top" 
-                             Foreground="White" Height="Auto" Width="250" VerticalContentAlignment="Top">
-                            <ListBox.ItemsPanel>
-                                <ItemsPanelTemplate>
-                                    <StackPanel Orientation="Horizontal"></StackPanel>
-                                </ItemsPanelTemplate>
-                            </ListBox.ItemsPanel>
-                            <ListBox.ItemTemplate>
-                                <DataTemplate>
-                                    <TextBlock Text="{Binding Name}" FontStyle="Italic" Width="Auto" Foreground="White" Padding="5" VerticalAlignment="Top"></TextBlock>
-                                </DataTemplate>
-                            </ListBox.ItemTemplate>
-                        </ListBox>
-                    </ScrollViewer>
-                    <TextBlock Grid.Column="1" Text="{Binding Time, Converter={StaticResource dataConverter}}" TextAlignment="Right" HorizontalAlignment="Right" Width="178" Margin="0,0,22,0" VerticalAlignment="Bottom" Height="25" Grid.ColumnSpan="2"/>
-                </Grid>
-            </Grid>
-        </DataTemplate>
     </Page.Resources>
 
     <Page.BottomAppBar>

@@ -114,9 +114,6 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Caching\FileCache.cs" />
-    <Compile Include="Common\BookmarkListItem.xaml.cs">
-      <DependentUpon>BookmarkListItem.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Common\BooleanToVisibilityConverter.cs" />
     <Compile Include="Common\NavigationHelper.cs" />
     <Compile Include="Common\ObservableDictionary.cs" />
@@ -150,9 +147,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Common\BookmarkListItem.xaml">
+    <Page Include="Common\BookmarkDetailsTemplateDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
     <Page Include="Common\BookmarkTemplateDictionary.xaml">
       <SubType>Designer</SubType>

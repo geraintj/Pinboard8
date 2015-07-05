@@ -125,10 +125,14 @@ namespace Pinboard8
         private void AppBar_EditButton_Click(object sender, RoutedEventArgs e)
         {
             var post = PostsListView.SelectedItem as Bookmark;
+            var appBarButton = sender as AppBarButton;
+            //var bookmarkDetailsTitle = appBarButton.FindName("BoookmarkDetailsTitle") as TextBlock;
+            //bookmarkDetailsTitle.Text = "Edit Bookmark";
 
-            PostTitle.Text = post.Title;
-            PostTags.Text = post.Tags[0].Name;
-            PostUrl.Text = post.Url;
+            //PostTitle.Text = post.Title;
+            //PostTags.Text = post.Tags[0].Name;
+            //PostUrl.Text = post.Url;
+            //PostDate.Text = post.Time;
         }
         
     }

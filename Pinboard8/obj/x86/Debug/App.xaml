@@ -5,16 +5,12 @@
     xmlns:local="using:Pinboard8">
 
     <Application.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-
-                <!-- 
-                    Styles that define common aspects of the platform look and feel
-                    Required by Visual Studio project and item templates
-                 -->
-            </ResourceDictionary.MergedDictionaries>
-
-        </ResourceDictionary>
+            <ResourceDictionary>
+                <ResourceDictionary.MergedDictionaries>
+                    <ResourceDictionary Source="Common/BookmarkTemplateDictionary.xaml"/>
+                    <ResourceDictionary Source="Common/BookmarkDetailsTemplateDictionary.xaml"></ResourceDictionary>
+                </ResourceDictionary.MergedDictionaries>
+            </ResourceDictionary>
     </Application.Resources>
 </Application>
 

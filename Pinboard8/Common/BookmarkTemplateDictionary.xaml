@@ -5,8 +5,8 @@
     xmlns:local="using:Pinboard8.Common">
 
     <converters:DateElapsedTimeConverter x:Key="dataConverter"/>
-        
-    <DataTemplate x:Name="BookmarkDataTemplate">
+
+    <DataTemplate x:Key="BookmarkDataTemplate">
         <Grid Width="450" Background="Blue" Height="92">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -15,7 +15,7 @@
                 <RowDefinition />
                 <RowDefinition Height="35" />
             </Grid.RowDefinitions>
-            <HyperlinkButton Grid.Row="0" Grid.Column="0" NavigateUri="{Binding Url}" Background="Blue" Foreground="White">
+            <HyperlinkButton Grid.Row="0" Grid.Column="0" NavigateUri="{Binding Url}" Background="Blue" Foreground="White" >
                 <HyperlinkButton.ContentTemplate>
                     <DataTemplate>
                         <TextBlock TextWrapping="Wrap" Text="{Binding Title}" TextAlignment="Left"/>
