@@ -92,14 +92,14 @@ namespace PinboardDomain.Repository
             return tags;
         }
 
-        public void RenameTag(string newTag, string oldTag)
+        public async void RenameTag(string newTag, string oldTag)
         {
-            throw new NotImplementedException();
+            await MakeGetCall("tags/rename", String.Format("&old={0}&new={1}", oldTag, newTag));
         }
 
-        public void DeleteTag(string tag)
+        public async void DeleteTag(string tag)
         {
-            throw new NotImplementedException();
+            await MakeGetCall("tags/delete", "&tag=" + tag);
         }
 
         ObservableCollection<IBookmark> ParseBookmarks(string responseString)
