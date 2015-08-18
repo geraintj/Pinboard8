@@ -1,6 +1,6 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="c:\users\geraint\documents\github\pinboard8\pinboard8\obj\x86\debug\intermediatexaml\pinboard8.exe" HashGuid="cd48e9c3-b00d-0a96-fc52-5bec0088f8bc" />
-    <ReferenceAssembly PathName="c:\users\geraint\documents\github\pinboard8\pinboarddomain\bin\debug\pinboarddomain.dll" HashGuid="6e66f7f6-89ce-cc6b-f664-6b23467ec9f6" />
+    <LocalAssembly PathName="c:\users\geraint\documents\github\pinboard8\pinboard8\obj\x86\debug\intermediatexaml\pinboard8.exe" HashGuid="60265b8c-4a0b-67f2-52c9-7740973f14e0" />
+    <ReferenceAssembly PathName="c:\users\geraint\documents\github\pinboard8\pinboarddomain\bin\debug\pinboarddomain.dll" HashGuid="8d60627a-fe93-10df-ca13-9193f7c33412" />
   </ReferenceAssemblyList>
 </XamlCompilerSaveState>

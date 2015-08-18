@@ -26,7 +26,9 @@
                 <StackPanel Orientation="Horizontal"/>
                 <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
                     <AppBarButton x:ConnectionId='1' x:Name="EditPostAppBarButton" Icon="Edit" Label="Edit Post"                                >
-                        <AppBarButton Flyout="{StaticResource BookmarkDetailsFlyout}" />
+                        <Flyout>
+                            <TextBlock Text="Hello"></TextBlock>
+                        </Flyout>
                     </AppBarButton>
                     <AppBarButton x:Name="DeletePostAppBarButton" Icon="Delete" Label="Delete Post"/>
                 </StackPanel>
