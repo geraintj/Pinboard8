@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Roots >
+<Roots xmlns="clr-namespace:Microsoft.Xaml.Tools.XamlCompiler.RootLog;assembly=Microsoft.Windows.UI.Xaml.81.Build.Tasks">
   <Roots.Interfaces>
     <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
   </Roots.Interfaces>
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="Time" />
-    <RootPropertyPathName Name="Tags" />
-    <RootPropertyPathName Name="Name" />
     <RootPropertyPathName Name="Url" />
     <RootPropertyPathName Name="Title" />
+    <RootPropertyPathName Name="Tags" />
+    <RootPropertyPathName Name="Name" />
     <RootPropertyPathName Name="RecentBookmarks" />
     <RootPropertyPathName Name="DefaultViewModel" />
     <RootPropertyPathName Name="Bookmarks" />
@@ -55,6 +55,7 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Margin" />
+      <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
@@ -63,6 +64,12 @@
       <RootProperty Name="Style" />
       <RootProperty Name="VerticalAlignment" />
       <RootEvent Name="Click" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="Converter" />
+      <RootProperty Name="RelativeSource" />
+      <RootProperty Name="ConverterParameter" />
+      <RootProperty Name="ElementName" />
     </RootType>
     <RootType FullName="Pinboard8.Converters.DateElapsedTimeConverter" />
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
@@ -116,12 +123,6 @@
       <RootMethod Name="GetZoomMode" />
       <RootMethod Name="SetZoomMode" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Data.Binding">
-      <RootProperty Name="Converter" />
-      <RootProperty Name="RelativeSource" />
-      <RootProperty Name="ConverterParameter" />
-      <RootProperty Name="ElementName" />
-    </RootType>
     <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
       <RootProperty Name="ItemsSource" />
@@ -152,7 +153,6 @@
       <RootProperty Name="Icon" />
       <RootProperty Name="Label" />
       <RootProperty Name="Flyout" />
-      <RootProperty Name="Content" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">

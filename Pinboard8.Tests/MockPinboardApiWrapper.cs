@@ -71,6 +71,11 @@ namespace Pinboard8.Tests
             throw new NotImplementedException();
         }
 
+        public void UpdateBookmark(Bookmark editBookmark)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<ObservableCollection<ITag>> GetTagsAsync()
         {
             return new ObservableCollection<ITag>(await GetTags());

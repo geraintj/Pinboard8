@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Runtime.CompilerServices;
+using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using PinboardDomain.Model;
@@ -69,14 +70,31 @@ namespace PinboardDomain.Repository
             return ParseBookmarks(responseString);
         }
 
-        public void AddBookmark(Bookmark newBookmark)
+        public async Task<Bookmark> GetBookmarkAsync(string url)
         {
-            throw new NotImplementedException();
+            var responseString = await MakeGetCall("posts/get", "&url=" + url);
+            return (Bookmark) ParseBookmarks(responseString).ToList().First();
         }
 
-        public void DeleteBookmark(string url)
+        public async void AddBookmark(Bookmark newBookmark)
         {
-            throw new NotImplementedException();
+            var addBookmarkString = BuildBookmarkQueryString(newBookmark);
+            await MakeGetCall("posts/add", addBookmarkString);
+        }
+
+        public async void DeleteBookmark(string url)
+        {
+            var response = await MakeGetCall("posts/delete", "url=" + url);
+        }
+
+        public async void UpdateBookmark(Bookmark editBookmark)
+        {
+            var editBookmarkString = BuildBookmarkQueryString(editBookmark);
+            editBookmarkString += "&dt=";
+            editBookmarkString += String.Format("{0:s}", editBookmark.Time);
+            editBookmarkString += "Z";
+            editBookmarkString += "&replace=yes";
+            await MakeGetCall("posts/add", editBookmarkString);
         }
 
         public async Task<ObservableCollection<ITag>> GetTagsAsync()
@@ -120,7 +138,26 @@ namespace PinboardDomain.Repository
             }
             return bookmarks;
         }
-            
+
+        string BuildBookmarkQueryString(Bookmark bookmark)
+        {
+            var bookmarkStringBuilder = new StringBuilder();
+            bookmarkStringBuilder.Append("&url=");
+            bookmarkStringBuilder.Append(bookmark.Url);
+            bookmarkStringBuilder.Append("&description=");
+            bookmarkStringBuilder.Append(bookmark.Title);
+            if (bookmark.Tags.Any())
+            {
+                bookmarkStringBuilder.Append("&tags=");
+                foreach (var tag in bookmark.Tags)
+                {
+                    bookmarkStringBuilder.Append(tag.Name + ",");
+                }
+                bookmarkStringBuilder.Remove(bookmarkStringBuilder.Length - 1, 1);
+            }
+            return bookmarkStringBuilder.ToString();
+        }
+
         async Task<string> MakeGetCall(string urlPart, string queryString =  "")
         {
             var client = new HttpClient();

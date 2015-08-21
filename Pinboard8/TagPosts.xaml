@@ -25,12 +25,12 @@
                 </Grid.ColumnDefinitions>
                 <StackPanel Orientation="Horizontal"/>
                 <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
-                    <AppBarButton x:Name="EditPostAppBarButton" Icon="Edit" Label="Edit Post" Click="AppBar_EditButton_Click">
-                        <Flyout>
-                            <TextBlock Text="Hello"></TextBlock>
-                        </Flyout>
+                    <AppBarButton x:Name="EditPostAppBarButton" Icon="Edit" Label="Edit Post" Flyout="{StaticResource BookmarkDetailsFlyout}" Click="AppBar_EditButton_Click">
+                     
                     </AppBarButton>
-                    <AppBarButton x:Name="DeletePostAppBarButton" Icon="Delete" Label="Delete Post"/>
+                    <AppBarButton x:Name="DeletePostAppBarButton" Icon="Delete" Label="Delete Post">
+
+                    </AppBarButton>
                 </StackPanel>
             </Grid>
         </AppBar>
