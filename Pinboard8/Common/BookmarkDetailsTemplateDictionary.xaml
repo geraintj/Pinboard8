@@ -11,6 +11,18 @@
             <TextBlock Text="URL" Margin="5,10,5,10" FontSize="14" TextWrapping="Wrap"/>
             <TextBox x:Name="PostUrl" Margin="5, 0, 5, 10" Text="{Binding Url}"/>
             <TextBlock Text="Tags" Margin="5,10,5,10" FontSize="14" TextWrapping="Wrap"/>
+            <ItemsControl ItemsSource="{Binding Tags}" Margin="5, 0, 5, 10">
+               <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                  </ItemsPanelTemplate>
+               </ItemsControl.ItemsPanel>
+               <ItemsControl.ItemTemplate>
+                  <DataTemplate>
+                     <Button Content="{Binding Name}"/>
+                  </DataTemplate>
+               </ItemsControl.ItemTemplate>
+            </ItemsControl>
             <TextBox x:Name="PostTags" Margin="5, 0, 5, 10"/>
             <TextBlock Text="Bookmark Date" Margin="5,10,5,10" FontSize="14" TextWrapping="Wrap"/>
             <TextBox x:Name="PostDate" Margin="5,0,5,10" Text="{Binding Time}"/>

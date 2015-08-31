@@ -42,6 +42,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\AllPostsViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
+    <Compile Include="ViewModels\PostDetailsViewModel.cs" />
     <Compile Include="ViewModels\TagCloudViewModel.cs" />
     <Compile Include="ViewModels\TagPostsViewModel.cs" />
   </ItemGroup>

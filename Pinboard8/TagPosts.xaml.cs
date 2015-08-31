@@ -1,6 +1,7 @@
 ﻿using Pinboard8.Common;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -29,6 +30,7 @@ namespace Pinboard8
 
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
+        private ObservableCollection<ITag> _allTags;
 
         /// <summary>
         /// This can be changed to a strongly typed view model.
@@ -68,10 +70,11 @@ namespace Pinboard8
         /// <see cref="Frame.Navigate(Type, Object)"/> when this page was initially requested and
         /// a dictionary of state preserved by this page during an earlier
         /// session. The state will be null the first time a page is visited.</param>
-        private void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
+        private async void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
             var api = new PinboardApiWrapper();
             this.DataContext = new TagPostsViewModel(api, e.NavigationParameter as string);
+            _allTags = await api.GetTagsAsync();
         }
 
         /// <summary>
@@ -126,6 +129,14 @@ namespace Pinboard8
         {
             var post = PostsListView.SelectedItem as Bookmark;
             var appBarButton = sender as AppBarButton;
+            var postDetails = new PostDetailsViewModel()
+            {
+                Url = post.Url,
+                Title = post.Title,
+                Tags = post.Tags,
+                Time = post.Time,
+                AllTags = _allTags.ToList()
+            };
             appBarButton.DataContext = post;
         }
         
