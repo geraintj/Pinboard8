@@ -1,0 +1,31 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Flyout x:Key="BookmarkDetailsFlyout">
+        <StackPanel Width="400" Height="600"> 
+            <TextBlock x:Name="BoookmarkDetailsTitle" FontSize="30" Margin="5,5,5,10" Text="Add/Edit Post"/>
+            <TextBlock Text="Title" Margin="5,10,5,10" FontSize="14" TextWrapping="Wrap" />
+            <TextBox x:Name="PostTitle" Margin="5, 0, 5, 10" Text="{Binding Title}"/>
+            <TextBlock Text="URL" Margin="5,10,5,10" FontSize="14" TextWrapping="Wrap"/>
+            <TextBox x:Name="PostUrl" Margin="5, 0, 5, 10" Text="{Binding Url}"/>
+            <TextBlock Text="Tags" Margin="5,10,5,10" FontSize="14" TextWrapping="Wrap"/>
+            <ItemsControl ItemsSource="{Binding Tags}" Margin="5, 0, 5, 10">
+               <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                  </ItemsPanelTemplate>
+               </ItemsControl.ItemsPanel>
+               <ItemsControl.ItemTemplate>
+                  <DataTemplate>
+                     <Button Content="{Binding Name}"/>
+                  </DataTemplate>
+               </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            <TextBox x:Name="PostTags" Margin="5, 0, 5, 10"/>
+            <TextBlock Text="Bookmark Date" Margin="5,10,5,10" FontSize="14" TextWrapping="Wrap"/>
+            <TextBox x:Name="PostDate" Margin="5,0,5,10" Text="{Binding Time}"/>
+            <Button Content="Save Changes" Margin="5, 20, 5,5"/>
+        </StackPanel>
+    </Flyout>
+</ResourceDictionary>

@@ -1,0 +1,82 @@
+﻿<Page
+    x:Class="Pinboard10.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:converters="using:Pinboard10.Converters"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:interop="using:Windows.UI.Xaml.Interop"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <converters:DateElapsedTimeConverter x:Key="dataConverter"></converters:DateElapsedTimeConverter>
+    </Page.Resources>
+
+    <Page.BottomAppBar>
+        <AppBar x:Name="BottomBar">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal"/>
+                <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
+                    <AppBarButton x:Name="RenameTagAppBarButton" Icon="Rename" Label="Rename Tag" Click="AppBar_RenameButton_Click">
+                        <AppBarButton.Flyout>
+                            <Flyout>
+                                <StackPanel Width="400" >
+                                    <TextBlock Text="Rename Tag" FontSize="30" Margin="5,5,5,10" />
+                                    <TextBlock Text="Type in the new tag name and tap the Rename button" Margin="5,0,5,10" FontSize="14"/>
+                                    <TextBox x:Name="TagName" Margin="5, 0, 5, 10"/>
+                                    <Button Content="Rename" Click="RenameButton_Click" Margin="5, 0, 5,5"/>
+                                </StackPanel>
+                            </Flyout>
+                        </AppBarButton.Flyout>
+                    </AppBarButton>
+                    <AppBarButton x:Name="DeleteTagAppBarButton" Icon="Delete" Label="Delete Tag" />
+                </StackPanel>
+            </Grid>
+        </AppBar>
+    </Page.BottomAppBar>
+
+    <ScrollViewer HorizontalScrollMode="Auto" HorizontalScrollBarVisibility="Auto" VerticalScrollMode="Disabled" VerticalScrollBarVisibility="Disabled">
+
+        <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="600"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+
+            <TextBlock Grid.Column="0" Grid.Row="0" FontSize="42" Text="Recent Bookmarks" Margin="20,56,0,20" Foreground="White"></TextBlock>
+            <ListBox Grid.Column="0" Grid.Row="1" x:Name="RecentBookmarks" ItemsSource="{Binding RecentBookmarks}" Width="450" ItemTemplate="{StaticResource BookmarkDataTemplate}" 
+                      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
+                
+            </ListBox>
+            <TextBlock  Grid.Column="1" Grid.Row="0" FontSize="42" Text="My Tags" Margin="20,56,0,20"/>
+            <ListView x:Name="TagListView" Grid.Column="1" Grid.Row="1" ItemsSource="{Binding Tags}" ScrollViewer.VerticalScrollBarVisibility="Disabled" 
+                        ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollMode="Disabled"
+                        ScrollViewer.HorizontalScrollMode="Auto" ScrollViewer.ZoomMode="Disabled" Height="Auto" Margin="50,10,10,10" SelectionChanged="TagSelected">
+                        <ListView.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapGrid Orientation="Vertical" />
+                            </ItemsPanelTemplate>
+                        </ListView.ItemsPanel>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <HyperlinkButton Width="150" Height="75"  Background="Blue" Foreground="White"  Click="ButtonClick"
+                               Content="{Binding Name}">
+                                </HyperlinkButton>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+
+        </Grid>
+    </ScrollViewer>
+
+</Page>
